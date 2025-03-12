@@ -1,0 +1,97 @@
+/* OurServices.css */
+.our-services {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+  }
+  
+  /* Page Header */
+  .services-header {
+    text-align: left;
+    padding: 50px 20px;
+    margin-left: 100px;
+    margin-top: 175px;
+  }
+  
+  .services-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .services-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Service Sections */
+  .service-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  }
+  
+  .service-image {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-text {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .service-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .service-text p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Reverse section for alternating layout */
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  
+  /* Responsive for Mobile */
+  @media (max-width: 768px) {
+    .service-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .service-image {
+      width: 80%;
+    }
+  
+    .service-text {
+      width: 90%;
+    }
+  }
+  
+  .service-btn {
+    background-color: #d90000;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .service-btn:hover {
+    background-color: #b00000;
+    color: white;
+    text-decoration: none;
+  }
+  
