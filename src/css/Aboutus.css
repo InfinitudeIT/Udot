@@ -26,16 +26,19 @@
   flex-wrap: wrap;
   max-width: 100%;
   width: 100%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 
 /* Image Section */
 .about-image {
   flex: 1;
-  min-width: 400px;
-  max-width: 40%;
+  /* min-width: 400px; */
+  max-width: 30%;
   text-align: center;
+  margin-top: 100px;
+  margin-right: 150px;
+  
 }
 
 .about-image img {
@@ -106,7 +109,7 @@
 
 .ceo-image img {
   width: 100%;
-  height: auto;
+  height: 350px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -187,27 +190,30 @@ blockquote {
 .vision-container {
   position: relative;
   width: 100%;
-  height: 100vh;
-  display: flex;
+  /* height: 100vh; */
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url("../assets/airplane.jpg") no-repeat center center/cover;
-  color: white;
+  /* background: url("../assets/airplane.jpg") no-repeat center center/cover; */
+  /* color: white; */
   overflow: hidden;
 }
 
 /* Semi-transparent overlay */
 .vision-overlay {
   background: rgba(0, 0, 0, 0.6);
-  padding: 50px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 100%;
+  /* padding: 50px; */
+  /* border-radius: 10px; */
+  width: 100%;
+  max-width: 70%;
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   opacity: 0;
   transform: translateY(50px);
+  margin-left: 50%;
+  /* max-height: 100%; */
+  /* align-items: right; */
 }
 
 /* Show animation when scrolled into view */
@@ -244,10 +250,13 @@ blockquote {
 /* Vision Points */
 .vision-points {
   list-style: none;
-  padding: 0;
-  text-align: left;
-  margin: 20px auto;
-  max-width: 600px;
+  /* padding: 0; */
+  text-align:left;
+  margin: 20px;
+  max-width:100%;
+  line-height: 35px;
+  font-size: 16px;
+  width: 100%;
 }
 
 /* Responsive */
@@ -271,7 +280,7 @@ blockquote {
 #mission-section {
   position: relative;
   width: 100%;
-  padding: 80px 10%;
+  /* padding: 80px 10%; */
   background: url("../assets/cargoloading.avif") center/cover no-repeat; /* Change background image */
   text-align: center;
   opacity: 0;
@@ -287,8 +296,9 @@ blockquote {
 .mission-overlay {
   background: rgba(0, 0, 0, 0.6); /* Dark overlay */
   padding: 50px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   max-width: 100%;
+  margin-right: 50%;
 }
 
 /* Mission Heading */
@@ -314,7 +324,7 @@ blockquote {
 /* Mission Text */
 .mission-text {
   font-size: 1.2rem;
-  color: #f1f1f1;
+  color: #000000;
   line-height: 1.8;
   margin-bottom: 20px;
   max-width: 800px;
@@ -326,12 +336,12 @@ blockquote {
   list-style: none;
   padding: 0;
   max-width: 800px;
-  margin: 30px auto;
+  /* margin: 30px auto; */
 }
 
 .mission-points li {
   font-size: 1.1rem;
-  color: white;
+  color: rgb(0, 0, 0);
   margin-bottom: 15px;
   text-align: left;
   position: relative;

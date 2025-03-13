@@ -226,80 +226,82 @@ function LocationSearchPopup({ onClose, onStoreSelect }) {
     onStoreSelect(selectedPincode || selectedCity, foundStores);
   };
 
-  return (
-    <div className="popup-overlay" onClick={onClose}>
-      <div className="popup-content fade-in" onClick={(e) => e.stopPropagation()}>
-        <button className="close-btn-pop" onClick={onClose}>
-          <FaTimes />
-        </button>
-        <h2>Select Your Location or Pincode</h2>
-
-        {/* 🔍 **City Searchable Dropdown** */}
-        <div className="form-group" ref={cityRef}>
-          <label>Select City:</label>
-          <input
-            type="text"
-            placeholder="Type a city"
-            value={selectedCity}
-            onChange={(e) => setSelectedCity(e.target.value)}
-            onFocus={() => setShowCityDropdown(true)}
-          />
-          {showCityDropdown && filteredCities.length > 0 && (
-            <div className="custom-dropdown">
-              {filteredCities.map((city, index) => (
-                <div key={index} className="dropdown-item" onClick={() => handleCitySelect(city)}>
-                  {city}
+    return (
+      <div className="popup-overlay" onClick={onClose}>
+        <div className="popup-content fade-in" onClick={(e) => e.stopPropagation()}>
+          <button className="close-btn-pop" onClick={onClose}>
+            <FaTimes />
+          </button>
+          <h2>Select Your Location or Pincode</h2>
+    
+          {/* Scrollable section */}
+          <div className="popup-body">
+            {/* City Dropdown */}
+            <div className="form-group" ref={cityRef}>
+              <label>Select City:</label>
+              <input
+                type="text"
+                placeholder="Type a city"
+                value={selectedCity}
+                onChange={(e) => setSelectedCity(e.target.value)}
+                onFocus={() => setShowCityDropdown(true)}
+              />
+              {showCityDropdown && filteredCities.length > 0 && (
+                <div className="custom-dropdown">
+                  {filteredCities.map((city, index) => (
+                    <div key={index} className="dropdown-item" onClick={() => handleCitySelect(city)}>
+                      {city}
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
             </div>
-          )}
-        </div>
-
-        {/* 🔽 **Pincode Searchable Dropdown** */}
-        <div className="form-group" ref={pincodeRef}>
-          <label>Select Pincode:</label>
-          <input
-            type="text"
-            placeholder="Type a pincode"
-            value={selectedPincode}
-            onChange={(e) => setSelectedPincode(e.target.value)}
-            onFocus={() => setShowPincodeDropdown(true)}
-          />
-          {showPincodeDropdown && filteredPincodes.length > 0 && (
-            <div className="custom-dropdown">
-              {filteredPincodes.map((pin, index) => (
-                <div key={index} className="dropdown-item" onClick={() => handlePincodeSelect(pin)}>
-                  {pin}
+    
+            {/* Pincode Dropdown */}
+            <div className="form-group" ref={pincodeRef}>
+              <label>Select Pincode:</label>
+              <input
+                type="text"
+                placeholder="Type a pincode"
+                value={selectedPincode}
+                onChange={(e) => setSelectedPincode(e.target.value)}
+                onFocus={() => setShowPincodeDropdown(true)}
+              />
+              {showPincodeDropdown && filteredPincodes.length > 0 && (
+                <div className="custom-dropdown">
+                  {filteredPincodes.map((pin, index) => (
+                    <div key={index} className="dropdown-item" onClick={() => handlePincodeSelect(pin)}>
+                      {pin}
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
             </div>
-          )}
-        </div>
-
-        {/* 🔎 **Search Button** */}
-        <button className="search-btn" onClick={handleSearch}>
-          <FaSearch /> Search
-        </button>
-
-        {/* 📌 **Show Search Results** */}
-        {searchInitiated && filteredStores.length === 0 && <p className="no-stores">No stores found.</p>}
-
-        {filteredStores.length > 0 && (
-          <div className="stores-list fade-in">
-            <h4>Available Stores:</h4>
-            {filteredStores.map((store, index) => (
-              <div key={index} className="store-item">
-                <strong>{store.city} - {store.pincode}</strong>
-                <p><b>📍 Address:</b> {store.address}</p>
-                <p><b>📞 Phone:</b> {store.phone}</p>
-                <p><b>📧 Email:</b> {store.email}</p>
+    
+            {/* Search Button */}
+            <button className="search-btn" onClick={handleSearch}>
+              <FaSearch /> Search
+            </button>
+    
+            {/* Display Search Results */}
+            {searchInitiated && filteredStores.length === 0 && <p className="no-stores">No stores found.</p>}
+    
+            {filteredStores.length > 0 && (
+              <div className="stores-list fade-in">
+                <h4>Available Stores:</h4>
+                {filteredStores.map((store, index) => (
+                  <div key={index} className="store-item">
+                    <strong>{store.city} - {store.pincode}</strong>
+                    <p><b>📍 Address:</b> {store.address}</p>
+                    <p><b>📞 Phone:</b> {store.phone}</p>
+                    <p><b>📧 Email:</b> {store.email}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
           </div>
-        )}
+        </div>
       </div>
-    </div>
-  );
-}
-
+    );
+  }
 export default LocationSearchPopup;

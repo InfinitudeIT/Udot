@@ -84,8 +84,69 @@ const AboutUs = () => {
         </div>
       </section>
 
+      {/* <section id="ceo-section" className="ceo-container fade-in-section">
+        <div className="ceo-content"> */}
+          {/* Image Section */}
+          {/* <div className="ceo-image">
+            <img src={visionBackground} alt="CEO" />
+          </div> */}
+
+          {/* Text Content */}
+          {/* <div className="ceo-text">
+            <h2 className="ceo-heading">OUR VISION</h2>
+            <span className="ceo-underline"></span>
+            <blockquote>
+              <p>
+                At Urbandot, our vision is to be India’s most trusted and efficient logistics provider, seamlessly connecting people and businesses through technology-driven delivery solutions.
+              </p>
+            </blockquote>
+            <p>
+            <ul className="vision-points">
+            <li><strong>Expand Nationwide</strong> – Reaching from villages to metro cities, ensuring reliable last-mile connectivity everywhere.</li>
+            <li><strong>Innovate Logistics</strong> – Using AI, automation, and smart technology for faster, more efficient deliveries.</li>
+            <li><strong>Ensure Reliability & Speed</strong> – Delivering secure, timely, and cost-effective courier and cargo services.</li>
+            <li><strong>Empower Small Businesses</strong> – Supporting MSMEs and online sellers by simplifying logistics and expanding market reach.</li>
+            <li><strong>Grow Sustainably</strong> – Committing to eco-friendly practices while continuously evolving to meet global standards.</li>
+          </ul>
+            </p>
+          </div>
+        </div>
+      </section> */}
+
+      <section id="about-section" className="about-container fade-in-section">
+        <div className="about-content">
+          {/* Image Section */}
+          <div className="about-image">
+            <img src={logisticsImage} alt="Logistics Network" />
+          </div>
+
+          {/* Text Content */}
+          <div className="about-text">
+            <h2 className="about-heading">
+              OUR MISSON
+              <span className="underline"></span>
+            </h2>
+            <p>
+            At Urbandot Couriers and Cargo Private Limited, our mission is to revolutionize the logistics industry by providing fast, reliable, and technology-driven courier and cargo services. We are committed to building a seamless delivery network that connects villages to metro cities, ensuring efficient and secure transportation of goods across India. 
+            </p>
+            <ul className="mission-points">
+            <li><strong>Customer-Centric Service</strong> – Delivering exceptional service with reliability, transparency, and efficiency.  </li>
+            <li><strong>Technology & Innovation</strong> – Leveraging AI, automation, and real-time tracking to enhance logistics solutions. </li>
+            <li><strong>Rural & Urban Connectivity</strong> – Expanding our network to reach every corner of India, from remote villages to bustling cities. </li>
+            <li><strong> Affordability & Accessibility</strong> – Offering cost-effective and easily accessible logistics solutions for individuals and businesses. </li>
+            <li><strong>Sustainability & Growth</strong> –  Implementing eco-friendly practices and continuously evolving to meet market demands. </li>
+          </ul>
+          </div>
+
+          {/* Image Section */}
+          {/* <div className="about-image">
+            <img src={logisticsImage} alt="Logistics Network" />
+          </div> */}
+        </div>
+      </section>
+
       {/* Our Vision Section */}
-      <section id="vision-section" className={`vision-container ${showVision ? "show" : ""}`}>
+      {/* <section id="vision-section" className={`vision-container ${showVision ? "show" : ""}`}>
         <div className="vision-overlay">
           <h2 className="vision-heading">Our Vision<span className="underline"></span></h2>
           <p className="vision-text">
@@ -117,6 +178,35 @@ const AboutUs = () => {
             <li><strong>Sustainability & Growth</strong> –  Implementing eco-friendly practices and continuously evolving to meet market demands. </li>
           </ul>
           <h1 className="mission-bottom-text">Urbandot – Delivering Beyond Expectations! </h1>
+        </div>
+      </section> */}
+
+      <section id="ceo-section" className="ceo-container fade-in-section">
+        <div className="ceo-content">
+          {/* Image Section */}
+          <div className="vision-image">
+            <img src={visionBackground} alt="CEO" />
+          </div>
+
+          {/* Text Content */}
+          <div className="vision-container">
+            <h2 className="ceo-heading">OUR VISION</h2>
+            <span className="ceo-underline"></span>
+            <blockquote>
+              <p>
+                At Urbandot, our vision is to be India’s most trusted and efficient logistics provider, seamlessly connecting people and businesses through technology-driven delivery solutions.
+              </p>
+            </blockquote>
+            <p>
+            <ul className="vision-points">
+            <li><strong>Expand Nationwide</strong> – Reaching from villages to metro cities, ensuring reliable last-mile connectivity everywhere.</li>
+            <li><strong>Innovate Logistics</strong> – Using AI, automation, and smart technology for faster, more efficient deliveries.</li>
+            <li><strong>Ensure Reliability & Speed</strong> – Delivering secure, timely, and cost-effective courier and cargo services.</li>
+            <li><strong>Empower Small Businesses</strong> – Supporting MSMEs and online sellers by simplifying logistics and expanding market reach.</li>
+            <li><strong>Grow Sustainably</strong> – Committing to eco-friendly practices while continuously evolving to meet global standards.</li>
+          </ul>
+            </p>
+          </div>
         </div>
       </section>
     </div>

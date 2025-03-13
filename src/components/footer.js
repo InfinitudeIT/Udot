@@ -25,9 +25,9 @@ function Footer() {
             <a href="https://www.linkedin.com/in/urbandot-courier-350130339/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            {/* <a href="#" target="_blank" rel="noopener noreferrer">
               <FaVimeo />
-            </a>
+            </a> */}
            </div>
         </div>
 
@@ -36,9 +36,8 @@ function Footer() {
           <h3>Contact</h3>
           <p>1800 590 1989</p>
           <p>info@urbandot.in</p>
-          <p>Flat #301, 3rd Floor, Mandhum Jade Towers  
-            Mch No 6-3-1090/a/12 & 13/301, Raj Bhavan Road,  
-           Somajiguda, Nampally, Telangana 500082, India </p>
+          <p>Flat #301, 3rd Floor, Mandhum Jade Towers,  
+           Nampally, Telangana 500082, India </p>
         </div>
 
         {/* Right Section - Newsletter Signup */}
@@ -54,7 +53,7 @@ function Footer() {
 
       {/* Bottom Copyright */}
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} DTDC Express Limited, All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} Urbandot Private Limited, All Rights Reserved.</p>
         <div className="footer-links">
           <a href="/terms-of-use">Terms of Use</a>
           <span> | </span>

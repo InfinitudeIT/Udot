@@ -1,20 +1,20 @@
 import React from 'react';
 import '../../css/ServiceDetail.css';
+import website1 from "../../assets/website1.png";
 
 const ThirdPartyServices = () => {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h1 className="hero-heading">Your Trusted <br /> Delivery Partner</h1>
+        <h1 className="hero-heading">First-Mile & Last-Mile Delivery </h1>
         <p className="hero-subtext">
-          At Urbandot, we ensure timely and safe delivery of parcels, catering 
-          to individuals and businesses with a commitment to excellence and 
-          customer satisfaction.
+        From warehouse pickup to doorstep delivery, we ensure efficient handling of shipments across 
+        urban and remote locations. 
         </p>
         <button className="hero-button">Explore</button>
       </div>
       <div className="hero-image-container">
-        {/* <img src={user2women} alt="Shipping Cargo" className="hero-image" /> */}
+        <img src={website1} alt="Shipping Cargo" className="hero-image" />
       </div>
     </section>
   );

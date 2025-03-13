@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../css/ServiceDetail.css';
+import website2 from "../../assets/website2.png";
 
 const DomesticService = () => {
     return (
@@ -13,7 +14,7 @@ const DomesticService = () => {
           <button className="hero-button">Explore</button>
         </div>
         <div className="hero-image-container">
-          {/* <img src={user2women} alt="Shipping Cargo" className="hero-image" /> */}
+          <img src={website2} alt="Shipping Cargo" className="hero-image" />
         </div>
       </section>
     );

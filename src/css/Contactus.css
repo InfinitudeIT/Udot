@@ -7,7 +7,7 @@
 }
 .contactpage-container h1{
   color: red;
-  text-align: left;
+  /* text-align: left; */
 }
 
 /* Hero Section */
@@ -94,14 +94,22 @@
 }
 
 /* Contact Info Section */
-.contactpage-info-section {
-  display: flex;
+.contactpage-info-section-address {
+  display:flex;
   justify-content: space-around;
-  margin-top: 50px;
   padding: 50px;
-  background: #f4f4f4;
-  border-radius: 10px;
+  background: #ffffff;
   margin-bottom: 10px;
+}
+
+/* Contact Info Section */
+.contactpage-info-section {
+  display:flex;
+  justify-content: space-around;
+  padding: 50px;
+  background: #ffffff;
+  margin-right: 270px;
+  margin-left: 270px;
 }
 
 .contactpage-info-card {
@@ -131,7 +139,7 @@
     flex-direction: column;
   }
 
-  .contactpage-info-section {
+  .contactpage-info-section-address {
     flex-direction: column;
     align-items: center;
   }
@@ -139,5 +147,10 @@
   .contactpage-info-card {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .contactpage-info-section {
+    flex-direction: column;
+    align-items: center;
   }
 }

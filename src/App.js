@@ -40,7 +40,7 @@ function App() {
                 <Routes>
                   <Route index element={<Home />} /> {/* Home route */}
                   <Route path="/about" element={<AboutUs />} />
-                  {/* <Route path="/our-services" element={<OurServices />} /> */}
+                  <Route path="/our-services" element={<OurServices />} />
                   <Route path="/services/cargo" element={<CargoService />} />
                   <Route path="/services/domestic" element={<DomesticService />} />
                   <Route path="/services/international" element={<InternationalService />} />

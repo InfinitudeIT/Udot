@@ -1,49 +1,22 @@
-import React from "react";
-import "../../css/OtherServices.css"; // ✅ Import Animation Styles
-
-const otherServices = [
-  {
-    title: "DMT (Money Transfer)",
-    description: "Fast and secure domestic money transfer services.",
-    icon: "💰",
-  },
-  {
-    title: "AEPS (Money Withdrawal)",
-    description: "Withdraw money using Aadhaar-based payment systems.",
-    icon: "🏧",
-  },
-  {
-    title: "Pan Card Services",
-    description: "Quick and easy PAN card application and assistance.",
-    icon: "📜",
-  },
-  {
-    title: "Bus/Flight/Train Ticketing",
-    description: "Seamless travel booking for buses, flights, and trains.",
-    icon: "🎟️",
-  },
-  {
-    title: "CMS (Cash Management System)",
-    description: "Optimized cash handling solutions for businesses.",
-    icon: "🏦",
-  },
-];
+import React from 'react';
+import '../../css/ServiceDetail.css';
+import website1 from "../../assets/website1.png";
 
 const OtherServices = () => {
-  return (
-    <div className="other-services-container">
-      <h1 className="other-services-title">✨ Our Additional Services</h1>
-      <div className="other-services-grid">
-        {otherServices.map((service, index) => (
-          <div className="other-service-card" key={index}>
-            <span className="other-service-icon">{service.icon}</span>
-            <h2 className="other-service-title">{service.title}</h2>
-            <p className="other-service-description">{service.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+    return (
+      <section className="hero-section">
+        <div className="hero-content">
+          <h1 className="hero-heading">B2B & B2C Logistics </h1>
+          <p className="hero-subtext">
+          Custom logistics solutions designed for businesses of all sizes, enabling smooth supply chain operations for retailers, manufacturers, and e-commerce platforms. 
+          </p>
+          <button className="hero-button">Explore</button>
+        </div>
+        <div className="hero-image-container">
+          <img src={website1} alt="Shipping Cargo" className="hero-image" />
+        </div>
+      </section>
+    );
 };
 
-export default OtherServices;
+export default OtherServices; 

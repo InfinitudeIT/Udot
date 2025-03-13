@@ -6,26 +6,46 @@ const ContactUs = () => {
   return (
     <div className="contactpage-container">
      <section >
-      <div className="contactpage-info-section">
+      <div className="contactpage-info-section-address">
         <div className="contactpage-info-card">
           <FaMapMarkerAlt className="contactpage-icon" />
-          <h3>Head Office </h3>
-          <h5>Urbandot Couriers and Cargo</h5>
-          <p>Flat no 301, Manbhum Jade Towers, Somajiguda, Hyderabad, Telangana 500082</p>
+          <h3>HEAD OFFICE </h3>
+          <h5>URBANDOT COURIER AND CARGO PRIVATE LIMITED </h5>
+          <h5>CIN NO - U53200TS2024PTC187415 </h5>
+          <p>#301, Manbhum Jade Towers, Somajiguda, Hyderabad, Telangana 500082</p>
         </div>
         <div className="contactpage-info-card">
-          <FaPhoneAlt className="contactpage-icon" />
-          <h3>Call Us</h3>
-          <p> Customer Support : 1800 590 1989</p>
-          <p> Franchise Enquires : 8977726784</p>
+          <FaMapMarkerAlt className="contactpage-icon" />
+          <h3>REGIONAL OFFICE BENGALURU </h3>
+          {/* <h5>URBANDOT COURIER AND CARGO PRIVATE LIMITED </h5> */}
+          {/* <h5>CIN NO - U53200TS2024PTC187415 </h5> */}
+          <p>#301, Jaganath arcade ,7-13, 1st Main Rd, SBM Layout, SBM Colony, Anandnagar, Ganganagar, Bengaluru, Karnataka 560024</p>
         </div>
         <div className="contactpage-info-card">
-          <FaEnvelope className="contactpage-icon" />
-          <h3>EMAIL</h3>
-          <p>info@urbandot.in</p>
-          <p>partners@urbandot.in</p>
+          <FaMapMarkerAlt className="contactpage-icon" />
+          <h3> REGIONAL OFFICE VIJAYAWADA </h3>
+          {/* <h5>URBANDOT COURIER AND CARGO PRIVATE LIMITED </h5> */}
+          {/* <h5>CIN NO - U53200TS2024PTC187415 </h5> */}
+          <p>D. No 8-103, Azad Street, Gollapudi, Vijayawada, NTR Dist., Andhra Pradesh 521225</p>
         </div>
       </div> 
+      </section>
+
+      <section >
+      <div className="contactpage-info-section">
+            <div className="contactpage-info-card">
+              <FaPhoneAlt className="contactpage-icon" />
+              <h3>Call Us</h3>
+              <p> Customer Support : 1800 590 1989</p>
+              <p> Franchise Enquires : 9493979796</p>
+            </div>
+            <div className="contactpage-info-card">
+              <FaEnvelope className="contactpage-icon" />
+              <h3>EMAIL</h3>
+              <p>info@urbandot.in</p>
+              <p>partners@urbandot.in</p>
+            </div>
+        </div>
       </section>
       
       {/* Hero Section */}

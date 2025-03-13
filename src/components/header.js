@@ -5,7 +5,7 @@ import logo from "../assets/logo.png"
 import { Link } from 'react-router-dom';
 import LocationSearchPopup from "./LocationSearchPopup"; // Ensure correct import path
 // import Popup from "./contactus";
-
+import logo2 from "../assets/logo2.png"
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [hideTopBar, setHideTopBar] = useState(false);
@@ -38,6 +38,18 @@ function Header() {
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 50);
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   
 
@@ -126,7 +138,11 @@ function Header() {
       <header className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="navbar-content">
           <div className="logo">
-            <img src={logo} alt="UrbanDot Logo" />
+          <img 
+            src={isScrolled ? logo : logo2} 
+            alt="UrbanDot Logo" 
+            className="logo-image"
+          />
           </div>
           <nav>
           <ul>
@@ -135,7 +151,7 @@ function Header() {
 
               {/* Services Dropdown (Behaves Like Other Links) */}
               <li className="dropdown-container" ref={dropdownRef}>
-                <Link 
+                <Link to="/our-services"
                   className="dropdown-trigger"
                   onClick={(e) => {
                     if (!showServicesDropdown) {
@@ -148,37 +164,37 @@ function Header() {
                 </Link>
                 {showServicesDropdown && (
                   <ul className="dropdown-menu">
-                  <li>
-                    <Link to="/services/cargo">
-                      <FaShippingFast className="menu-icon" /> Express Courier Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/services/domestic">
-                      <FaTruck className="menu-icon" /> Freight & Cargo Solutions
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/services/international">
-                      <FaUndo className="menu-icon" /> Reverse Logistics & Returns Management
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/services/3rdPartyServices">
-                      <FaRoute className="menu-icon" /> First-Mile & Last-Mile Delivery
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/services/OtherServices">
-                      <FaHandshake className="menu-icon" /> B2B & B2C Logistics
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/our-services/ecommerce">
-                      <FaSearchLocation className="menu-icon" /> Technology-Driven Tracking & Support
-                    </Link>
-                  </li>
-                </ul>
+                    <li>
+                      <Link to="/services/cargo">
+                        <FaShippingFast className="menu-icon" /> Express Courier Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/domestic">
+                        <FaTruck className="menu-icon" /> Freight & Cargo Solutions
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/international">
+                        <FaUndo className="menu-icon" /> Reverse Logistics & Returns Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/3rdPartyServices">
+                        <FaRoute className="menu-icon" /> First-Mile & Last-Mile Delivery
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/OtherServices">
+                        <FaHandshake className="menu-icon" /> B2B & B2C Logistics
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/our-services/ecommerce">
+                        <FaSearchLocation className="menu-icon" /> Technology-Driven Tracking & Support
+                      </Link>
+                    </li>
+                  </ul>
                 )}
               </li>
 

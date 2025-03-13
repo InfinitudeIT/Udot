@@ -9,6 +9,7 @@ import internationalDelivery from "../assets/cargoloading.avif"; // You'll need 
 const OurServices = () => {
   return (
     <div className="our-services">
+
       {/* Page Header */}
       <section className="services-header" data-aos="fade-down">
         <h1>Logistics Solutions</h1>
@@ -197,6 +198,29 @@ const OurServices = () => {
           </Link>
         </div>
       </section>
+
+      <section className="why-choose-section">
+      <div className="why-choose-container">
+        <h2 className="why-choose-title">Why Choose Urbandot Couriers & Cargo?</h2>
+        <ul className="why-choose-list">
+          <li>
+            <span className="check-icon">✅</span> Extensive Network: Coverage across India with 18,600+ pin codes.
+          </li>
+          <li>
+            <span className="check-icon">✅</span> Fast & Reliable: Efficient deliveries with real-time tracking.
+          </li>
+          <li>
+            <span className="check-icon">✅</span> Secure Handling: Advanced logistics technology for safe transit.
+          </li>
+          <li>
+            <span className="check-icon">✅</span> Cost-Effective Solutions: Competitive pricing for businesses and individuals.
+          </li>
+          <li>
+            <span className="check-icon">✅</span> End-to-End Logistics: Comprehensive services from pickup to delivery.
+          </li>
+        </ul>
+      </div>
+    </section>
     </div>
   );
 };

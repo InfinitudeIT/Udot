@@ -82,11 +82,11 @@
         }
         
         /* Logo */
-        .logo img {
+        /* .logo img {
           margin-top: 17px;
           width: 200px;
           height: 70px;
-        }
+        } */
         
         /* Navigation Menu */
         nav {
@@ -535,4 +535,19 @@
   color:rgb(24, 24, 70); /* Match the text color */
   font-size: 1.2rem;
   vertical-align: middle;
+}
+
+
+.logo img {
+  height: 350px; /* Adjust as needed */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition effect */
+  width: 300px;
+  margin-top: 17px;
+}
+
+.navbar.scrolled .logo img {
+            margin-top: 15px;
+            width: 250px;
+            height: 100px;
+            margin-left: 25px;
 }

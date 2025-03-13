@@ -1,4 +1,5 @@
 import React from 'react';
+import website2 from "../../assets/website2.png";
 import '../../css/ServiceDetail.css';
 
 const InternationalService = () => {
@@ -13,7 +14,7 @@ const InternationalService = () => {
           <button className="hero-button">Explore</button>
         </div>
         <div className="hero-image-container">
-          {/* <img src={user2women} alt="Shipping Cargo" className="hero-image" /> */}
+          <img src={website2} alt="Shipping Cargo" className="hero-image" />
         </div>
       </section>
     );
