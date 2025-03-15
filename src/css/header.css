@@ -36,10 +36,13 @@
           margin-right: 8px;
         }
         
+        .social-icons{
+          margin-right: 50px;
+        }
         /* Social Media Icons */
         .social-icons a {
           color: white;
-          margin-left: 15px;
+          margin-right: 20px;
           font-size: 16px;
           transition: 0.3s;
         }

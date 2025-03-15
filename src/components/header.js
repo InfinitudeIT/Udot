@@ -127,9 +127,6 @@ function Header() {
         <a href="https://www.linkedin.com/in/urbandot-courier-350130339/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <FaVimeo />
-        </a>
       </div>
 
       </div>

@@ -10,7 +10,7 @@ function Footer() {
       <div className="footer-container">
         {/* Left Section - Company Info */}
         <div className="footer-section">
-          <h1>Urbandot</h1>
+          <h1>URBANDOT</h1>
           <p>Reliable logistics for your parcel delivery needs.</p>
           <div className="social-icons">
           <a href="https://www.facebook.com/urbandotlogistics/" target="_blank" rel="noopener noreferrer">
@@ -34,7 +34,8 @@ function Footer() {
         {/* Middle Section - Contact Info */}
         <div className="footer-section">
           <h3>Contact</h3>
-          <p>1800 590 1989</p>
+          <p> Customer Support : 1800 590 1989</p>
+          <p> Franchise Enquires : 9493979796</p>
           <p>info@urbandot.in</p>
           <p>Flat #301, 3rd Floor, Mandhum Jade Towers,  
            Nampally, Telangana 500082, India </p>
