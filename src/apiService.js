@@ -73,4 +73,10 @@ export const sendOTP = async (phone_number) => {
 export const verifyOTP = async (phone_number, otp) => {
   return await apiRequest("/user/verify-otp/", "POST", { phone_number, otp });
 };
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
