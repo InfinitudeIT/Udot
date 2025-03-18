@@ -1,0 +1,289 @@
+/* General Styles */
+.reverse-logistics-container {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
+.reverse-logistics-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/website9.png');
+  background-size: cover;
+  background-position: center;
+
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.reverse-logistics-hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.reverse-logistics-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+
+.reverse-logistics-hero-content p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  padding:40px
+}
+
+/* Introduction Section */
+.reverse-logistics-intro {
+  padding: 80px 5%;
+  background: white;
+  text-align: center;
+}
+
+.reverse-logistics-intro-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.reverse-logistics-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Reverse Logistics Types */
+.reverse-logistics-types {
+  padding: 80px 5%;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.reverse-logistics-types h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.reverse-logistics-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.reverse-logistics-type-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.reverse-logistics-type-card:hover {
+  transform: translateY(-5px);
+}
+
+.reverse-logistics-icon {
+  font-size: 3rem;
+  color:red;
+  margin-bottom: 15px;
+}
+
+.reverse-logistics-type-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Reverse Logistics Process Overview */
+.reverse-logistics-process-overview {
+  padding: 80px 5%;
+  background: white;
+  text-align: center;
+}
+
+.reverse-logistics-process-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.reverse-logistics-process-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Reverse Logistics Stages */
+.reverse-logistics-process {
+  padding: 80px 5%;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.reverse-logistics-process h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.reverse-logistics-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reverse-logistics-stage {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.reverse-logistics-stage:hover {
+  transform: scale(1.02);
+}
+
+.stage-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background: red;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.stage-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Reverse Logistics Benefits */
+.reverse-logistics-benefits {
+  padding: 80px 5%;
+  background: white;
+  text-align: center;
+}
+
+.reverse-logistics-benefits p {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.reverse-logistics-benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.reverse-logistics-benefit-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.reverse-logistics-benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.reverse-logistics-benefit-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* CTA Section */
+.reverse-logistics-cta {
+  background: red;
+  color: white;
+  text-align: center;
+  padding: 60px 5%;
+}
+
+.reverse-logistics-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.reverse-logistics-cta button {
+  background: white;
+  color: red;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.reverse-logistics-cta button:hover {
+  background: #ff0000;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reverse-logistics-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .reverse-logistics-stage {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stage-number {
+    margin: 0 auto 15px;
+  }
+
+  .reverse-logistics-benefits-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .reverse-logistics-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .reverse-logistics-hero-content p {
+    font-size: 1rem;
+  }
+
+  .reverse-logistics-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reverse-logistics-stages {
+    gap: 20px;
+  }
+
+  .reverse-logistics-cta h2 {
+    font-size: 2rem;
+  }
+
+  .reverse-logistics-cta button {
+    font-size: 1rem;
+  }
+}
