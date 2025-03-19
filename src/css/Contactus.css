@@ -4,7 +4,7 @@
 .contactpage-container {
   font-family: "Poppins", sans-serif;
   text-align: center;
-  margin-top: 150px;
+  /* margin-top: 150px; */
 }
 .contactpage-container h1{
   color: red;
@@ -26,12 +26,12 @@
   font-size: 2.5rem;
   font-weight: bold;
   color: #ff0000;
-  
+  text-align: center;
 }
 
 .contactpage-hero-section p {
   font-size: 1.2rem;
-  color: #555;
+  color: black;
   margin-top: 10px;
   max-width: 100%;
 }
@@ -42,6 +42,7 @@
   padding: 50px;
   /* border-radius: 10px; */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 800px;
 }
 
 .contactpage-form {
@@ -54,7 +55,7 @@
   display: flex;
   gap: 20px;
   width: 100%;
-  max-width: 700px;
+  max-width: 100%;
   margin-bottom: 20px;
 }
 
@@ -256,14 +257,12 @@
   display: flex;
   justify-content: space-around;
   padding: 50px;
-  /* background: url("../assets/contactus.jpg") no-repeat center center; */
-  /* background-size: cover; */
   background-attachment: fixed;
 }
 
-.contactpage-info-section-address {
+/* .contactpage-info-section-address {
   margin-top: 130px;
-}
+} */
 
 
 .contactpage-info-card {
@@ -326,6 +325,71 @@
 
   .contactpage-info-section-address,
   .contactpage-info-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* Fix Header Overlap */
+.contact-container {
+  /* background: url("../assets/contactus.jpg") no-repeat center center/cover; */
+  width: 100%;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 150px 20px; /* Increased padding to push content below the navbar */
+}
+
+/* Improved Section Styling */
+.contact-section {
+  background: url("../assets/contactus.jpg") no-repeat center center/cover;
+  width: 100%;
+  max-width: 1200px;
+  /* background: white; */
+  padding: 50px; /* Increased padding for better spacing */
+  border-radius: 10px;
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+  margin-bottom: 40px; /* Increased margin to separate sections */
+  /* margin-top: 150px; */
+}
+
+/* Improved Spacing for Rows */
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Increased gap between cards */
+  flex-wrap: wrap;
+}
+
+/* Center Align Bottom Row */
+.contact-row.center {
+  justify-content: center;
+  gap: 60px;
+}
+
+/* Contact Cards Styling */
+.contact-card {
+  flex: 1;
+  min-width: 320px;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Icons Styling */
+.contact-icon {
+  font-size: 28px; /* Slightly increased size */
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-row {
     flex-direction: column;
     align-items: center;
   }

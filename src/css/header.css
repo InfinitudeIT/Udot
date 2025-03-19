@@ -544,13 +544,13 @@
 .logo img {
   height: 300px; /* Adjust as needed */
   transition: opacity 0.3s ease-in-out; /* Smooth transition effect */
-  width: 300px;
+  width: 400px;
   margin-top: 17px;
 }
 
 .navbar.scrolled .logo img {
             margin-top: 15px;
-            width: 300px;
+            width: 400px;
             /* height: 100px; */
             /* margin-left: 25px; */
 }

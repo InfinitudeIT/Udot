@@ -1,24 +1,24 @@
-<<<<<<< Updated upstream
-const API_BASE_URL = "http://localhost:8000"; // FastAPI server URL
 
-export const submitFeedback = async (formData) => {
-  try {
-    const response = await fetch(`${API_BASE_URL}/feedback/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+// const API_BASE_URL = "http://localhost:8000"; // FastAPI server URL
 
-    const result = await response.json();
-    return { success: response.ok, data: result };
-  } catch (error) {
-    console.error("Error submitting feedback:", error);
-    return { success: false, error: "Something went wrong. Please try again." };
-  }
-};
-=======
+// export const submitFeedback = async (formData) => {
+//   try {
+//     const response = await fetch(`${API_BASE_URL}/feedback/`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(formData),
+//     });
+
+//     const result = await response.json();
+//     return { success: response.ok, data: result };
+//   } catch (error) {
+//     console.error("Error submitting feedback:", error);
+//     return { success: false, error: "Something went wrong. Please try again." };
+//   }
+// };
+
 const API_BASE_URL = "http://localhost:8000"; // FastAPI server URL
 
 // Generic function for API requests
@@ -31,11 +31,13 @@ const apiRequest = async (endpoint, method, body = null) => {
       },
       body: body ? JSON.stringify(body) : null,
     });
-
     const result = await response.json();
-    if (!response.ok) {
-      throw new Error(result.detail || "API request failed");
-    }
+
+        // If the response is not ok, we throw an error
+        if (!response.ok) {
+          const result = await response.json();
+          throw new Error(result.detail || "API request failed");
+        }
 
     return { success: true, data: result };
   } catch (error) {
@@ -73,13 +75,6 @@ export const sendOTP = async (phone_number) => {
 export const verifyOTP = async (phone_number, otp) => {
   return await apiRequest("/user/verify-otp/", "POST", { phone_number, otp });
 };
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
+
+export { apiRequest };

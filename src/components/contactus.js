@@ -57,51 +57,45 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="contactpage-container">
-    <div className="contact-page-background">
-        <section >
-          <div className="contactpage-info-section-address">
-            <div className="contactpage-info-card">
-              <FaMapMarkerAlt className="contactpage-icon" />
-              <h3>HEAD OFFICE- <br></br>URBANDOT COURIER AND CARGO PRIVATE LIMITED </h3>
-              {/* <h5>URBANDOT COURIER AND CARGO PRIVATE LIMITED </h5> */}
-              CIN NO - U53200TS2024PTC187415<br></br>
-              #301, Manbhum Jade Towers, Somajiguda, Hyderabad, Telangana 500082
-            </div>
-            <div className="contactpage-info-card">
-              <FaMapMarkerAlt className="contactpage-icon" />
-              <h3>REGIONAL OFFICE BENGALURU </h3>
-              {/* <h5>URBANDOT COURIER AND CARGO PRIVATE LIMITED </h5> */}
-              {/* <h5>CIN NO - U53200TS2024PTC187415 </h5> */}
-              <p>#301, Jaganath arcade ,7-13, 1st Main Rd, SBM Layout, SBM Colony, Anandnagar, Ganganagar, Bengaluru, Karnataka 560024</p>
-            </div>
-            <div className="contactpage-info-card">
-              <FaMapMarkerAlt className="contactpage-icon" />
-              <h3> REGIONAL OFFICE VIJAYAWADA </h3>
-              {/* <h5>URBANDOT COURIER AND CARGO PRIVATE LIMITED </h5> */}
-              {/* <h5>CIN NO - U53200TS2024PTC187415 </h5> */}
-              <p>D. No 8-103, Azad Street, Gollapudi, Vijayawada, NTR Dist., Andhra Pradesh 521225</p>
-            </div>
-          </div> 
-          </section>
-
-        <section >
-        <div className="contactpage-info-section" >
-              <div className="contactpage-info-card">
-                <FaPhoneAlt className="contactpage-icon" />
-                <h3>Call Us</h3>
-                <p> Customer Support : 1800 570 1989</p>
-                <p> Franchise Enquires : 9493979796</p>
-              </div>
-              <div className="contactpage-info-card">
-                <FaEnvelope className="contactpage-icon" />
-                <h3>EMAIL</h3>
-                <p>info@urbandot.in</p>
-                <p>partners@urbandot.in</p>
-              </div>
+    <div className="contact-container">
+              <section className="contact-section">
+        <div className="contact-row">
+          <div className="contact-card">
+            <FaMapMarkerAlt className="contact-icon" />
+            <h3>HEAD OFFICE - <br /> URBANDOT COURIER AND CARGO PRIVATE LIMITED</h3>
+            <p>CIN NO - U53200TS2024PTC187415</p>
+            <p>#301, Manbhum Jade Towers, Somajiguda, Hyderabad, Telangana 500082</p>
           </div>
-        </section>
-      </div>
+          <div className="contact-card">
+            <FaMapMarkerAlt className="contact-icon" />
+            <h3>REGIONAL OFFICE BENGALURU</h3>
+            <p>#301, Jaganath Arcade, 7-13, 1st Main Rd, SBM Layout, SBM Colony, Anandnagar, Ganganagar, Bengaluru, Karnataka 560024</p>
+          </div>
+          <div className="contact-card">
+            <FaMapMarkerAlt className="contact-icon" />
+            <h3>REGIONAL OFFICE VIJAYAWADA</h3>
+            <p>D. No 8-103, Azad Street, Gollapudi, Vijayawada, NTR Dist., Andhra Pradesh 521225</p>
+          </div>
+        </div>
+      </section>
+
+
+          <section className="contact-section">
+                <div className="contact-row center">
+                  <div className="contact-card">
+                    <FaPhoneAlt className="contact-icon" />
+                    <h3>Call Us</h3>
+                    <p>Customer Support: 1800 570 1989</p>
+                    <p>Franchise Enquiries: 9493979796</p>
+                  </div>
+                  <div className="contact-card">
+                    <FaEnvelope className="contact-icon" />
+                    <h3>Email</h3>
+                    <p>info@urbandot.in</p>
+                    <p>partners@urbandot.in</p>
+                  </div>
+                </div>
+              </section>
       
       {/* Hero Section */}
       <section className="contactpage-hero-section">
