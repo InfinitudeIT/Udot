@@ -7,6 +7,7 @@ import user1boy from "../assets/website7.png";
 import user2women from "../assets/website8.png";
 import airplane from "../assets/website3.png";
 import red from "../assets/website6.png";
+import truck from "../assets/website15.png"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -103,7 +104,7 @@ function Home() {
             </div>
           </div>
         <div className="image-container" data-aos="zoom-in" data-aos-delay="300">
-          <img src={delivery} alt="Courier Delivering a Package" />
+          {/* <img src={delivery} alt="Courier Delivering a Package" /> */}
         </div>
         </section>
 
