@@ -7,6 +7,8 @@ import LocationSearchPopup from "./LocationSearchPopup"; // Ensure correct impor
 import LoginPopup from "./loginPopup";
 import logo2 from "../assets/logo2.png";
 import * as XLSX from 'xlsx';
+import { useNavigate } from 'react-router-dom';
+
 
 
 function Header() {
@@ -25,10 +27,30 @@ function Header() {
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
   const dropdownRef = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [lastClickedTime, setLastClickedTime] = useState(null);
+  const navigate = useNavigate();
 
-  
-  
+  const handleServicesClick = () => {
+    const now = Date.now();
 
+    if (!showServicesDropdown) {
+      // First click: open dropdown
+      setShowServicesDropdown(true);
+      setLastClickedTime(now);
+    } else {
+      // Second click: if within 1.5 seconds, navigate to /our-services
+      if (lastClickedTime && now - lastClickedTime < 1500) {
+        navigate('/our-services');
+        setShowServicesDropdown(false);
+        setLastClickedTime(null);
+      } else {
+        // Reset timer if user waits too long
+        setLastClickedTime(now);
+      }
+    }
+  };
+    
+  
   
   // Sample stores data
   const stores = [
@@ -163,10 +185,11 @@ function Header() {
               <li className="dropdown-container" ref={dropdownRef}>
                 <span
                   className="dropdown-trigger"
-                  onClick={() => setShowServicesDropdown(!showServicesDropdown)}
+                  onClick={handleServicesClick}
                 >
                   Services
                 </span>
+
                 {showServicesDropdown && (
                   <ul className="dropdown-menu show">
                     <li><Link to="/services/Express" onClick={() => setMenuOpen(false)}><FaShippingFast className="menu-icon" /> Express Courier</Link></li>

@@ -1,4 +1,4 @@
-/* Global Styling */
+/* ========== Global Styling ========== */
 .fade-in-section {
   opacity: 1;
   transform: translateY(0);
@@ -10,10 +10,9 @@
   transform: translateY(0);
 }
 
-/* About Us Section Styling */
+/* ========== About Us Section ========== */
 .about-container {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding: 80px 5%;
@@ -24,23 +23,17 @@
 .about-content {
   display: flex;
   flex-wrap: wrap;
-  max-width: 100%;
+  max-width: 1200px;
   width: 100%;
-  /* justify-content: space-between; */
   align-items: center;
+  gap: 2rem;
 }
 
-/* Image Section */
 .about-image {
   flex: 1;
-  max-width: 40%;
-  height: 100%;
-  /* min-width: 400px; */
-  /* max-width: %; */
+  max-width: 500px;
+  width: 100%;
   text-align: center;
-  margin-top: 100px;
-  margin-right: 50px;
-  
 }
 
 .about-image img {
@@ -50,14 +43,13 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Text Section */
 .about-text {
   flex: 1;
-  max-width: 50%;
+  max-width: 600px;
+  width: 100%;
   padding: 20px;
 }
 
-/* Heading */
 .about-heading {
   font-size: 2.5rem;
   color: #333;
@@ -65,7 +57,13 @@
   position: relative;
 }
 
-/* Animated Underline */
+.about-text p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
 .underline {
   display: block;
   width: 100px;
@@ -74,21 +72,12 @@
   margin-top: 5px;
 }
 
-.about-text p {
-  font-size: 1.2rem;
-  color: #444;
-  line-height: 1.8;
-  margin-bottom: 15px;
-  margin-right: 150px;
-}
-
-/* CEO's Message Section */
+/* ========== CEO Section ========== */
 .ceo-container {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 80px 10%;
+  padding: 80px 5%;
   background-color: #fff;
 }
 
@@ -97,33 +86,30 @@
   flex-wrap: wrap;
   max-width: 1200px;
   width: 100%;
-  justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 
-/* Image Section */
 .ceo-image {
   flex: 1;
-  min-width: 300px;
   max-width: 450px;
+  width: 100%;
   text-align: center;
 }
 
 .ceo-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Text Section */
 .ceo-text {
   flex: 1;
-  max-width: 650px;
+  max-width: 600px;
   padding: 20px;
 }
 
-/* Heading */
 .ceo-heading {
   font-size: 2.5rem;
   color: #222;
@@ -132,7 +118,6 @@
   position: relative;
 }
 
-/* CEO's Quote */
 blockquote {
   font-size: 1.3rem;
   font-style: italic;
@@ -142,7 +127,6 @@ blockquote {
   padding-left: 15px;
 }
 
-/* CEO Name */
 .ceo-name {
   font-size: 1.2rem;
   font-weight: bold;
@@ -151,36 +135,79 @@ blockquote {
   text-align: right;
 }
 
-/* Responsive */
+.highlight {
+  color: #c00;
+}
+
+/* ========== Vision Section ========== */
+.vision-container {
+  width: 100%;
+  text-align: center;
+  padding: 60px 5%;
+}
+
+.vision-image {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.vision-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.vision-points {
+  list-style: none;
+  text-align: left;
+  padding-left: 1rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* ========== Mission Section ========== */
+#mission-section {
+  width: 100%;
+  padding: 60px 5%;
+  background-color: #f2f2f2;
+}
+
+.mission-points {
+  list-style: none;
+  padding-left: 1rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.mission-points li::before {
+  content: "✔";
+  margin-right: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+/* ========== Responsive Media Queries ========== */
 @media (max-width: 900px) {
-  .about-content, .ceo-content {
+  .about-content,
+  .ceo-content {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .about-heading,
+  .ceo-heading {
     text-align: center;
   }
 
   .ceo-name {
     text-align: center;
   }
-}
 
-/* Responsive Design */
-@media (max-width: 900px) {
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image {
-    max-width: 100%;
-  }
-
-  .about-text {
-    max-width: 100%;
-    padding: 20px 5%;
-  }
-
-  .about-heading {
-    text-align: center;
+  .vision-points,
+  .mission-points {
+    padding: 0 1rem;
   }
 
   .underline {
@@ -188,188 +215,31 @@ blockquote {
   }
 }
 
-/* Our Vision Section */
-.vision-container {
-  position: relative;
-  width: 100%;
-  /* height: 100vh; */
-  /* display: flex; */
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  /* background: url("../assets/airplane.jpg") no-repeat center center/cover; */
-  /* color: white; */
-  overflow: hidden;
-}
-
-/* Semi-transparent overlay */
-.vision-overlay {
-  background: rgba(0, 0, 0, 0.6);
-  /* padding: 50px; */
-  /* border-radius: 10px; */
-  width: 100%;
-  max-width: 70%;
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transform: translateY(50px);
-  margin-left: 50%;
-  /* max-height: 100%; */
-  /* align-items: right; */
-}
-
-/* Show animation when scrolled into view */
-.show .vision-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Heading */
-.vision-heading {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  position: relative;
-  margin-bottom: 20px;
-  color: white;
-}
-
-/* Animated underline effect */
-.underline {
-  display: block;
-  width: 0;
-  height: 4px;
-  background-color: #d01a1a;
-  margin: 8px auto;
-  transition: width 1s ease-in-out;
-}
-
-/* Expand underline when section is visible */
-.show .underline {
-  width: 100px;
-}
-
-/* Vision Points */
-.vision-points {
-  list-style: none;
-  /* padding: 0; */
-  text-align:left;
-  margin: 20px;
-  max-width:100%;
-  line-height: 35px;
-  font-size: 16px;
-  width: 100%;
-}
-
-.vision-image img{
-  height: 600px;
-  width: 1000px;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .vision-container {
-    padding: 20px;
+@media (max-width: 500px) {
+  .about-heading,
+  .ceo-heading {
+    font-size: 1.6rem;
   }
 
-  .vision-overlay {
-    width: 90%;
-    padding: 30px;
+  .about-text p,
+  .ceo-text p,
+  .mission-points li,
+  .vision-points li {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
-  .vision-heading {
-    font-size: 2.5rem;
+  .about-container,
+  .ceo-container,
+  #mission-section {
+    padding: 2rem 1rem;
   }
-}
 
+  .ceo-name {
+    text-align: center;
+  }
 
-/* Mission Section Container */
-#mission-section {
-  position: relative;
-  width: 100%;
-  /* padding: 80px 10%; */
-  background: url("../assets/cargoloading.avif") center/cover no-repeat; /* Change background image */
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-}
-
-/* Show Section when Active */
-#mission-section.show {
-  opacity: 1;
-}
-
-/* Overlay Effect */
-.mission-overlay {
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-  padding: 50px;
-  /* border-radius: 10px; */
-  max-width: 100%;
-  margin-right: 50%;
-}
-
-/* Mission Heading */
-.mission-heading {
-  font-size: 2.5rem;
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  position: relative;
-  display: inline-block;
-}
-
-/* Underline Effect for Heading */
-.mission-heading .underline {
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: red;
-  margin: 10px auto 0;
-}
-
-/* Mission Text */
-.mission-text {
-  font-size: 1.2rem;
-  color: #000000;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  max-width: 800px;
-  margin: auto;
-}
-
-/* Mission Points (List) */
-.mission-points {
-  list-style: none;
-  padding: 0;
-  max-width: 800px;
-  /* margin: 30px auto; */
-}
-
-.mission-points li {
-  font-size: 1.1rem;
-  color: rgb(0, 0, 0);
-  margin-bottom: 15px;
-  text-align: left;
-  position: relative;
-  padding-left: 30px;
-  line-height: 1.6;
-}
-
-/* Bullet Icon Before List Items */
-.mission-points li::before {
-  content: "✔"; /* Checkmark */
-  position: absolute;
-  left: 0;
-  color: red;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-/* Mission Bottom Text */
-.mission-bottom-text {
-  font-size: 1.5rem;
-  color: red;
-  font-weight: bold;
-  margin-top: 30px;
+  blockquote {
+    font-size: 1.1rem;
+  }
 }
