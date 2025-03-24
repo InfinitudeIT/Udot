@@ -166,7 +166,7 @@ const LoginPopup = ({ setShowLoginPopup }) => {
 
                     {/* Customer Login Form */}
           {!isSignup && isCustomerLogin && (
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleCustomerLogin}>
               {/* Step 1: Enter Mobile Number & Send OTP */}
               <label>Mobile Number</label>
               <input 

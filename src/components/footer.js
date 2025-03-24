@@ -1,8 +1,6 @@
 import React from "react";
 import "../css/footer.css"; // Import CSS for styling
-import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaVimeo, FaTimes, FaMapMarkerAlt, FaSearch, FaUser } from "react-icons/fa";
-import TermsOfUse from "../TermsofUse";
-import PrivacyPolicy from "../privacyPolicy";
+import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -55,9 +53,14 @@ function Footer() {
       {/* Bottom Copyright */}
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Urbandot Private Limited, All Rights Reserved.</p>
-        <a href="https://www.infinitudeit.com/" target="_blank" rel="noopener noreferrer">
-              Powered by InfintudeIT
-            </a>
+        <a
+          href="https://www.infinitudeit.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: 'white', textDecoration: 'none' }}
+        >
+          ⚡InfinitudeIT
+        </a>
         <div className="footer-links">
           <a href="/terms-of-use">Terms of Use</a>
           <span> | </span>

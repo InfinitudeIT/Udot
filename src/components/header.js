@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../css/header.css";
-import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaVimeo, FaTimes, FaMapMarkerAlt, FaSearch, FaUser ,FaChevronDown, FaShippingFast, FaTruck, FaUndo, FaRoute, FaHandshake, FaSearchLocation } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaVimeo, FaTimes, FaMapMarkerAlt, FaSearch, FaUser ,FaChevronDown, FaShippingFast, FaTruck, FaUndo, FaRoute, FaHandshake, FaSearchLocation,FaBars } from "react-icons/fa";
 import logo from "../assets/logo.png"
 import { Link } from 'react-router-dom';
 import LocationSearchPopup from "./LocationSearchPopup"; // Ensure correct import path
 import LoginPopup from "./loginPopup";
-import logo2 from "../assets/logo2.png"
+import logo2 from "../assets/logo2.png";
+import * as XLSX from 'xlsx';
+
+
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [hideTopBar, setHideTopBar] = useState(false);
@@ -21,6 +24,7 @@ function Header() {
   const [showPopup, setShowPopup] = useState(false);
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
   const dropdownRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   
   
@@ -134,152 +138,81 @@ function Header() {
 
       </div>
 
-      {/* MAIN NAVBAR */}
+      {/* Main Navbar */}
       <header className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="navbar-content">
+          {/* Logo */}
           <div className="logo">
-          <img 
-            src={isScrolled ? logo : logo2} 
-            alt="UrbanDot Logo" 
-            className="logo-image"
-          />
+            <Link to="/">
+            <img src={isScrolled ? logo : logo2} alt="UrbanDot Logo" />
+            </Link>
           </div>
-          <nav>
-          <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us</Link></li>
 
-              {/* Services Dropdown (Behaves Like Other Links) */}
+          {/* Hamburger Toggle */}
+          <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+
+          {/* Nav Links */}
+          <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
+            <ul>
+              <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+              <li><Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
+
+              {/* Dropdown */}
               <li className="dropdown-container" ref={dropdownRef}>
-                <Link to="/our-services"
+                <span
                   className="dropdown-trigger"
-                  onClick={(e) => {
-                    if (!showServicesDropdown) {
-                      e.preventDefault(); // Prevents navigation on first click
-                      setShowServicesDropdown(true);
-                    }
-                  }}
+                  onClick={() => setShowServicesDropdown(!showServicesDropdown)}
                 >
                   Services
-                </Link>
+                </span>
                 {showServicesDropdown && (
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link to="/services/Express">
-                        <FaShippingFast className="menu-icon" /> Express Courier Services
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/freight">
-                        <FaTruck className="menu-icon" /> Freight & Cargo Solutions
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/Reverse">
-                        <FaUndo className="menu-icon" /> Reverse Logistics & Returns Management
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/first-last-mile-delivery">
-                        <FaRoute className="menu-icon" /> First-Mile & Last-Mile Delivery
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/b2b-b2c-fulfillment">
-                        <FaHandshake className="menu-icon" /> B2B & B2C Logistics
-                      </Link>
-                    </li>
-                    {/* <li>
-                      <Link to="/our-services/ecommerce">
-                        <FaSearchLocation className="menu-icon" /> Technology-Driven Tracking & Support
-                      </Link>
-                    </li> */}
+                  <ul className="dropdown-menu show">
+                    <li><Link to="/services/Express" onClick={() => setMenuOpen(false)}><FaShippingFast className="menu-icon" /> Express Courier</Link></li>
+                    <li><Link to="/services/freight" onClick={() => setMenuOpen(false)}><FaTruck className="menu-icon" /> Freight & Cargo</Link></li>
+                    <li><Link to="/services/Reverse" onClick={() => setMenuOpen(false)}><FaUndo className="menu-icon" /> Reverse Logistics</Link></li>
+                    <li><Link to="/services/first-last-mile-delivery" onClick={() => setMenuOpen(false)}><FaRoute className="menu-icon" /> First/Last Mile</Link></li>
+                    <li><Link to="/services/b2b-b2c-fulfillment" onClick={() => setMenuOpen(false)}><FaHandshake className="menu-icon" /> B2B / B2C</Link></li>
                   </ul>
                 )}
               </li>
 
-
-              <li><Link to="/contact">Contact Us</Link></li>  
+              <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
             </ul>
 
+            {/* Buttons */}
+            <div className="nav-buttons">
+              <button className="enquiry-btn" onClick={() => { setShowTrackingPopup(true); setMenuOpen(false); }}>
+                Track Shipment
+              </button>
+              <button className="login-btn" onClick={() => { setShowLoginPopup(true); setMenuOpen(false); }}>
+                <FaUser />
+              </button>
+            </div>
           </nav>
-          <div className="nav-buttons">
-            <button className="enquiry-btn" onClick={() => setShowTrackingPopup(true)}>
-              Track Shipment
-            </button>
-            <button className="login-btn" onClick={() => setShowLoginPopup(true)}>
-              <FaUser />
-            </button>
-          </div>
         </div>
       </header>
 
-      {/* TRACKING POPUP */}
+      {/* Popups */}
+      {showLoginPopup && <LoginPopup setShowLoginPopup={setShowLoginPopup} />}
+      {showLocationPopup && (
+        <LocationSearchPopup
+          onClose={() => setShowLocationPopup(false)}
+          onStoreSelect={(selectedPincode) => {
+            handlePincodeSearch(selectedPincode);
+          }}
+        />
+      )}
       {showTrackingPopup && (
         <div className="popup-overlay">
           <div className="popup-content">
             <button className="close-btn" onClick={() => setShowTrackingPopup(false)}>×</button>
             <h2>Track Your Shipment</h2>
-            <input type="text" value={trackingNumber} onChange={(e) => setTrackingNumber(e.target.value)} placeholder="Enter tracking number" />
-            <button className="track-btn" onClick={handleTrackShipment}>Track Now</button>
+            <input type="text" placeholder="Enter tracking number" />
+            <button className="track-btn">Track Now</button>
           </div>
         </div>
-      )}
-
-      {/* LOGIN POPUP
-      {showLoginPopup && (
-        <div className="popup-overlay">
-          <div className="popup-content">
-            <button className="close-btn" onClick={() => setShowLoginPopup(false)}><FaTimes /></button>
-            <h2>Login</h2>
-            <form onSubmit={handleLogin}>
-              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="Email" />
-              <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder="Password" />
-              <button 
-                  type="submit"
-                  className="login-btn" 
-                  onClick={handleLogin} 
-                  style={{ 
-                    backgroundColor: "red", 
-                    color: "white", 
-                    border: "none", 
-                    padding: "12px 20px", 
-                    cursor: "pointer", 
-                    borderRadius: "5px", 
-                    fontSize: "16px", 
-                    fontWeight: "bold",
-                    width: "100%", // Make it full-width inside the form
-                    marginTop: "10px", // Add space above
-                    textAlign: "center",
-                    display: "block" // Ensure it doesn't shrink
-                  }}
-                >
-                  Login
-                </button>
-            </form>
-          </div>
-        </div>
-      )} */}
-
-        {showLoginPopup && <LoginPopup setShowLoginPopup={setShowLoginPopup} />}
-        {showLocationPopup && (
-        <LocationSearchPopup
-          onClose={() => setShowLocationPopup(false)}
-          onStoreSelect={(selectedPincode, selectedStores) => {
-            setShowLocationPopup(false);
-          }}
-        />
-        )}
-
-      {showLocationPopup && (
-        <LocationSearchPopup
-          onClose={() => setShowLocationPopup(false)}
-          onStoreSelect={(selectedPincode, selectedStores) => {
-            setPincode(selectedPincode);
-            setNearbyStores(selectedStores);
-            setShowStoreList(false); // Ensure dropdown does not appear twice
-          }}
-        />
       )}
     </>
   );

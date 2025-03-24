@@ -13,6 +13,10 @@
   }
 }
 
+body {
+  padding-top: 120px; /* Adjust based on combined height of top-navbar + header */
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -1,149 +1,134 @@
 
-       .top-navbar {
-          width: 100%;
-          background: rgb(24, 24, 70); /* Set background to red */
-          color: white;
-          display: flex;
-          justify-content: space-between;
-          padding: 10px 40px;
-          font-size: 14px;
-          align-items: center;
-          position: fixed;
-          top: 0;
-          left: 0;
-          z-index: 1001; /* Keep it above the main navbar */
-          transition: transform 0.4s ease-in-out;
-        }
+.top-navbar {
+  width: 100%;
+  background: rgb(24, 24, 70);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  transition: transform 0.4s ease-in-out;
+  flex-wrap: wrap;
+}
+.top-navbar.hide {
+  transform: translateY(-100%);
+}
         
-        /* Hide Top Navbar when scrolling down */
-        .top-navbar.hide {
-          transform: translateY(-100%);
-        }
-        
-        /* Space below top-navbar to prevent overlap */
-        body {
-          padding-top: 50px;
-        }
-        
-        /* Top Navbar Contact Info */
-        .contact-info span {
-          margin-right: 20px;
-          display: flex;
-          align-items: center;
-        }
-        
-        .contact-info span svg {
-          margin-right: 8px;
-        }
-        
-        .social-icons{
-          margin-right: 50px;
-        }
-        /* Social Media Icons */
-        .social-icons a {
-          color: white;
-          margin-right: 20px;
-          font-size: 16px;
-          transition: 0.3s;
-        }
-        
-        .social-icons a:hover {
-          color: #ff0000;
-        }
-        
-        /* ------------------ MAIN NAVBAR ------------------ */
-        .navbar {
-          position: fixed;
-          top: 40px; /* Adjusted to be right below top-navbar */
-          left: 0;
-          width: 100%;
-          padding: 15px 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          transition: all 0.4s ease-in-out;
-          background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-          z-index: 1000;
-          height: 70px;
-        }
-        
-        /* Navbar when scrolled */
-        .navbar.scrolled {
-          top: 0; /* Moves to the top when scrolling */
-          background: white;
-          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-          padding: 12px 40px;
-        }
-        
-        /* Navbar Content */
-        .navbar-content {
-          display: flex;
-          width: 100%;
-          align-items: center;
-          justify-content: space-between;
-          margin-right: 100px;
-        }
-        
-        /* Logo */
-        /* .logo img {
-          margin-top: 17px;
-          width: 200px;
-          height: 70px;
-        } */
-        
-        /* Navigation Menu */
-        nav {
-          flex-grow: 1;
-          display: flex;
-          justify-content: center;
-        }
-        
-        nav ul {
-          list-style: none;
-          display: flex;
-          gap: 30px;
-          padding: 0;
-          margin: 0;
-        }
-        
-        nav ul li a {
-          text-decoration: none;
-          font-size: 16px;
-          color: white;
-          transition: color 0.3s;
-          font-weight: 600;
-        }
-        
-        /* When navbar is scrolled, change link color */
-        .navbar.scrolled nav ul li a {
-          color: black;
-        }
-        
-        nav ul li a:hover {
-          color: red;
-        }
-        
-        /* ------------------ ENQUIRY BUTTON ------------------ */
-        .enquiry-btn {
-          background-color: red;
-          color: white;
-          padding: 0.5rem 1rem;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          font-size: 16px;
-          /* font-weight: bold; */
-          transition: 0.3s;
-          position: relative;
-          /* right: 50px; Moves button 120px to the left */
-          top: 0;
-          margin-left: 30px; /* More space from nav links */
-        }
-        
-        .enquiry-btn:hover {
-          background-color: rgb(60, 0, 0);
-        }
-        
+  .contact-info span {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .contact-info svg {
+    margin-right: 6px;
+  }
+.social-icons{
+   margin-right: 50px;
+ }
+
+ 
+ /* Social Media Icons */
+ .social-icons a {
+  color: white;
+  margin-left: 15px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  color: red;
+}
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  /* padding: 15px 40px; */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  height: 120px;
+}
+
+.navbar.scrolled {
+  top: 0;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo img {
+  max-width: 300px;
+  /* height: auto; */
+  transition: 0.3s;
+  margin-top: 30px;
+}
+.navbar.scrolled .logo img {
+  max-width: 300px;
+  margin-top: 30px;
+}
+nav.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  font-size: large;
+}
+nav ul li a,
+.dropdown-trigger {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.navbar.scrolled nav ul li a,
+.navbar.scrolled .dropdown-trigger {
+  color: black;
+}
+nav ul li a:hover,
+.dropdown-trigger:hover {
+  color: red;
+}
+.enquiry-btn {
+  background-color: red;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  /* font-weight: bold; */
+  transition: 0.3s;
+  position: relative;
+  /* right: 50px; Moves button 120px to the left */
+  top: 0;
+  margin-left: 30px; /* More space from nav links */
+}
+
+.enquiry-btn:hover {
+  background-color: rgb(60, 0, 0);
+}
+
         
         
         /* ------------------ RESPONSIVE DESIGN ------------------ */
@@ -158,6 +143,7 @@
             flex-direction: grid;
             align-items: center;
             padding: 10px 20px;
+            height: 100px;
             /* justify-content: space-evenly; */
           }
         
@@ -227,50 +213,6 @@
           transform: rotate(-45deg) translate(6px, -6px);
         }
         
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-          .menu-toggle {
-            display: block;
-          }
-        
-          .nav-menu {
-            position: fixed;
-            top: 120px;
-            left: -100%;
-            width: 100%;
-            height: calc(100vh - 120px);
-            background: white;
-            padding: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          }
-        
-          .nav-menu.active {
-            left: 0;
-          }
-        
-          .nav-menu ul {
-            flex-direction: column;
-            align-items: center;
-          }
-        
-          .nav-menu ul li {
-            margin: 15px 0;
-          }
-        
-          .nav-menu ul li a {
-            color: rgb(24, 24, 70);
-            font-size: 18px;
-          }
-        
-          .navbar-content {
-            justify-content: space-between;
-          }
-        
-          .nav-buttons {
-            margin-right: 0;
-          }
-        }
   /* [Previous styles remain the same...] */
                 .popup-overlay {
                   position: fixed;
@@ -423,7 +365,7 @@
                   width: 40px;
                   height: 40px;
                   border-radius: 50%;
-                  /* background:  #cc0000; */
+                  background:  #cc0000;
                   border: none;
                   color: rgb(24, 24, 70);
                   display: flex;
@@ -482,75 +424,132 @@
 /* Make Services behave like other navbar links */
 .dropdown-container {
   position: relative;
-  display: inline-block;
 }
-
-
-
-/* Ensure same hover effect as other navbar links */
-.dropdown-trigger:hover {
-  color: #f5f5f5 !important; /* Adjust based on navbar hover color */
-}
-
-/* Fix Dropdown Menu */
 .dropdown-menu {
   position: absolute;
-  top: 100%; /* Aligns below Services */
+  top: 120%;
   left: 0;
-  background: white; /* White background for visibility */
-  color: #333;
+  background: white;
   border-radius: 5px;
-  min-width: 300px;
-  z-index: 1000;
   padding: 10px 0;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  border: 1px solid #ddd;
-  display: none; /* Hide by default */
-  font-size: 10px;
+  min-width: 250px;
+  z-index: 999;
+  display: none;
 }
-
-/* Show dropdown when active */
-.dropdown-container:hover .dropdown-menu,
-.dropdown-container .dropdown-menu.show {
+.dropdown-menu.show {
   display: block;
 }
-
-/* Dropdown Menu Items */
-.dropdown-menu li {
-  list-style: none;
-}
-
-.dropdown-menu a {
-  display: block;
+.dropdown-menu li a {
+  display: flex;
+  align-items: center;
   padding: 10px 15px;
+  color: black;
   text-decoration: none;
-  color: #333;
-  transition: background 0.3s ease-in-out;
 }
-
-/* Hover Effect */
-.dropdown-menu a:hover {
-  background: #c6c6c6;
+.dropdown-menu li a:hover {
+  background: #f5f5f5;
 }
-
 .menu-icon {
-  margin-right: 10px;
-  color:rgb(24, 24, 70); /* Match the text color */
-  font-size: 1.2rem;
-  vertical-align: middle;
+  margin-right: 8px;
+  color: rgb(24, 24, 70);
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.enquiry-btn {
+  background-color: red;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login-btn {
+  background: white;
+  border: none;
+  font-size: 20px;
+  color: rgb(24, 24, 70);
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 
-.logo img {
-  height: 300px; /* Adjust as needed */
-  transition: opacity 0.3s ease-in-out; /* Smooth transition effect */
-  width: 400px;
-  margin-top: 17px;
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  z-index: 1002;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+.navbar.scrolled .menu-toggle {
+  color: black;
 }
 
-.navbar.scrolled .logo img {
-            margin-top: 15px;
-            width: 400px;
-            /* height: 100px; */
-            /* margin-left: 25px; */
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.nav-menu {
+    position: fixed;
+    top: 130px;
+    left: -150%;
+    flex-direction: column;
+    /* background: white; */
+    width: 100%;
+    height: calc(100vh - 100px);
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.5);
+    /* color: white; */
+  }
+
+  nav.nav-menu.active {
+    left: 0;
+    /* padding-top: 60px; */
+  }
+
+  .navbar.scrolled nav.nav-menu {
+    background: white; /* or whatever color you want */
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul li a,
+  .dropdown-trigger {
+    color: white;
+    font-size: 18px;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    /* margin-top: 2rem; */
+  }
+
+  nav.nav-menu ul li a {
+    display: block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid white; /* light underline */
+    text-decoration: none;
+  }
+  
+  .navbar.scrolled nav.nav-menu ul li a {
+    border-color: rgba(0, 0, 0, 0.3); /* slightly darker if scrolled */
+  }
+  
+
 }
