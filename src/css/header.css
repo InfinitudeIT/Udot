@@ -83,14 +83,15 @@ nav.nav-menu {
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-top: 30px;
+  top: 0; 
+  padding: 30px;
 }
 nav ul {
   display: flex;
   list-style: none;
   gap: 30px;
   margin: 0;
-  padding: 0;
+  padding-top: 2rem ;
   font-size: large;
 }
 nav ul li a,
@@ -109,21 +110,20 @@ nav ul li a:hover,
 .dropdown-trigger:hover {
   color: red;
 }
-.enquiry-btn {
+/* .enquiry-btn {
   background-color: red;
   color: white;
-  padding: 0.5rem 1rem;
+  padding-top: 2rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  /* font-weight: bold; */
   transition: 0.3s;
   position: relative;
-  /* right: 50px; Moves button 120px to the left */
+  
   top: 0;
-  margin-left: 30px; /* More space from nav links */
-}
+  margin-left: 30px;
+} */
 
 .enquiry-btn:hover {
   background-color: rgb(60, 0, 0);
@@ -396,12 +396,13 @@ nav ul li a:hover,
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  /* font-weight: bold; */
+  font-weight: bold;
   transition: 0.3s;
   position: relative;
-  /* right: 50px; Moves button 120px to the left */
+  right: 50px;
   top: 0;
-  margin-left: 30px; /* More space from nav links */
+  margin-left: 30px;
+  margin-top: 2rem;
 }
 
 .enquiry-btn:hover {
@@ -460,14 +461,14 @@ nav ul li a:hover,
   align-items: center;
   gap: 1rem;
 }
-.enquiry-btn {
+/* .enquiry-btn {
   background-color: red;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
+} */
 .login-btn {
   background: white;
   border: none;
@@ -475,6 +476,7 @@ nav ul li a:hover,
   color: rgb(24, 24, 70);
   cursor: pointer;
   margin-right: 20px;
+  margin-top: 2rem;
 }
 
 
