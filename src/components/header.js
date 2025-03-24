@@ -136,13 +136,16 @@ function Header() {
           <span><FaPhone /> 1800 570 1989</span>
           <span><FaEnvelope /> info@urbandot.in</span>
         </div>
-        <div className="location-search">
-          <div className="search-container" onClick={() => setShowLocationPopup(true)}>
-            <FaMapMarkerAlt className="location-icon" />
-            <input type="text" placeholder="Nearby Stores" readOnly />
-            <button><FaSearch /></button>
+        {window.innerWidth > 768 && (
+          <div className="location-search">
+            <div className="search-container" onClick={() => setShowLocationPopup(true)}>
+              <FaMapMarkerAlt className="location-icon" />
+              <input type="text" placeholder="Nearby Stores" readOnly />
+              <button><FaSearch /></button>
+            </div>
           </div>
-        </div>
+        )}
+
         <div className="social-icons">
         <a href="https://www.facebook.com/urbandotlogistics/" target="_blank" rel="noopener noreferrer">
           <FaFacebook />
@@ -202,6 +205,19 @@ function Header() {
               </li>
 
               <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
+              <li className="mobile-only">
+                <span
+                  className={`nearby-stores-link ${isScrolled ? "scrolled" : ""}`}
+                  onClick={() => {
+                    setShowLocationPopup(true);
+                    setMenuOpen(false);
+                  }}
+                >
+                  <span className="nearby-text">Nearby Stores</span>
+                </span>
+              </li>
+
+
             </ul>
 
             {/* Buttons */}

@@ -550,8 +550,43 @@ nav ul li a:hover,
   }
   
   .navbar.scrolled nav.nav-menu ul li a {
-    border-color: rgba(0, 0, 0, 0.3); /* slightly darker if scrolled */
+    border-color: black
   }
   
 
+}
+
+@media screen and (max-width: 768px) {
+  .location-search {
+    display: none;
+  }
+
+  .nav-menu ul li span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+/* Hide on desktop, show only on mobile */
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
+/* Default (not scrolled) */
+.nearby-stores-link .nearby-text {
+  color: white;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* When header is scrolled */
+.nearby-stores-link.scrolled .nearby-text {
+  color: black;
 }
