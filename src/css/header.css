@@ -509,10 +509,11 @@ nav ul li a:hover,
     /* background: white; */
     width: 100%;
     height: calc(100vh - 100px);
-    padding: 2rem;
+    /* padding: 2rem; */
     transition: all 0.3s ease-in-out;
     z-index: 999;
     overflow-y: auto;
+    justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     /* color: white; */
   }

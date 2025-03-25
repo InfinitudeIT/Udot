@@ -42,7 +42,7 @@ function Footer() {
         {/* Right Section - Newsletter Signup */}
         <div className="footer-section">
           {/* <h3>Service</h3> */}
-          <p>Enter your email address</p>
+          <h3>Enter your email address</h3>
           <form className="newsletter-form">
             <input type="email" placeholder="Your email for updates" />
             <button type="submit">Submit your request now</button>

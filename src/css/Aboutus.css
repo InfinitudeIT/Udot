@@ -23,7 +23,7 @@
 .about-content {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 80%;
   width: 100%;
   align-items: center;
   gap: 2rem;
@@ -154,7 +154,7 @@ blockquote {
 
 .vision-image img {
   width: 100%;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   border-radius: 10px;
 }
@@ -241,5 +241,6 @@ blockquote {
 
   blockquote {
     font-size: 1.1rem;
+    max-width: 90%;
   }
 }
