@@ -35,8 +35,7 @@ function Footer() {
           <p> Customer Support : 1800 570 1989</p>
           <p> Franchise Enquires : 9493979796</p>
           <p>info@urbandot.in</p>
-          <p>Flat #301, 3rd Floor, Mandhum Jade Towers,  
-           Nampally, Telangana 500082, India </p>
+          <p> #301, Manbhum Jade Towers, Somajiguda, Hyderabad, Telangana, 500082</p>
         </div>
 
         {/* Right Section - Newsletter Signup */}

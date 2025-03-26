@@ -186,7 +186,7 @@ const LoginPopup = ({ setShowLoginPopup }) => {
                     backgroundColor: "blue",
                     color: "white",
                     borderRadius: "15px",
-                    width: "90%",
+                    width: "95%",
                   }}
                 >
                   Send OTP
