@@ -150,7 +150,7 @@ function Header() {
         <a href="https://www.facebook.com/urbandotlogistics/" target="_blank" rel="noopener noreferrer">
           <FaFacebook />
         </a>
-        <a href="https://www.instagram.com/urbandotlogistics/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/urbandot_couriers_cargo/ " target="_blank" rel="noopener noreferrer">
           <FaInstagram />
         </a>
         <a href="https://x.com/urbandotIN" target="_blank" rel="noopener noreferrer">

@@ -104,14 +104,6 @@ main {
     font-weight: bold;
   }
   
-  .content {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    gap: 40px;
-    flex-wrap: wrap; /* Ensures responsiveness */
-    max-width: 80%;
-  }
   
   .column {
     flex: 1;
@@ -196,6 +188,7 @@ main {
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+    flex-wrap: wrap;
   }
   
   /* Left Side - Image */
@@ -403,7 +396,7 @@ main {
   }
 
   .track-btn {
-    width: 100%;
+    width: 95%;
     padding: 0.75rem;
     background: #ff0000;
     color: white;

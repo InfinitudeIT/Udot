@@ -121,8 +121,13 @@ const LoginPopup = ({ setShowLoginPopup }) => {
             >Agent Login</button>
             <button 
               className={isCustomerLogin ? "active" : ""} 
-              onClick={() => setIsCustomerLogin(true)}
-            >Customer Login</button>
+              onClick={() => {
+                setIsCustomerLogin(true);
+                window.location.href = "https://urbandot.elastic.run/portal/sign_up"; // replace with your URL
+              }}
+            >
+              Customer Login
+            </button>
           </div>
         )}
 
@@ -165,9 +170,8 @@ const LoginPopup = ({ setShowLoginPopup }) => {
           )}
 
                     {/* Customer Login Form */}
-          {!isSignup && isCustomerLogin && (
+          { /* !isSignup && isCustomerLogin && (
             <form onSubmit={handleCustomerLogin}>
-              {/* Step 1: Enter Mobile Number & Send OTP */}
               <label>Mobile Number</label>
               <input 
                 type="tel" 
@@ -180,7 +184,7 @@ const LoginPopup = ({ setShowLoginPopup }) => {
               {!otpSent ? (
                 <button 
                   type="button" 
-                  onClick={handleSendOTP}  // New function to send OTP
+                  onClick={handleSendOTP} 
                   className="login-btn"
                   style={{
                     backgroundColor: "blue",
@@ -193,7 +197,6 @@ const LoginPopup = ({ setShowLoginPopup }) => {
                 </button>
               ) : (
                 <>
-                  {/* Step 2: Enter OTP & Verify */}
                   <label>OTP</label>
                   <input 
                     type="text" 
@@ -219,7 +222,7 @@ const LoginPopup = ({ setShowLoginPopup }) => {
                 </>
               )}
             </form>
-          )}
+          ) */}
 
 
           {/* Agent Signup Form */}
