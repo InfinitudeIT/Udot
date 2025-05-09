@@ -16,40 +16,43 @@ function LocationSearchPopup({ onClose, onStoreSelect }) {
 
   const cityRef = useRef(null);
   const pincodeRef = useRef(null);
+  // const validLocations = formattedData.filter(loc => loc.city && loc.pincode);
+  //  setLocations(validLocations);
 
-  // 📌 Load Data from Excel (Ensure the file is in the `public` folder)
-  useEffect(() => {
-    const loadExcelData = async () => {
-      try {
-        setIsLoading(true);
-        const response = await fetch("/locations.xlsx");
-        const buffer = await response.arrayBuffer();
-        const workbook = XLSX.read(buffer, { type: "array" });
-        const sheetName = workbook.SheetNames[0];
-        const sheet = workbook.Sheets[sheetName];
-        const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
-        if (jsonData.length === 0) throw new Error("Excel sheet is empty");
+useEffect(() => {
+  const loadExcelData = async () => {
+    try {
+      setIsLoading(true);
+      const response = await fetch("/locations.xlsx");
+      const buffer = await response.arrayBuffer();
+      const workbook = XLSX.read(buffer, { type: "array" });
+      const sheetName = workbook.SheetNames[0];
+      const sheet = workbook.Sheets[sheetName];
+      const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
-        // 📌 Convert Rows into Object Format
-        const formattedData = jsonData.slice(1).map((row) => ({
-          city: row[1]?.trim() || "", // Column B - City Name
-          phone: row[2]?.toString().trim() || "N/A", // Column C - Phone Number
-          email: row[3]?.trim() || "N/A", // Column D - Email ID
-          address: row[4]?.trim() || "N/A", // Column E - Outlet Address
-          pincode: row[5]?.toString().trim() || "", // Column F - Pincode
-        }));
+      if (jsonData.length === 0) throw new Error("Excel sheet is empty");
 
-        setLocations(formattedData);
-      } catch (error) {
-        console.error("❌ Error loading locations file:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+      // 📌 Convert Rows into Object Format based on updated structure
+      const formattedData = jsonData.slice(1).map((row) => ({
+        city: row[1]?.toString().trim() || "",    // Outlet location
+        phone: row[2]?.toString().trim() || "N/A", // NUMBER
+        email: row[3]?.toString().trim() || "N/A", // MAIL
+        address: row[4]?.toString().trim() || "N/A", // Outlet address
+        pincode: row[5]?.toString().trim() || "",  // PIN CODE
+      }));
 
-    loadExcelData();
-  }, []);
+      setLocations(formattedData);
+    } catch (error) {
+      console.error("❌ Error loading locations file:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  loadExcelData();
+}, []);
+
 
   // 🔄 **Derived State for Cities and Pincodes**
   const availableCities = useMemo(() => [...new Set(locations.map((loc) => loc.city))], [locations]);
