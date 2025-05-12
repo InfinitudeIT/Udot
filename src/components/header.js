@@ -222,7 +222,9 @@ function Header() {
 
             {/* Buttons */}
             <div className="nav-buttons">
-              <button className="enquiry-btn" onClick={() => { setShowTrackingPopup(true); setMenuOpen(false); }}>
+              <button className="enquiry-btn" onClick={() =>{
+                window.location.href = "https://urbandot.elastic.run/portal/login";
+              }}>
                 Track Shipment
               </button>
               <button className="login-btn" onClick={() => { setShowLoginPopup(true); setMenuOpen(false); }}>
@@ -242,16 +244,6 @@ function Header() {
             handlePincodeSearch(selectedPincode);
           }}
         />
-      )}
-      {showTrackingPopup && (
-        <div className="popup-overlay">
-          <div className="popup-content">
-            <button className="close-btn" onClick={() => setShowTrackingPopup(false)}>×</button>
-            <h2>Track Your Shipment</h2>
-            <input type="text" placeholder="Enter tracking number" />
-            <button className="track-btn">Track Now</button>
-          </div>
-        </div>
       )}
     </>
   );

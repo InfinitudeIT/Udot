@@ -14,7 +14,7 @@ function Footer() {
           <a href="https://www.facebook.com/urbandotlogistics/" target="_blank" rel="noopener noreferrer">
           <FaFacebook />
             </a>
-            <a href="https://www.instagram.com/urbandot_couriers_cargo/ " target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/_couriers_cargo/ " target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
             <a href="https://x.com/urbandotIN" target="_blank" rel="noopener noreferrer">
@@ -23,9 +23,6 @@ function Footer() {
             <a href="https://www.linkedin.com/in/urbandot-courier-350130339/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
             </a>
-            {/* <a href="#" target="_blank" rel="noopener noreferrer">
-              <FaVimeo />
-            </a> */}
            </div>
         </div>
 
@@ -49,23 +46,28 @@ function Footer() {
         </div>
       </div>
 
-      {/* Bottom Copyright */}
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Urbandot Private Limited, All Rights Reserved.</p>
-        <a
-          href="https://www.infinitudeit.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: 'white', textDecoration: 'none' }}
-        >
-          ⚡InfinitudeIT
-        </a>
-        <div className="footer-links">
+        <div className="footer-left">
+          <p>© {new Date().getFullYear()} UrbanDot Private Limited, All Rights Reserved.</p>
+        </div>
+
+        <div className="footer-center">
+          <a
+            href="https://www.infinitudeit.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ⚡InfinitudeIT
+          </a>
+        </div>
+
+        <div className="footer-right">
           <a href="/terms-of-use">Terms of Use</a>
           <span> | </span>
           <a href="/privacy-policy">Privacy Policy</a>
         </div>
       </div>
+
     </footer>
   );
 }

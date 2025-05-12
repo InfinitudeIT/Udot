@@ -108,7 +108,7 @@ const AboutUs = () => {
     <section className="urb-ceo-vision-section">
       <div className="urb-ceo-layout" data-aos="fade-right">
         <div className="urb-ceo-image">
-          <img src={ceoImage} alt="CEO of Urbandot" />
+          <img src={ceoImage} alt="CEO of UrbanDot" />
           <h4 className="urb-ceo-name">
             Mr. Raparla Ravindranath Choudary
           </h4>
@@ -120,7 +120,7 @@ const AboutUs = () => {
             <span className="urb-ceo-highlight">
               “Mr. Raparla Ravindranath Choudary
             </span>
-            , CEO of Urbandot Couriers and Cargo Private Limited, come from a
+            , CEO of UrbanDot Couriers and Cargo Private Limited, come from a
             humble middle-class background with an unshakable passion for
             innovation and excellence in logistics.”
           </blockquote>
@@ -159,7 +159,7 @@ const AboutUs = () => {
         <div className="urb-vision-text">
           <h2>Our Vision</h2>
           <p className="vision-subtext">
-            At Urbandot, our vision is to be India’s most trusted and efficient logistics provider, seamlessly connecting people and businesses through technology-driven delivery solutions.
+            At UrbanDot, our vision is to be India’s most trusted and efficient logistics provider, seamlessly connecting people and businesses through technology-driven delivery solutions.
           </p>
           <div className="vision-grid">
             {visionPoints.map((item, index) => (
@@ -173,7 +173,7 @@ const AboutUs = () => {
             ))}
           </div>
           <p className="vision-footer">
-            <strong>Urbandot – Connecting India, One Delivery at a Time!</strong>
+            <strong>UrbanDot – Connecting India, One Delivery at a Time!</strong>
           </p>
         </div>
         <div className="urb-vision-image">
@@ -186,7 +186,7 @@ const AboutUs = () => {
       <div className="urb-mission-container" data-aos="fade-up">
         <h2>Our Mission</h2>
         <p className="urb-mission-intro">
-          At Urbandot Couriers and Cargo Private Limited, our mission is to revolutionize the logistics industry
+          At UrbanDot Couriers and Cargo Private Limited, our mission is to revolutionize the logistics industry
           by providing fast, reliable, and technology-driven courier and cargo services. We are committed to
           building a seamless delivery network that connects villages to metro cities, ensuring efficient and
           secure transportation of goods across India.
@@ -205,7 +205,7 @@ const AboutUs = () => {
         </div>
 
         <p className="urb-mission-outro">
-          <strong><em>Urbandot – Delivering Beyond Expectations!</em></strong>
+          <strong><em>UrbanDot – Delivering Beyond Expectations!</em></strong>
         </p>
       </div>
     </section>

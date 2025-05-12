@@ -10,7 +10,7 @@ const LoginPopup = ({ setShowLoginPopup }) => {
           <FaTimes />
         </button>
 
-        <h2 className="popup-title">Welcome to Urbandot</h2>
+        <h2 className="popup-title">Welcome to UrbanDot</h2>
         <p className="popup-subtitle">Access your account or create a new one</p>
 
         <div className="popup-button-group">

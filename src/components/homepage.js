@@ -39,11 +39,6 @@ function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleTrackShipment = () => {
-    // Add tracking logic here
-    console.log('Tracking shipment:', trackingNumber);
-    setShowTrackingPopup(false);
-  };
 
   return (
     <main>
@@ -58,30 +53,12 @@ function Home() {
           <div className="hero-content" data-aos="zoom-in" data-aos-delay="300">
             <h1>UrbanDot Services</h1>
             <p>Cargo and Courier Services</p>
-            <button className="cta-button" onClick={() => setShowTrackingPopup(true)}>Track your Shipment</button>
+            <button className="cta-button" onClick={() => {
+    window.location.href = "https://urbandot.elastic.run/portal/login";
+  }}>Track your Shipment</button>
           </div>
         </section>
 
-        {showTrackingPopup && (
-          <div className="popup-overlay" data-aos="fade-down">
-            <div className="popup-content">
-              <button className="close-btn" onClick={() => setShowTrackingPopup(false)}>×</button>
-              <h2>Track Your Shipment</h2>
-              <div className="form-group">
-                <label>Reference Number / Shipment ID:</label>
-                <input
-                  type="text"
-                  value={trackingNumber}
-                  onChange={(e) => setTrackingNumber(e.target.value)}
-                  placeholder="Enter your tracking number"
-                />
-              </div>
-              <button className="track-btn" onClick={handleTrackShipment}>
-                Track Now
-              </button>
-            </div>
-          </div>
-        )}
 
         <section className="trusted-partner" data-aos="fade-up" data-aos-duration="1200">
           <h2>Your Trusted Courier and Cargo Partner</h2>

@@ -31,7 +31,7 @@ max-width: 100%;
 
 .urb-about-text-content {
   max-width: 600px;
-  text-align: left;
+  text-align: justify;
 }
 
 .urb-about-text-content h2 {
@@ -48,6 +48,7 @@ max-width: 100%;
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 16px;
+  justify-content: space-evenly ;
 }
 
 /* Responsive */
@@ -58,7 +59,7 @@ max-width: 100%;
   }
 
   .urb-about-text-content {
-    text-align: center;
+    text-align: justify;
   }
 
   .urb-about-text-content h2 {
@@ -126,6 +127,7 @@ max-width: 100%;
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 18px;
+  text-align: justify;
 }
 
 @media screen and (max-width: 768px) {
@@ -217,6 +219,7 @@ max-width: 100%;
 .vision-card p {
   font-size: 14px;
   line-height: 1.5;
+  text-align: justify;
 }
 
 .vision-icon {
@@ -264,9 +267,6 @@ max-width: 100%;
     text-align: center;
   }
 }
-
-
-
 
 .urb-mission-wrapper {
   padding: 60px 20px;

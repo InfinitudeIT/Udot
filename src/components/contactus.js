@@ -101,7 +101,7 @@ const ContactUs = () => {
       <section className="contactpage-hero-section">
         <h1>GET IN TOUCH</h1>
         <p>
-          Urbandot is an innovative logistics solution for the delivery of small cargo.
+          UrbanDot is an innovative logistics solution for the delivery of small cargo.
           We’re here to help! Reach out to us for inquiries or support.
         </p>
       </section>

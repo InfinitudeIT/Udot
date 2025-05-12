@@ -185,7 +185,7 @@ const ReverseLogistics = () => {
       <section className="reverse-logistics-cta">
         <div className="reverse-logistics-cta-content">
           <h2>Ready to Optimize Your Reverse Logistics?</h2>
-          <p>Partner with Urbandot Couriers and Cargo for efficient, sustainable, and cost-effective solutions.</p>
+          <p>Partner with UrbanDot Couriers and Cargo for efficient, sustainable, and cost-effective solutions.</p>
           <button onClick={() => window.location.href = '/contact'}>Contact Us Today</button>
         </div>
       </section>

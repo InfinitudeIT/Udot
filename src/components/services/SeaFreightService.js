@@ -10,7 +10,7 @@ const SeaFreightService = () => {
         <div className="sea-freight-hero-content">
           <h1 className="sea-freight-hero-heading">Your Trusted Cargo Shipping Company Near You</h1>
           <p className="sea-freight-hero-subtext">
-          When cost is a priority or delivery time is flexible, Urbandot Couriers and Cargo provides reliable Freight & Cargo Solutions through our sea freight services. If you need to transport large or heavy shipments, our extensive network ensures smooth and cost-effective cargo movement. With regular weekly shipments, we offer high-capacity solutions, frequent departures, and competitive pricing. Our services connect major global ports, covering both intercontinental and short-sea routes.
+          When cost is a priority or delivery time is flexible, UrbanDot Couriers and Cargo provides reliable Freight & Cargo Solutions through our sea freight services. If you need to transport large or heavy shipments, our extensive network ensures smooth and cost-effective cargo movement. With regular weekly shipments, we offer high-capacity solutions, frequent departures, and competitive pricing. Our services connect major global ports, covering both intercontinental and short-sea routes.
           </p>
           <button className="sea-freight-hero-button" onClick={() => window.location.href = '/contact'}>
             Get a Quote
@@ -97,7 +97,7 @@ const SeaFreightService = () => {
       {/* Call to Action Section */}
       <section className="sea-freight-cta">
         <div className="sea-freight-cta-content" data-aos="zoom-in">
-          <h2>Ready to Ship with Urbandot?</h2>
+          <h2>Ready to Ship with UrbanDot?</h2>
           <p>Let us handle your freight with efficiency and care!</p>
           <button className="sea-freight-cta-button" onClick={() => window.location.href = '/contact'}>
             Contact Us Now
