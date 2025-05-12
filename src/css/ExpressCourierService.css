@@ -1,64 +1,64 @@
-.service-detail-container {
+.ecs-wrapper {
   width: 100%;
   overflow-x: hidden;
 }
 
 /* Hero Section */
-.hero-section {
+.ecs-hero {
   background: #c1c8d4;
   padding: 120px 5% 80px;
   text-align: center;
   position: relative;
 }
 
-.hero-content {
+.ecs-hero-content {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.hero-heading {
+.ecs-title {
   font-size: 3rem;
   color: #000;
   margin-bottom: 20px;
   font-weight: bold;
 }
 
-.hero-subtext {
+.ecs-subtext {
   font-size: 1.1rem;
   color: #333;
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
-.hero-button {
+.ecs-button {
   padding: 15px 30px;
   font-size: 1.1rem;
-  background: #d90000;
-  color: white;
+  background: red;
+  color:white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
-.hero-button:hover {
+.ecs-button:hover {
   background: #b00000;
 }
 
 /* Features Section */
-.features-section {
+.ecs-features {
   padding: 80px 5%;
   background: white;
 }
 
-.features-section h2 {
+.ecs-section-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 50px;
   color: #333;
 }
 
-.features-grid {
+.ecs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
@@ -66,50 +66,43 @@
   margin: 0 auto;
 }
 
-.feature-card {
+.ecs-card {
   padding: 30px;
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.feature-card:hover {
+.ecs-card:hover {
   transform: translateY(-5px);
 }
 
-.feature-icon {
+.ecs-icon {
   font-size: 2.5rem;
   color: #d90000;
   margin-bottom: 20px;
 }
 
-.feature-card h3 {
+.ecs-card h3 {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 15px;
 }
 
-.feature-card p {
+.ecs-card p {
   color: #666;
   line-height: 1.6;
 }
 
-/* Why Choose Us Section */
-.why-choose-section {
+/* Why Choose Us */
+.ecs-why-choose {
   padding: 80px 5%;
   background: #f8f9fa;
 }
 
-.why-choose-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-  color: #333;
-}
-
-.reasons-grid {
+.ecs-reasons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
@@ -117,7 +110,7 @@
   margin: 0 auto;
 }
 
-.reason-card {
+.ecs-reason {
   padding: 30px;
   background: white;
   border-radius: 10px;
@@ -125,42 +118,29 @@
   text-align: center;
 }
 
-.reason-icon {
-  font-size: 2.5rem;
-  color: #d90000;
-  margin-bottom: 20px;
-}
-
-.reason-card h3 {
+.ecs-reason h3 {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 15px;
 }
 
-.reason-card p {
+.ecs-reason p {
   color: #666;
   line-height: 1.6;
 }
 
-/* Booking Process Section */
-.booking-section {
+/* Booking Section */
+.ecs-booking {
   padding: 80px 5%;
   background: white;
 }
 
-.booking-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-  color: #333;
-}
-
-.booking-steps {
+.ecs-steps {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.step {
+.ecs-step {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
@@ -170,10 +150,10 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.step-number {
+.ecs-step-number {
   width: 40px;
   height: 40px;
-  background: #d90000;
+  background:#d90000;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -184,13 +164,13 @@
   flex-shrink: 0;
 }
 
-.step p {
+.ecs-step p {
   color: #333;
   font-size: 1.1rem;
   margin: 0;
 }
 
-.booking-note {
+.ecs-note {
   text-align: center;
   margin-top: 40px;
   padding: 20px;
@@ -202,90 +182,76 @@
   gap: 15px;
 }
 
-.note-icon {
+.ecs-note-icon {
   font-size: 2rem;
   color: #d90000;
 }
 
-/* Call to Action Section */
-.cta-section {
+/* CTA Section */
+.ecs-cta {
   padding: 80px 5%;
-  background: #d90000;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/website1.png');
+  background-size: cover;
+  background-position: center;
   color: white;
   text-align: center;
 }
 
-.cta-content {
+.ecs-cta-content {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.cta-content h2 {
+.ecs-cta-content h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.cta-content p {
+.ecs-cta-content p {
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
 
-.cta-button-Express {
-  padding: 15px 30px;
-  font-size: 1.1rem;
-  background: white;
-  color: #d90000;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #f0f0f0;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hero-heading {
+  .ecs-title {
     font-size: 2.5rem;
   }
 
-  .features-grid,
-  .reasons-grid {
+  .ecs-grid,
+  .ecs-reasons {
     grid-template-columns: 1fr;
   }
 
-  .step {
+  .ecs-step {
     flex-direction: column;
     text-align: center;
   }
 
-  .step-number {
-    margin: 0 0 15px 0;
+  .ecs-step-number {
+    margin-bottom: 15px;
   }
 
-  .booking-note {
+  .ecs-note {
     flex-direction: column;
   }
 
-  .cta-content h2 {
+  .ecs-cta-content h2 {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-heading {
+  .ecs-title {
     font-size: 2rem;
   }
 
-  .hero-button,
-  .cta-button {
+  .ecs-button {
     width: 100%;
   }
 
-  .feature-card,
-  .reason-card {
+  .ecs-card,
+  .ecs-reason {
     padding: 20px;
   }
-} 
+}

@@ -1,10 +1,10 @@
-.fulfillment-container {
+.ff-wrapper {
   width: 100%;
   overflow-x: hidden;
 }
 
 /* Hero Section */
-.fulfillment-hero {
+.ff-hero {
   background: linear-gradient(rgba(3, 3, 3, 0.7), rgba(66, 66, 66, 0.7)), url('../assets/b2b.jpg');
   background-size: cover;
   background-position: center;
@@ -14,69 +14,59 @@
   height: 500px;
 }
 
-.fulfillment-hero-content {
+.ff-hero-content {
   max-width: 1000px;
   margin: 0 auto;
   margin-top: 150px;
 }
 
-.fulfillment-hero-content h1 {
+.ff-hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
 }
 
-.fulfillment-hero-content h2 {
+.ff-hero-content h2 {
   font-size: 2rem;
   margin-bottom: 30px;
   color: #ffffff;
 }
 
-.fulfillment-container-p {
+.ff-intro-text {
   color: white;
 }
-/* Section Styles */
-.section-content {
+
+/* Generic Section Container */
+.ff-section-inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 80px 5%;
 }
 
-.b2b-section,
-.b2c-section {
-  background: white;
-}
-
-.comparison-section {
-  background: #f8f9fa;
-}
-
-.fulfillment-container h2 {
+.ff-wrapper h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  /* color: #333; */
 }
 
-.h3 {
+.ff-wrapper h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #333;
+  color: red;
 }
 
-.fulfillment-container p {
+.ff-wrapper p {
   font-size: 1.1rem;
   line-height: 1.6;
-  /* color: #000000; */
 }
 
-/* Considerations Grid */
-.considerations-grid {
+/* Cards / Grids */
+.ff-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 30px;
 }
 
-.consideration-item {
+.ff-item {
   background: white;
   padding: 30px;
   border-radius: 10px;
@@ -84,33 +74,29 @@
   text-align: center;
 }
 
-.icon {
+.ff-icon {
   font-size: 2.5rem;
   color: #d90000;
   margin-bottom: 20px;
 }
 
-/* Services & Benefits Lists */
-.services-list,
-.benefits-list {
+/* Services & Benefits */
+.ff-list {
   list-style: none;
   padding: 0;
   margin: 20px 0;
 }
 
-.services-list li,
-.benefits-list li {
-  padding: 15px;
+.ff-list li {
+  padding: 15px 30px 15px 30px;
   margin-bottom: 10px;
   background: #f8f9fa;
   border-radius: 5px;
   font-size: 1.1rem;
   position: relative;
-  padding-left: 30px;
 }
 
-.services-list li:before,
-.benefits-list li:before {
+.ff-list li::before {
   content: "✓";
   color: #d90000;
   position: absolute;
@@ -118,76 +104,98 @@
 }
 
 /* Comparison Table */
-.comparison-table {
+.ff-table-wrapper {
   overflow-x: auto;
   margin: 30px 0;
 }
 
-table {
+.ff-table {
   width: 100%;
   border-collapse: collapse;
   background: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
+.ff-table th,
+.ff-table td {
   padding: 15px;
   text-align: left;
   border-bottom: 1px solid #eee;
 }
 
-th {
+.ff-table th {
   background: #d90000;
   color: white;
 }
 
-tr:hover {
+.ff-table tr:hover {
   background: #f8f9fa;
 }
 
-/* Process Steps */
-.process-steps {
+/* Fulfillment Process */
+.ff-process-steps {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.process-step {
+.ff-step {
   background: white;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.step-comparison {
+.ff-step-comparison {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   margin-top: 20px;
 }
 
+.ff-step-box {
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.ff-step-box h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
 /* FAQ Section */
-.faq-grid {
+.ff-faq-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
-.faq-item {
+.ff-faq-item {
   background: white;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.faq-icon {
+.ff-faq-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.ff-faq-item p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.ff-faq-item .ff-icon {
   font-size: 2rem;
   color: #d90000;
   margin-bottom: 15px;
 }
 
 /* CTA Section */
-.fulfillment-cta {
+.ff-cta {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/user1boy.avif');
   background-size: cover;
   background-position: center;
@@ -196,25 +204,25 @@ tr:hover {
   text-align: center;
 }
 
-.cta-content {
+.ff-cta-inner {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.cta-features {
+.ff-cta-features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   margin: 40px 0;
 }
 
-.cta-feature {
+.ff-cta-box {
   background: rgba(255, 255, 255, 0.1);
   padding: 30px;
   border-radius: 10px;
 }
 
-.cta-content button {
+.ff-cta-btn {
   padding: 15px 30px;
   font-size: 1.1rem;
   background-color: #d90000;
@@ -225,40 +233,40 @@ tr:hover {
   transition: background-color 0.3s ease;
 }
 
-.cta-content button:hover {
+.ff-cta-btn:hover {
   background-color: #b30000;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .fulfillment-hero-content h1 {
+  .ff-hero-content h1 {
     font-size: 2.5rem;
   }
 
-  .fulfillment-hero-content h2 {
+  .ff-hero-content h2 {
     font-size: 1.5rem;
   }
 
-  .step-comparison {
+  .ff-step-comparison {
     grid-template-columns: 1fr;
   }
 
-  table {
+  .ff-table {
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  .fulfillment-hero-content h1 {
+  .ff-hero-content h1 {
     font-size: 2rem;
   }
 
-  .consideration-item,
-  .faq-item {
+  .ff-item,
+  .ff-faq-item {
     padding: 20px;
   }
 
-  .icon {
+  .ff-icon {
     font-size: 2rem;
   }
-} 
+}
