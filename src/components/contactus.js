@@ -74,7 +74,7 @@ const ContactUs = () => {
           <div className="contact-card">
             <FaMapMarkerAlt className="contact-icon" />
             <h3>REGIONAL OFFICE VIJAYAWADA</h3>
-            <p>D. No 8-103, Azad Street, Gollapudi, Vijayawada, NTR Dist., Andhra Pradesh 521225</p>
+            <p>#7-6, ABR Building, Opp Santhi Nagar, Rayanapadu, Vijayawada Rural, NTR Dist, Andhra Pradesh 521241</p>
           </div>
         </div>
       </section>
