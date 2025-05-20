@@ -11,6 +11,9 @@ import red from "../assets/website6.png";
 import truck from "../assets/truc.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import startupLogo from '../assets/Startup-India.jpg';
+import msmeLogo from '../assets/MSME.webp';
+
 
 function Home() {
   const [showTrackingPopup, setShowTrackingPopup] = useState(false);
@@ -156,7 +159,18 @@ function Home() {
           <img src={delivery} alt="Logistics and Shipping" data-aos="zoom-in" data-aos-delay="500"/>
           <img src={cargoImage} alt="Cargo Transport" data-aos="zoom-in" data-aos-delay="600"/>
         </div>
-        </section>
+    </section>
+    <div>
+
+  <div class="logos-section">
+<div className="logo">
+  <img src={msmeLogo} alt="MSME Logo" />
+</div>
+<div className="logo">
+  <img src={startupLogo} alt="Startup India Logo" />
+</div>
+</div>
+</div>
     </main>
   );
 }

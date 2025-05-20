@@ -439,3 +439,32 @@ main {
   .track-btn:hover {
     background: #cc0000;
   }
+
+  .logos-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px; /* space between logos */
+  flex-wrap: wrap;
+  /* margin-top: 20px; */
+  padding: 1.75rem;
+  animation: blink 5s infinite;
+}
+
+.logo img {
+  max-height: 200px;  /* Control the image height */
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .logo img {
+    max-height: 60px;
+  }
+}
+
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
