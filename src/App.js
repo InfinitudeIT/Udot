@@ -18,6 +18,7 @@ import SeaFreightServices from "./components/services/SeaFreightService";
 import ReverseLogistics from "./components/services/ReverseLogistics";
 import FirstLastMileDelivery from "./components/services/FirstLastMileDelivery";
 import B2BandB2CFulfillment from "./components/services/B2BandB2CFulfillment";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
         flexDirection: 'column', 
         minHeight: '100vh' 
       }}>
+        <ScrollToTop />
            <Header /> {/* Stays on all pages */}
               <main style={{ flex: 1 }}>
                 <Routes>

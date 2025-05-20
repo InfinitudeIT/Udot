@@ -216,8 +216,6 @@ function Header() {
                   <span className="nearby-text">Nearby Stores</span>
                 </span>
               </li>
-
-
             </ul>
 
             {/* Buttons */}

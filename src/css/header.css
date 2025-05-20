@@ -566,6 +566,7 @@ nav ul li a:hover,
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
   }
 }
 /* Hide on desktop, show only on mobile */

@@ -40,31 +40,25 @@ function Footer() {
           {/* <h3>Service</h3> */}
           <h3>Enter your email address</h3>
           <form className="newsletter-form">
-            <input type="email" placeholder="Your email for updates" />
+            <input
+              type="email"
+              className="centered-placeholder"
+              placeholder="Your email for updates"
+            />
             <button type="submit">Submit your request now</button>
           </form>
         </div>
       </div>
 
+      <hr className="footer-divider" />
+
       <div className="footer-bottom">
-        <div className="footer-left">
-          <p>© {new Date().getFullYear()} UrbanDot Private Limited, All Rights Reserved.</p>
-        </div>
-
-        <div className="footer-center">
-          <a
-            href="https://www.infinitudeit.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ⚡InfinitudeIT
-          </a>
-        </div>
-
-        <div className="footer-right">
-          <a href="/terms-of-use">Terms of Use</a>
-          <span> | </span>
-          <a href="/privacy-policy">Privacy Policy</a>
+        <p className="left">© {new Date().getFullYear()} Urbandot Private Limited, All Rights Reserved.</p>
+        <p className="center">
+          <a href="https://www.infinitudeit.com" target="_blank" rel="noopener noreferrer">⚡ InfinitudeIT</a>
+        </p>
+        <div className="right">
+          <a href="/terms-of-use">Terms of Use</a> | <a href="/privacy-policy">Privacy Policy</a>
         </div>
       </div>
 
