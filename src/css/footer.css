@@ -207,4 +207,11 @@
 .logo-icon {
   height: 80px;
   object-fit: contain;
+  width: 100px;
+}
+
+.logo-icon-1 {
+  height: 80px;
+  object-fit: contain;
+  width: 100px;
 }

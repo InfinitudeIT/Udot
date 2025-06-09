@@ -14,6 +14,7 @@ import 'aos/dist/aos.css';
 import startupLogo from '../assets/Startup-India.jpg';
 import msmeLogo from '../assets/MSME.webp';
 import CountUp from "react-countup";
+import { FaStore, FaMapMarkedAlt, FaWarehouse, FaUsers } from "react-icons/fa";
 
 
 function Home() {
@@ -43,12 +44,12 @@ function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-    const stats = [
-        { label: "Total Outlets", value: 150, suffix: "+" },
-        { label: "Areas Serving", value: 5000, suffix: "+" },
-        { label: "Hubs", value: 15, suffix: "+" },
-        { label: "Team Size", value: 200, suffix: "+" },
-    ];
+   const statsData = [
+  { value: 150, suffix: "+", label: "Total Outlets", icon: <FaStore size={30} color="#ff0000" /> },
+  { value: 5000, suffix: "+", label: "Areas Serving", icon: <FaMapMarkedAlt size={30} color="#ff0000" /> },
+  { value: 15, suffix: "+", label: "Hubs", icon: <FaWarehouse size={30} color="#ff0000" /> },
+  { value: 200, suffix: "+", label: "Team Size", icon: <FaUsers size={30} color="#ff0000" /> }
+];
 
   return (
     <main>
@@ -164,8 +165,9 @@ function Home() {
 
     <section className="counter-section" data-aos="fade-up">
         <div className="counter-grid">
-          {stats.map((stat, index) => (
+          {statsData.map((stat, index) => (
             <div key={index} className="counter-box">
+              <div className="icon">{stat.icon}</div>
               <h2>
                 <CountUp end={stat.value} duration={5} />{stat.suffix || ""}
               </h2>
