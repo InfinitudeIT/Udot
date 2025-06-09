@@ -13,6 +13,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import startupLogo from '../assets/Startup-India.jpg';
 import msmeLogo from '../assets/MSME.webp';
+import CountUp from "react-countup";
 
 
 function Home() {
@@ -42,6 +43,12 @@ function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+    const stats = [
+        { label: "Total Outlets", value: 150, suffix: "+" },
+        { label: "Areas Serving", value: 5000, suffix: "+" },
+        { label: "Hubs", value: 15, suffix: "+" },
+        { label: "Team Size", value: 200, suffix: "+" },
+    ];
 
   return (
     <main>
@@ -57,8 +64,8 @@ function Home() {
             <h1>UrbanDot Services</h1>
             <p>Cargo and Courier Services</p>
             <button className="cta-button" onClick={() => {
-    window.location.href = "https://urbandot.elastic.run/portal/login";
-  }}>Track your Shipment</button>
+                window.location.href = "https://urbandot.elastic.run/portal/login";
+              }}>Track your Shipment</button>
           </div>
         </section>
 
@@ -146,7 +153,31 @@ function Home() {
         </div>
       </section>
 
-        <section className="gallery" data-aos="fade-up">
+    <div class="logos-section">
+      <div className="logo">
+        <img src={msmeLogo} alt="MSME Logo" />
+      </div>
+      <div className="logo">
+        <img src={startupLogo} alt="Startup India Logo" />
+      </div>
+    </div>
+
+    <section className="counter-section" data-aos="fade-up">
+        <div className="counter-grid">
+          {stats.map((stat, index) => (
+            <div key={index} className="counter-box">
+              <h2>
+                <CountUp end={stat.value} duration={5} />{stat.suffix || ""}
+              </h2>
+              <h3>{stat.label}</h3>
+            </div>
+          ))}
+        </div>
+      </section>
+
+    
+
+    <section className="gallery" data-aos="fade-up">
           <h2>Gallery</h2>
           <p className="gallery-subtext">
             Explore our commitment to excellence in courier and cargo services.  </p>
@@ -162,14 +193,14 @@ function Home() {
     </section>
     <div>
 
-  <div class="logos-section">
-<div className="logo">
-  <img src={msmeLogo} alt="MSME Logo" />
-</div>
-<div className="logo">
-  <img src={startupLogo} alt="Startup India Logo" />
-</div>
-</div>
+    {/* <div class="logos-section">
+      <div className="logo">
+        <img src={msmeLogo} alt="MSME Logo" />
+      </div>
+      <div className="logo">
+        <img src={startupLogo} alt="Startup India Logo" />
+      </div>
+    </div> */}
 </div>
     </main>
   );

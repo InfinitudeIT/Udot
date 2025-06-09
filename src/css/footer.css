@@ -194,3 +194,17 @@
   margin: 20px 0;
   width: 100%;
 }
+
+
+
+.partner-logos {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.logo-icon {
+  height: 80px;
+  object-fit: contain;
+}

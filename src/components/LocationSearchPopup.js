@@ -181,8 +181,8 @@ useEffect(() => {
                   <div key={index} className="store-item">
                     <strong>{store.city} - {store.pincode}</strong>
                     <p><b>📍 Address:</b> {store.address}</p>
-                    <p><b>📞 Phone:</b> {store.phone}</p>
-                    <p><b>📧 Email:</b> {store.email}</p>
+                    {/* <p><b>📞 Phone:</b> {store.phone}</p>
+                    <p><b>📧 Email:</b> {store.email}</p> */}
                   </div>
                 ))}
               </div>

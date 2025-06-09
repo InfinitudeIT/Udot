@@ -1,6 +1,8 @@
 import React from "react";
 import "../css/footer.css"; // Import CSS for styling
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import startupLogo from '../assets/startupindia2.png';
+import msmeLogo from '../assets/MSME.webp';
 
 function Footer() {
   return (
@@ -24,6 +26,11 @@ function Footer() {
               <FaLinkedin />
             </a>
            </div>
+           <div className="partner-logos">
+            <img src={msmeLogo} alt="MSME Logo" className="logo-icon" />
+            <img src={startupLogo} alt="Startup India Logo" className="logo-icon" />
+          </div>
+
         </div>
 
         {/* Middle Section - Contact Info */}

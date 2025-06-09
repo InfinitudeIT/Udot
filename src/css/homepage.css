@@ -334,7 +334,7 @@ main {
 .gallery {
     text-align: center;
     padding: 60px 10%;
-    background: #f8f9fa;
+    /* background: #f8f9fa; */
   }
   
   .gallery h2 {
@@ -448,7 +448,7 @@ main {
   flex-wrap: wrap;
   /* margin-top: 20px; */
   padding: 1.75rem;
-  animation: blink 5s infinite;
+  /* animation: blink 5s infinite; */
 }
 
 .logo img {
@@ -467,4 +467,89 @@ main {
   0%   { opacity: 1; }
   50%  { opacity: 0; }
   100% { opacity: 1; }
+}
+
+
+
+
+.counter-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+.counter-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.counter-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.counter-subtext {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.counter-box {
+  background-color: #fff;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.counter-box:hover {
+  transform: translateY(-5px);
+}
+
+.counter-box h2 {
+  color: #ff0000;
+  font-size: 2.5rem;
+  /* margin: 0; */
+}
+
+.counter-box h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #4e4e4e;
+}
+
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .counter-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .counter-box h3 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-box {
+    flex: 1 1 100%;
+  }
+
+  .counter-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .counter-box h3 {
+    font-size: 0.9rem;
+  }
 }
