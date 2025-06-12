@@ -12,7 +12,7 @@ import truck from "../assets/truc.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import startupLogo from '../assets/Startup-India.jpg';
-import msmeLogo from '../assets/MSME.webp';
+import msmeLogo from '../assets/msme4.png';
 import CountUp from "react-countup";
 import { FaStore, FaMapMarkedAlt, FaWarehouse, FaUsers } from "react-icons/fa";
 

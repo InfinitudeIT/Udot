@@ -212,3 +212,10 @@
   width: auto; /* Let width follow natural aspect ratio */
   max-width: 120px; /* Optional cap */
 }
+
+.logo-icon2 {
+  height: 100px; /* Reduce height for better visual balance */
+  object-fit: contain;
+  width: auto; /* Let width follow natural aspect ratio */
+  max-width: 120px; /* Optional cap */
+}
