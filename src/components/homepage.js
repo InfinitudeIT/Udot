@@ -65,7 +65,7 @@ function Home() {
             <h1>UrbanDot Services</h1>
             <p>Cargo and Courier Services</p>
             <button className="cta-button" onClick={() => {
-                window.location.href = "https://urbandot.elastic.run/portal/login";
+                window.location.href = "https://navis.elastic.run/trackOrder";
               }}>Track your Shipment</button>
           </div>
         </section>

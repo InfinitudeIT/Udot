@@ -22,12 +22,12 @@ function Footer() {
             <a href="https://x.com/urbandotIN" target="_blank" rel="noopener noreferrer">
               <FaTwitter />
             </a>
-            <a href="https://www.linkedin.com/in/urbandot-courier-350130339/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/urbandot-couriers-and-cargo-350130339/ " target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
             </a>
            </div>
            <div className="partner-logos">
-            <img src={msmeLogo} alt="MSME Logo" className="logo-icon-1" />
+            <img src={msmeLogo} alt="MSME Logo" className="logo-icon" />
             <img src={startupLogo} alt="Startup India Logo" className="logo-icon" />
           </div>
 

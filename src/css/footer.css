@@ -199,19 +199,16 @@
 
 .partner-logos {
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  /* margin-top: 1rem; */
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* For better responsiveness */
 }
 
 .logo-icon {
-  height: 80px;
+  height: 80px; /* Reduce height for better visual balance */
   object-fit: contain;
-  width: 100px;
-}
-
-.logo-icon-1 {
-  height: 80px;
-  object-fit: contain;
-  width: 100px;
+  width: auto; /* Let width follow natural aspect ratio */
+  max-width: 120px; /* Optional cap */
 }

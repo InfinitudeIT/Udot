@@ -156,7 +156,7 @@ function Header() {
         <a href="https://x.com/urbandotIN" target="_blank" rel="noopener noreferrer">
           <FaTwitter />
         </a>
-        <a href="https://www.linkedin.com/in/urbandot-courier-350130339/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/urbandot-couriers-and-cargo-350130339/ " target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
       </div>
@@ -221,7 +221,7 @@ function Header() {
             {/* Buttons */}
             <div className="nav-buttons">
               <button className="enquiry-btn" onClick={() =>{
-                window.location.href = "https://urbandot.elastic.run/portal/login";
+                window.location.href = "https://navis.elastic.run/trackOrder";
               }}>
                 Track Shipment
               </button>
