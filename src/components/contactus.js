@@ -70,6 +70,20 @@ const ContactUs = () => {
             <p>CIN NO - U53200TS2024PTC187415</p>
             <p>#301, Manbhum Jade Towers, Somajiguda, Hyderabad, Telangana 500082</p>
           </div>
+          {/* Call Us Card */}
+          <div className="contact-card">
+            <FaPhoneAlt className="contact-icon" />
+            <h3>Call Us</h3>
+            <p>Customer Support: 1800 570 1989</p>
+            <p>Franchise Enquiries: 9493979796</p>
+          </div>
+          {/* Email Us Card */}
+          <div className="contact-card">
+            <FaEnvelope className="contact-icon" />
+            <h3>Email Us</h3>
+            <p>info@urbandot.in</p>
+            <p>partners@urbandot.in</p>
+          </div>
           <div className="contact-card">
             <FaMapMarkerAlt className="contact-icon" />
             <h3>REGIONAL OFFICE BENGALURU</h3>
@@ -85,21 +99,21 @@ const ContactUs = () => {
             <h3>REGIONAL OFFICE DELHI</h3>
             <p> #904, 9Th floor, Tower 2, Assotech Business Cresterra, Sector 135, Noida, Uttar Pradesh 201305</p>
           </div>
-          {/* Call Us Card */}
-          <div className="contact-card">
+</div>
+          {/* <div className="contact-card">
             <FaPhoneAlt className="contact-icon" />
             <h3>Call Us</h3>
             <p>Customer Support: 1800 570 1989</p>
             <p>Franchise Enquiries: 9493979796</p>
           </div>
-          {/* Email Us Card */}
+
           <div className="contact-card">
             <FaEnvelope className="contact-icon" />
             <h3>Email Us</h3>
             <p>info@urbandot.in</p>
             <p>partners@urbandot.in</p>
           </div>
-        </div>
+        </div> */}
       </section>      
       {/* Hero Section */}
       <section className="contactpage-hero-section">
