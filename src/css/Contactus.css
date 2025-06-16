@@ -6,39 +6,45 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  box-sizing: border-box;
 }
 
 /* ========== Hero Section ========== */
 .contactpage-hero-section {
   background: #f4f4f4;
-  padding: 50px 20px;
+  padding: 40px 20px;
   border-radius: 10px;
   margin-bottom: 30px;
   width: 100%;
   max-width: 900px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .contactpage-hero-section h1 {
   font-size: 2.5rem;
   color: #ff0000;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .contactpage-hero-section p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* ========== Contact Form ========== */
 .contactpage-form-section {
   background: #fff;
-  padding: 50px 30px;
+  padding: 40px 20px;
   width: 100%;
   max-width: 800px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .contactpage-form {
@@ -48,20 +54,19 @@
 }
 
 .contactpage-form-group {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .contactpage-form-group input,
 .contactpage-form-group select {
-  flex: 1;
+  width: 100%;
   padding: 15px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
-  width: 100%;
-  min-width: 200px;
+  box-sizing: border-box;
 }
 
 .contactpage-form textarea {
@@ -71,61 +76,84 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  resize: vertical;
+  box-sizing: border-box;
 }
 
 .contactpage-submit-btn {
   background: red;
   color: white;
   border: none;
-  padding: 15px;
+  padding: 15px 30px;
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s ease;
   width: fit-content;
-  align-self: flex-start;
+  align-self: center;
+  min-width: 200px;
 }
 
 .contactpage-submit-btn:hover {
   background: darkred;
+  transform: translateY(-2px);
 }
 
 /* ========== Contact Cards Section ========== */
 .contact-section {
-  background: url("../assets/contactus.jpg") no-repeat center center/cover;
+  /* background: url("../assets/contactus.jpg") no-repeat center center/cover; */
   width: 100%;
   max-width: 1200px;
-  padding: 50px;
+  padding: 50px 20px;
   border-radius: 10px;
   margin-bottom: 40px;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
+
 
 .contact-row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.contact-row.center {
-  justify-content: center;
-  gap: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  z-index: 2; /* Place content above the overlay */
 }
 
 .contact-card {
-  flex: 1;
-  min-width: 300px;
-  background: white;
+  background: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
   padding: 25px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(5px); /* Add blur effect for better readability */
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
 }
 
 .contact-icon {
   font-size: 28px;
   color: red;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
 }
 
 /* ========== Info Cards Section ========== */
@@ -168,72 +196,128 @@
   color: red;
 }
 
-/* ========== Responsive ========== */
-@media (max-width: 1024px) {
-  .contactpage-info-section,
-  .contact-row {
-    flex-direction: column;
-    align-items: center;
+/* ========== Responsive Styles ========== */
+@media (max-width: 1200px) {
+  .contact-section {
+    min-height: 90vh;
+    padding: 40px 15px;
   }
+  
+  .contactpage-hero-section h1 {
+    font-size: 2.2rem;
+  }
+}
 
-  .contactpage-submit-btn {
-    width: 70%;
-    text-align: center;
+@media (max-width: 992px) {
+  .contact-container {
+    padding: 130px 15px 40px;
+  }
+  
+  .contactpage-hero-section {
+    padding: 30px 15px;
+  }
+  
+  .contactpage-form-section {
+    padding: 30px 15px;
+  }
+  
+  .contact-section {
+    min-height: 80vh;
   }
 }
 
 @media (max-width: 768px) {
+  .contact-container {
+    padding: 120px 10px 30px;
+  }
+  
   .contactpage-hero-section h1 {
     font-size: 2rem;
   }
-
+  
+  .contactpage-hero-section p {
+    font-size: 1rem;
+  }
+  
+  .contact-section {
+    min-height: auto;
+    padding: 30px 15px;
+  }
+  
+  .contact-card {
+    background: rgba(255, 255, 255, 0.98); /* More opaque on mobile */
+  }
+  
+  .contact-card h3 {
+    font-size: 1.1rem;
+  }
+  
   .contactpage-form-group {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
-
-  .contactpage-form-group input,
-  .contactpage-form-group select {
-    max-width: 80%;
-    width: 100%;
-    margin: 0 auto;            /* ✅ center horizontally */
-    display: block;            /* ✅ required for margin auto to work */
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-
+  
   .contactpage-submit-btn {
-    width: 70%;
-    text-align: center;
-    align-self: center;
-  }
-
-  .contactpage-form textarea {
-    max-width: 70%;
     width: 100%;
-    margin: 0 auto;            /* ✅ center horizontally */
-    display: block;            /* ✅ required for margin auto to work */
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+    max-width: 300px;
   }
 }
 
 @media (max-width: 480px) {
-  .contactpage-hero-section h1 {
-    font-size: 1.6rem;
+  .contact-container {
+    padding: 100px 10px 20px;
   }
-
-  .contactpage-hero-section p,
-  .contactpage-info-card p {
+  
+  .contactpage-hero-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .contactpage-hero-section p {
     font-size: 0.95rem;
   }
-
+  
+  .contact-section {
+    padding: 20px 10px;
+  }
+  
+  .contact-card {
+    padding: 15px;
+  }
+  
+  .contact-card h3 {
+    font-size: 1rem;
+  }
+  
+  .contact-card p {
+    font-size: 0.9rem;
+  }
+  
   .contactpage-form-group input,
   .contactpage-form-group select,
+  .contactpage-form textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+  
   .contactpage-submit-btn {
     font-size: 0.95rem;
+    padding: 12px 25px;
   }
+}
+
+/* Add smooth transitions for better UX */
+.contact-card,
+.contactpage-form-group input,
+.contactpage-form-group select,
+.contactpage-form textarea,
+.contactpage-submit-btn {
+  transition: all 0.3s ease;
+}
+
+/* Add focus states for better accessibility */
+.contactpage-form-group input:focus,
+.contactpage-form-group select:focus,
+.contactpage-form textarea:focus {
+  outline: none;
+  border-color: red;
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.1);
 }
