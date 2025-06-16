@@ -101,7 +101,7 @@
 
 /* ========== Contact Cards Section ========== */
 .contact-section {
-  /* background: url("../assets/contactus.jpg") no-repeat center center/cover; */
+  background: url("../assets/contactus.jpg") no-repeat center center/cover;
   width: 100%;
   max-width: 1200px;
   padding: 50px 20px;
@@ -109,7 +109,7 @@
   margin-bottom: 40px;
   box-sizing: border-box;
   position: relative;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
 }

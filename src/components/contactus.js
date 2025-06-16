@@ -84,6 +84,18 @@ const ContactUs = () => {
             <p>info@urbandot.in</p>
             <p>partners@urbandot.in</p>
           </div>
+          </div>
+      </section>      
+      <section
+        className="contact-section"
+        style={{ backgroundImage: `url(${contactUsBg})` }}
+      >
+        <div className="contact-row">
+          <div className="contact-card">
+            <FaMapMarkerAlt className="contact-icon" />
+            <h3>REGIONAL OFFICE DELHI</h3>
+            <p> #904, 9Th floor, Tower 2, Assotech Business Cresterra, Sector 135, Noida, Uttar Pradesh 201305</p>
+          </div>
           <div className="contact-card">
             <FaMapMarkerAlt className="contact-icon" />
             <h3>REGIONAL OFFICE BENGALURU</h3>
@@ -94,26 +106,7 @@ const ContactUs = () => {
             <h3>REGIONAL OFFICE VIJAYAWADA</h3>
             <p>#7-6, ABR Building, Opp Santhi Nagar, Rayanapadu, Vijayawada Rural, NTR Dist, Andhra Pradesh 521241</p>
           </div>
-          <div className="contact-card">
-            <FaMapMarkerAlt className="contact-icon" />
-            <h3>REGIONAL OFFICE DELHI</h3>
-            <p> #904, 9Th floor, Tower 2, Assotech Business Cresterra, Sector 135, Noida, Uttar Pradesh 201305</p>
           </div>
-</div>
-          {/* <div className="contact-card">
-            <FaPhoneAlt className="contact-icon" />
-            <h3>Call Us</h3>
-            <p>Customer Support: 1800 570 1989</p>
-            <p>Franchise Enquiries: 9493979796</p>
-          </div>
-
-          <div className="contact-card">
-            <FaEnvelope className="contact-icon" />
-            <h3>Email Us</h3>
-            <p>info@urbandot.in</p>
-            <p>partners@urbandot.in</p>
-          </div>
-        </div> */}
       </section>      
       {/* Hero Section */}
       <section className="contactpage-hero-section">
