@@ -35,11 +35,11 @@ useEffect(() => {
 
       // 📌 Convert Rows into Object Format based on updated structure
       const formattedData = jsonData.slice(1).map((row) => ({
-        city: row[1]?.toString().trim() || "",    // Outlet location
-        phone: row[2]?.toString().trim() || "N/A", // NUMBER
-        email: row[3]?.toString().trim() || "N/A", // MAIL
-        address: row[4]?.toString().trim() || "N/A", // Outlet address
-        pincode: row[5]?.toString().trim() || "",  // PIN CODE
+        city: row[0]?.toString().trim() || "",    // Outlet location
+        phone: row[1]?.toString().trim() || "N/A", // NUMBER
+        email: row[2]?.toString().trim() || "N/A", // MAIL
+        address: row[3]?.toString().trim() || "N/A", // Outlet address
+        pincode: row[4]?.toString().trim() || "",  // PIN CODE
       }));
 
       setLocations(formattedData);
