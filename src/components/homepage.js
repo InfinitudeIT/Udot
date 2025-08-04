@@ -11,7 +11,7 @@ import red from "../assets/website6.png";
 import truck from "../assets/truc.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import startupLogo from '../assets/Startup-India.jpg';
+import startupLogo from '../assets/startup_resized.svg';
 import msmeLogo from '../assets/msme4.png';
 import CountUp from "react-countup";
 import { FaStore, FaMapMarkedAlt, FaWarehouse, FaUsers } from "react-icons/fa";
@@ -155,10 +155,10 @@ function Home() {
       </section>
 
     <div class="logos-section">
-      <div className="logo">
+      <div className="logox">
         <img src={msmeLogo} alt="MSME Logo" />
       </div>
-      <div className="logo">
+      <div className="logoy">
         <img src={startupLogo} alt="Startup India Logo" />
       </div>
     </div>

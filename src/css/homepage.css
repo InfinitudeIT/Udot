@@ -451,10 +451,15 @@ main {
   /* animation: blink 5s infinite; */
 }
 
-.logo img {
-  max-height: 200px;  /* Control the image height */
-  width: auto;
-  object-fit: contain;
+.logox img {
+  height: 200px;
+  width: 250px;
+
+}
+.logoy img {
+  height: 100px;
+  width: 270px;  /* Control the image height */
+
 }
 
 @media (max-width: 600px) {

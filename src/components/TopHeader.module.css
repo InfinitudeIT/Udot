@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(24, 24, 70);
+  color: #fff;
+  flex-wrap: wrap;
+  font-size: 14px;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.right a {
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.right a:hover {
+  color:red;
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 12px;
+  }
+
+  .left {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .right {
+    gap: 8px;
+  }
+
+  .right a {
+    font-size: 14px;
+  }
+}

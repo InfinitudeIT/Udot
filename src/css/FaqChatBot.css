@@ -1,8 +1,8 @@
 /* Chatbot Icon */
 .chatbot-icon {
   position: fixed;
-  bottom: 130px;
-  right: 20px;
+  bottom: 4.5rem;
+  right: 2rem;
   background-color: red;
   color: white;
   border-radius: 50px;

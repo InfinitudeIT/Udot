@@ -19,6 +19,7 @@ import ReverseLogistics from "./components/services/ReverseLogistics";
 import FirstLastMileDelivery from "./components/services/FirstLastMileDelivery";
 import B2BandB2CFulfillment from "./components/services/B2BandB2CFulfillment";
 import ScrollToTop from "./components/ScrollToTop";
+import TopHeader from "./components/TopHeader";
 
 function App() {
   useEffect(() => {
@@ -37,7 +38,8 @@ function App() {
         minHeight: '100vh' 
       }}>
         <ScrollToTop />
-           <Header /> {/* Stays on all pages */}
+        <TopHeader />
+        <Header />
               <main style={{ flex: 1 }}>
                 <Routes>
                   <Route index element={<Home />} /> {/* Home route */}

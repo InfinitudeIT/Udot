@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import "../css/header.css";
-import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaVimeo, FaTimes, FaMapMarkerAlt, FaSearch, FaUser ,FaChevronDown, FaShippingFast, FaTruck, FaUndo, FaRoute, FaHandshake, FaSearchLocation,FaBars } from "react-icons/fa";
+import "../css/Header2.css";
+import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaVimeo, FaTimes, FaMapMarkerAlt, FaSearch, FaSignInAlt ,FaChevronDown, FaShippingFast, FaTruck, FaUndo, FaRoute, FaHandshake, FaSearchLocation,FaBars } from "react-icons/fa";
 import logo from "../assets/logo.png"
 import { Link } from 'react-router-dom';
 import LocationSearchPopup from "./LocationSearchPopup"; // Ensure correct import path
@@ -130,7 +130,7 @@ function Header() {
 
   return (
     <>
-      {/* TOP NAVBAR */}
+      {/* TOP NAVBAR
       <div className={`top-navbar ${hideTopBar ? "hide" : ""}`}>
         <div className="contact-info">
           <span><FaPhone /> 1800 570 1989</span>
@@ -161,30 +161,26 @@ function Header() {
         </a>
       </div>
 
-      </div>
+      </div> */}
 
-      {/* Main Navbar */}
-      <header className={`navbar ${isScrolled ? "scrolled" : ""}`}>
+      {/* <header className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="navbar-content">
-          {/* Logo */}
           <div className="logo">
             <Link to="/">
             <img src={isScrolled ? logo : logo2} alt="UrbanDot Logo" />
             </Link>
           </div>
-
-          {/* Hamburger Toggle */}
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <FaTimes /> : <FaBars />}
+            <div className={`hamburger ${menuOpen ? 'active' : ''}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </button>
-
-          {/* Nav Links */}
           <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
             <ul>
               <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
               <li><Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
-
-              {/* Dropdown */}
               <li className="dropdown-container" ref={dropdownRef}>
                 <span
                   className="dropdown-trigger"
@@ -192,7 +188,6 @@ function Header() {
                 >
                   Services
                 </span>
-
                 {showServicesDropdown && (
                   <ul className="dropdown-menu show">
                     <li><Link to="/services/Express" onClick={() => setMenuOpen(false)}><FaShippingFast className="menu-icon" /> Express Courier</Link></li>
@@ -203,7 +198,6 @@ function Header() {
                   </ul>
                 )}
               </li>
-
               <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
               <li className="mobile-only">
                 <span
@@ -217,21 +211,134 @@ function Header() {
                 </span>
               </li>
             </ul>
-
-            {/* Buttons */}
             <div className="nav-buttons">
-              <button className="enquiry-btn" onClick={() =>{
+              <button className="enquiry-btn" onClick={() => {
                 window.location.href = "https://navis.elastic.run/trackOrder";
+                setMenuOpen(false);
               }}>
                 Track Shipment
               </button>
               <button className="login-btn" onClick={() => { setShowLoginPopup(true); setMenuOpen(false); }}>
-                <FaUser />
+                <FaSignInAlt />
               </button>
             </div>
           </nav>
         </div>
-      </header>
+      </header> */}
+
+  <header className={`navbar ${isScrolled ? "scrolled" : ""}`}>
+    <div className="navbar-content">
+<div className="navbar-left">
+    {/* Logo - left */}
+    <div className="logo">
+      <Link to="/">
+        <img src={isScrolled ? logo : logo2} alt="UrbanDot Logo" />
+      </Link>
+    </div>
+
+  </div>  
+
+    {/* Hamburger - visible on mobile/tablet only */}
+    <button className="menu-toggle mobile-only" onClick={() => setMenuOpen(!menuOpen)}>
+      <div className={`hamburger ${menuOpen ? 'active' : ''}`}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+
+    {/* Logo - left */}
+    {/* <div className="logo">
+      <Link to="/">
+        <img src={isScrolled ? logo : logo2} alt="UrbanDot Logo" />
+      </Link>
+    </div> */}
+
+    {/* Main Nav */}
+    <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
+
+      {/* Nav Links - center on desktop, collapsible on mobile */}
+      <ul>
+        {/* <li>  
+            <div className="logo">
+      <Link to="/">
+        <img src={isScrolled ? logo : logo2} alt="UrbanDot Logo" />
+      </Link>
+    </div></li> */}
+        <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+        <li><Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
+
+        {/* Services Dropdown */}
+        <li className="dropdown-container" ref={dropdownRef}>
+          <span className="dropdown-trigger" onClick={handleServicesClick}>
+            Services
+          </span>
+          {showServicesDropdown && (
+            <ul className="dropdown-menu show">
+              <li><Link to="/services/Express" onClick={() => setMenuOpen(false)}><FaShippingFast className="menu-icon" /> Express Courier</Link></li>
+              <li><Link to="/services/freight" onClick={() => setMenuOpen(false)}><FaTruck className="menu-icon" /> Freight & Cargo</Link></li>
+              <li><Link to="/services/Reverse" onClick={() => setMenuOpen(false)}><FaUndo className="menu-icon" /> Reverse Logistics</Link></li>
+              <li><Link to="/services/first-last-mile-delivery" onClick={() => setMenuOpen(false)}><FaRoute className="menu-icon" /> First/Last Mile</Link></li>
+              <li><Link to="/services/b2b-b2c-fulfillment" onClick={() => setMenuOpen(false)}><FaHandshake className="menu-icon" /> B2B / B2C</Link></li>
+            </ul>
+          )}
+        </li>
+
+        <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
+
+        {/* Mobile-only: Nearby Stores inside menu */}
+        <li className="mobile-only">
+          <span
+            className={`nearby-stores-link ${isScrolled ? "scrolled" : ""}`}
+            onClick={() => {
+              setShowLocationPopup(true);
+              setMenuOpen(false);
+            }}
+          >
+            <span className="nearby-text">Nearby Stores</span>
+          </span>
+        </li>
+      </ul>
+
+      {/* Buttons: Track & Login - desktop & inside mobile nav */}
+      <div className="nav-buttons">
+        <button
+          className="enquiry-btn"
+          onClick={() => {
+            window.location.href = "https://navis.elastic.run/trackOrder";
+            setMenuOpen(false);
+          }}
+        >
+          Track Shipment
+        </button>
+<div className="navbar-right">
+        {/* Desktop: Search Nearby Button */}
+        <button
+          className="search-button desktop-only"
+          onClick={() => {
+            setShowLocationPopup(true);
+            setMenuOpen(false);
+          }}
+        >
+          Nearby Stores
+        </button>
+
+        <button
+          className="login-btn"
+          onClick={() => {
+            setShowLoginPopup(true);
+            setMenuOpen(false);
+          }}
+        >
+          <FaSignInAlt />
+        </button>
+
+     </div>   
+      </div>
+    </nav>
+  </div>
+</header>
+
 
       {/* Popups */}
       {showLoginPopup && <LoginPopup setShowLoginPopup={setShowLoginPopup} />}

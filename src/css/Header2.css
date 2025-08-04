@@ -1,0 +1,387 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Top Navbar (optional if enabled) === */
+.top-navbar {
+  background-color: #111845;
+  color: white;
+  padding: 5px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.top-navbar.hide {
+  display: none;
+}
+
+.top-navbar .contact-info span,
+.top-navbar .social-icons a {
+  margin-right: 15px;
+  color: white;
+}
+
+.top-navbar .location-search {
+  margin-top: 5px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.search-container input {
+  border: none;
+  padding: 5px;
+  outline: none;
+}
+
+.search-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.location-icon {
+  color: #111845;
+  margin-right: 5px;
+}
+
+
+/* === Main Navbar === */
+.navbar {
+  position: absolute;
+  top:40px;
+  width: 100%;
+  z-index: 999;
+  background: transparent;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+}
+
+.navbar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: all 0.3s;
+  height: 80px;
+  box-shadow: none;
+}
+
+.navbar.scrolled {
+  position: fixed;
+  top: 0px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 300px; */
+   /* padding: 10px 16px; */
+  min-height: 60px;
+}
+
+/* Logo */
+.logo img {
+  height: 70px;
+  width: 200px;
+  display: block;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  margin-left: 100px; /* spacing between logo and menu */
+}
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  font-size: 18px;
+}
+
+.nav-menu ul li a,
+.nav-menu ul li span {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li span:hover {
+  text-decoration: underline;
+}
+
+/* === Dropdown === */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-trigger {
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  /* top: 30px; */
+  left: 0;
+  background-color: #222;
+  /* padding: 10px 0; */
+  border-radius: 4px;
+  display: none;
+  flex-direction: column;
+  width: 200px;
+  z-index: 1000;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+.dropdown-menu li {
+  padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  margin-right: 8px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: left;
+  gap: 100px;
+  margin-right: 50px;
+}
+
+/* === Nav Buttons === */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.enquiry-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+   line-height: 1.2;
+   margin-right:50px ;
+}
+
+.search-button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* === Hamburger === */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+}
+
+.hamburger {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+
+.hamburger span {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* === Responsive Styles === */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: inline-block;
+}
+
+@media (max-width: 1024px) {
+  .mobile-only {
+    display: inline-block !important;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left:0;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .nav-menu ul li,
+  .nav-menu ul li a,
+  .nav-menu ul li span {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .logo img {
+  height: 60px;
+  width: 180px;
+  display: block;
+  /* margin-inline-end: 150px; */
+}
+
+.navbar-left {
+margin: 10px;
+}  
+
+.navbar.scrolled nav.nav-menu {
+        background: #fff;
+        top: 70px;
+    }
+  .search-button,
+  .enquiry-btn,
+  .login-btn {
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .nearby-stores-link {
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+}
+
+
+.navbar.scrolled .search-button {
+  color: red;
+  border-color: red;
+}
+
+.navbar.scrolled .login-btn {
+  color: red;
+}
+
+.navbar.scrolled .hamburger span {
+  background-color: red;
+}
+
+.search-button,
+.login-btn,
+.hamburger span {
+  transition: all 0.3s ease;
+}

@@ -6,55 +6,56 @@ import msmeLogo from '../assets/msme3.png';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" aria-label="Site Footer">
       <div className="footer-container">
         {/* Left Section - Company Info */}
-        <div className="footer-section">
+        <section className="footer-section" aria-label="Company Info">
           <h1>URBANDOT</h1>
           <p>Reliable logistics for your parcel delivery needs.</p>
-          <div className="social-icons">
-          <a href="https://www.facebook.com/urbandotlogistics/" target="_blank" rel="noopener noreferrer">
-          <FaFacebook />
+          <nav className="social-icons" aria-label="Social Media Links">
+            <a href="https://www.facebook.com/urbandotlogistics/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <FaFacebook />
             </a>
-            <a href="https://www.instagram.com/_couriers_cargo/ " target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/_couriers_cargo/ " target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FaInstagram />
             </a>
-            <a href="https://x.com/urbandotIN" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/urbandotIN" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <FaTwitter />
             </a>
-            <a href="https://www.linkedin.com/in/urbandot-couriers-and-cargo-350130339/ " target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/urbandot-couriers-and-cargo-350130339/ " target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
-           </div>
-           <div className="partner-logos">
+          </nav>
+          <div className="partner-logos" aria-label="Certifications and Partners">
             <img src={msmeLogo} alt="MSME Logo" className="logo-icon" />
             <img src={startupLogo} alt="Startup India Logo" className="logo-icon2" />
           </div>
-
-        </div>
+        </section>
 
         {/* Middle Section - Contact Info */}
-        <div className="footer-section">
+        <section className="footer-section" aria-label="Contact Information">
           <h3>Contact</h3>
-          <p> Customer Support : 1800 570 1989</p>
-          <p> Franchise Enquires : 9493979796</p>
-          <p>info@urbandot.in</p>
-          <p> #301, Manbhum Jade Towers,<br></br> Somajiguda, Hyderabad, Telangana, 500082</p>
-        </div>
+          <address>
+            <p>Customer Support : 1800 570 1989</p>
+            <p>Franchise Enquires : 9493979796</p>
+            <p>Email: info@urbandot.in</p>
+            <p>#301, Manbhum Jade Towers,<br />Somajiguda, Hyderabad, Telangana, 500082</p>
+          </address>
+        </section>
 
         {/* Right Section - Newsletter Signup */}
-        <div className="footer-section">
-          {/* <h3>Service</h3> */}
+        <section className="footer-section" aria-label="Newsletter Signup">
           <h3>Enter your email address</h3>
-          <form className="newsletter-form">
+          <form className="newsletter-form" autoComplete="off">
             <input
               type="email"
               className="centered-placeholder"
               placeholder="Your email for updates"
+              aria-label="Email address for newsletter"
             />
             <button type="submit">Submit your request now</button>
           </form>
-        </div>
+        </section>
       </div>
 
       <hr className="footer-divider" />
@@ -64,11 +65,10 @@ function Footer() {
         <p className="center">
           <a href="https://www.infinitudeit.com" target="_blank" rel="noopener noreferrer">⚡ InfinitudeIT</a>
         </p>
-        <div className="right">
+        <nav className="right" aria-label="Footer Navigation">
           <a href="/terms-of-use">Terms of Use</a> | <a href="/privacy-policy">Privacy Policy</a>
-        </div>
+        </nav>
       </div>
-
     </footer>
   );
 }
