@@ -17,7 +17,7 @@ const ExpressCourierService = () => {
         <div className="ecs-hero-content">
           <h1 className="ecs-title">Fast & Secure Express Courier Services</h1>
           <p className="ecs-subtext">
-            Urbandot is a trusted express courier service that helps individuals and businesses 
+            Urbandot is a trusted express couriers service that helps individuals and businesses 
             send parcels, documents, and packages quickly and safely. Unlike regular postal services, 
             Urbandot provides faster deliveries, better security, and real-time tracking.
           </p>
@@ -29,7 +29,7 @@ const ExpressCourierService = () => {
 
       {/* Features Section */}
       <section className="ecs-features">
-        <h2 className="ecs-section-title">Features of UrbanDot Express Courier Services</h2>
+        <h2 className="ecs-section-title">Features of UrbanDot Express Couriers Services</h2>
         <div className="ecs-grid">
           <div className="ecs-card" data-aos="fade-up">
             <FaClock className="ecs-icon" />
@@ -56,7 +56,7 @@ const ExpressCourierService = () => {
 
       {/* Why Choose Us Section */}
       <section className="ecs-why-choose">
-        <h2 className="ecs-section-title">Why Choose UrbanDot Express Courier Services?</h2>
+        <h2 className="ecs-section-title">Why Choose UrbanDot Express Couriers Services?</h2>
         <div className="ecs-reasons">
           <div className="ecs-reason" data-aos="fade-right">
             <FaClock className="ecs-icon" />

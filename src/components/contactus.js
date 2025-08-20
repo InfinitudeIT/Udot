@@ -66,7 +66,7 @@ const ContactUs = () => {
         <div className="contact-row">
           <div className="contact-card">
             <FaMapMarkerAlt className="contact-icon" />
-            <h3>HEAD OFFICE - <br /> URBANDOT COURIER AND CARGO PRIVATE LIMITED</h3>
+            <h3>HEAD OFFICE - <br /> URBANDOT COURIERS AND CARGO PRIVATE LIMITED</h3>
             <p>CIN NO - U53200TS2024PTC187415</p>
             <p>#301, Manbhum Jade Towers, Somajiguda, Hyderabad, Telangana 500082</p>
           </div>

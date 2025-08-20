@@ -20,7 +20,7 @@ const AboutUs = () => {
     {
       icon: <FaClock className="vision-icon red" />,
       title: "Ensure Reliability & Speed",
-      text: "Delivering secure, timely, and cost-effective courier and cargo services.",
+      text: "Delivering secure, timely, and cost-effective couriers and cargo services.",
     },
     {
       icon: <FaBoxOpen className="vision-icon blue" />,
@@ -187,7 +187,7 @@ const AboutUs = () => {
         <h2>Our Mission</h2>
         <p className="urb-mission-intro">
           At UrbanDot Couriers and Cargo Private Limited, our mission is to revolutionize the logistics industry
-          by providing fast, reliable, and technology-driven courier and cargo services. We are committed to
+          by providing fast, reliable, and technology-driven couriers and cargo services. We are committed to
           building a seamless delivery network that connects villages to metro cities, ensuring efficient and
           secure transportation of goods across India.
         </p>

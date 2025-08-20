@@ -16,7 +16,7 @@ const OurServices = () => {
       {/* Page Header */}
       <section className="services-header" data-aos="fade-down">
         <h1>Logistics Solutions</h1>
-        <p>Reliable courier and cargo services for timely deliveries nationwide and worldwide.</p>
+        <p>Reliable couriers and cargo services for timely deliveries nationwide and worldwide.</p>
       </section>
 
       {/* Cargo Delivery Section */}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../css/Header2.css";
-import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaVimeo, FaTimes, FaMapMarkerAlt, FaSearch, FaSignInAlt ,FaChevronDown, FaShippingFast, FaTruck, FaUndo, FaRoute, FaHandshake, FaSearchLocation,FaBars } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaVimeo, FaTimes, FaMapMarkerAlt, FaSearch, FaUser, FaChevronDown, FaShippingFast, FaTruck, FaUndo, FaRoute, FaHandshake, FaSearchLocation,FaBars } from "react-icons/fa";
 import logo from "../assets/logo.png"
 import { Link } from 'react-router-dom';
 import LocationSearchPopup from "./LocationSearchPopup"; // Ensure correct import path
@@ -311,6 +311,18 @@ function Header() {
         >
           Track Shipment
         </button>
+        
+        {/* Book Now Button */}
+        <button
+          className="book-now-btn"
+          onClick={() => {
+            setShowLoginPopup(true);
+            setMenuOpen(false);
+          }}
+        >
+          Book Now
+        </button>
+        
 <div className="navbar-right">
         {/* Desktop: Search Nearby Button */}
         <button
@@ -330,7 +342,7 @@ function Header() {
             setMenuOpen(false);
           }}
         >
-          <FaSignInAlt />
+          <FaUser />
         </button>
 
      </div>   

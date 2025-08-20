@@ -15,12 +15,14 @@ import startupLogo from '../assets/startup_resized.svg';
 import msmeLogo from '../assets/msme4.png';
 import CountUp from "react-countup";
 import { FaStore, FaMapMarkedAlt, FaWarehouse, FaUsers } from "react-icons/fa";
+import LoginPopup from "./loginPopup";
 
 
 function Home() {
   const [showTrackingPopup, setShowTrackingPopup] = useState(false);
   const [trackingNumber, setTrackingNumber] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showLoginPopup, setShowLoginPopup] = useState(false);
 
   useEffect(() => {
     // Initialize AOS
@@ -63,8 +65,11 @@ function Home() {
 
           <div className="hero-content" data-aos="zoom-in" data-aos-delay="300">
             <h1>UrbanDot Services</h1>
-            <p>Cargo and Courier Services</p>
-            <button className="cta-button" onClick={() => {
+            <p>Cargo and Couriers Services</p>
+            <button className="cta-button book-btn" onClick={() => {
+                setShowLoginPopup(true);
+              }}>Book Now</button>
+            <button className="cta-button track-btn" onClick={() => {
                 window.location.href = "https://navis.elastic.run/trackOrder";
               }}>Track your Shipment</button>
           </div>
@@ -72,12 +77,12 @@ function Home() {
 
 
         <section className="trusted-partner" data-aos="fade-up" data-aos-duration="1200">
-          <h2>Your Trusted Courier and Cargo Partner</h2>
+          <h2>Your Trusted Couriers and Cargo Partner</h2>
           <div className="content">
             <div className="column" data-aos="fade-right" data-aos-delay="200">
               <h3>Excellence in Delivery Services</h3>
               <p>
-                At Urbandot, we specialize in reliable courier and cargo services,
+                At Urbandot, we specialize in reliable couriers and cargo services,
                 ensuring your parcels are delivered safely and on time, backed by
                 a dedicated team committed to customer satisfaction.
               </p>
@@ -182,7 +187,7 @@ function Home() {
     <section className="gallery" data-aos="fade-up">
           <h2>Gallery</h2>
           <p className="gallery-subtext">
-            Explore our commitment to excellence in courier and cargo services.  </p>
+            Explore our commitment to excellence in couriers and cargo services.  </p>
 
         <div className="gallery-grid">
           <img src={user1boy} alt="Cargo Plane" data-aos="zoom-in" data-aos-delay="100"/>
@@ -203,7 +208,11 @@ function Home() {
         <img src={startupLogo} alt="Startup India Logo" />
       </div>
     </div> */}
-</div>
+    </div>
+    
+    {/* Login Popup */}
+    {showLoginPopup && <LoginPopup setShowLoginPopup={setShowLoginPopup} />}
+    
     </main>
   );
 }

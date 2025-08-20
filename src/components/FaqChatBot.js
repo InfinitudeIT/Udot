@@ -4,14 +4,48 @@ import { FaRobot, FaTimes } from "react-icons/fa";
 
 // ✅ Define FAQs only once
 const faqData = [
-  { pattern: /(cancel|order cancellation|cancel my order)/i, response: "To cancel your order, please visit your account or contact support." },
-  { pattern: /(track|tracking|track my order)/i, response: "You can track your order using the tracking ID provided via email." },
-  { pattern: /(refund|money back|return policy)/i, response: "Our refund process takes 5-7 business days. Please visit our refund policy page for more details." },
-  { pattern: /(hi|hello|hey)/i, response: "Hi! How can I assist you today?" },
-  { pattern: /(delivery time|how long|shipping duration | ship )/i, response: "Standard delivery takes 3-5 business days." },
-  { pattern: /(contact support|customer service|help desk)/i, response: "You can contact our support team at support@urbandot.com." },
-  { pattern: /(working hours|business hours)/i, response: "Our working hours are 9 AM - 6 PM, Monday to Saturday." }
+  {
+    pattern: /(cancel|order cancellation|cancel my order)/i,
+    response: "You can cancel your order from your account dashboard or by reaching out to our support team."
+  },
+  {
+    pattern: /(track|tracking|track my order|where is my order)/i,
+    response: "Tracking details are available in your confirmation email or account. Let me know if you need help locating it."
+  },
+  {
+    pattern: /(return|return policy|return my package)/i,
+    response: "We offer an easy return process. You can start it from your order history or contact support for guidance."
+  },
+  {
+    pattern: /(hi|hello|hey|good morning|good evening)/i,
+    response: "Hello! 👋 How can I assist you today?"
+  },
+  {
+    pattern: /(shipping status|has my order shipped|dispatch)/i,
+    response: "Once your order is shipped, you'll receive an update with tracking info. Need help checking it?"
+  },
+  {
+    pattern: /(contact support|customer service|speak to someone|get help)/i,
+    response: "You can reach our support team directly at support@urbandot.com or use the contact form on our website."
+  },
+  {
+    pattern: /(change address|update delivery address)/i,
+    response: "You can update your delivery address before the order is shipped. Check your order settings or message support."
+  },
+  {
+    pattern: /(package damaged|item broken|received wrong item)/i,
+    response: "We're here to help! Please report any issues through your order page or send us a message with a photo."
+  },
+  {
+    pattern: /(account issues|can't login|reset password)/i,
+    response: "You can reset your password from the login page. If you're still stuck, support can assist you further."
+  },
+  {
+    pattern: /(services|what do you offer|available options)/i,
+    response: "We offer couriers and cargo services for individuals and businesses. Want help choosing the right option?"
+  }
 ];
+
 
 // ✅ Function to match predefined responses
 const detectIntent = (userInput) => {
