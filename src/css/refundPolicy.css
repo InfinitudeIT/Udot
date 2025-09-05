@@ -1,0 +1,78 @@
+.refund-policy-container {
+    max-width: 100%;
+    margin: 150px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Arial", sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.refund-policy-container h1 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 15px;
+    border-bottom: 3px solid red;
+    padding-bottom: 10px;
+}
+
+.refund-policy-container h2 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.refund-policy-container p {
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.refund-policy-container ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.refund-policy-container li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.refund-policy-container ul ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.refund-policy-container strong {
+    font-weight: bold;
+    color: #444;
+}
+
+.refund-policy-container a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.refund-policy-container a:hover {
+    text-decoration: underline;
+}
+
+.important-note {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.important-note p {
+    margin: 0;
+    color: #856404;
+    font-weight: bold;
+}

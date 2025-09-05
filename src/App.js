@@ -13,6 +13,7 @@ import FaqChatBot from "./components/FaqChatBot";
 import ContactUs from "./components/contactus";
 import TermsOfUse from "./TermsofUse";
 import PrivacyPolicy from "./privacyPolicy";
+import RefundPolicy from "./RefundPolicy";
 import ExpressCourierService from "./components/services/ExpressCourierService";
 import SeaFreightServices from "./components/services/SeaFreightService";
 import ReverseLogistics from "./components/services/ReverseLogistics";
@@ -49,6 +50,7 @@ function App() {
                   <Route path="/contact" element={<ContactUs />} />
                   <Route path="/terms-of-use" element={<TermsOfUse />} />
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                  <Route path="/refund-policy" element={<RefundPolicy />} />
                   <Route path="/services/Express" element={<ExpressCourierService/>}/>
                   <Route path="/services/freight" element={<SeaFreightServices/>}/>
                   <Route path="/services/Reverse" element={<ReverseLogistics/>}/>

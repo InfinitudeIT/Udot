@@ -66,7 +66,7 @@ function Footer() {
           <a href="https://www.infinitudeit.com" target="_blank" rel="noopener noreferrer">⚡ InfinitudeIT</a>
         </p>
         <nav className="right" aria-label="Footer Navigation">
-          <a href="/terms-of-use">Terms of Use</a> | <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-use">Terms of Use</a> | <a href="/privacy-policy">Privacy Policy</a> | <a href="/refund-policy">Refund Policy</a>
         </nav>
       </div>
     </footer>
