@@ -21,6 +21,7 @@ import FirstLastMileDelivery from "./components/services/FirstLastMileDelivery";
 import B2BandB2CFulfillment from "./components/services/B2BandB2CFulfillment";
 import ScrollToTop from "./components/ScrollToTop";
 import TopHeader from "./components/TopHeader";
+import Careers from "./components/Careers";
 
 function App() {
   useEffect(() => {
@@ -56,6 +57,7 @@ function App() {
                   <Route path="/services/Reverse" element={<ReverseLogistics/>}/>
                   <Route path="/services/first-last-mile-delivery" element={<FirstLastMileDelivery/>}/>
                   <Route path="/services/b2b-b2c-fulfillment" element={<B2BandB2CFulfillment/>}/>
+                  <Route path="/careers" element={<Careers />} />
                   {/* <Route path="*" element={<NotFound />} /> Catch all for 404 pages */}
                 </Routes>
               </main>

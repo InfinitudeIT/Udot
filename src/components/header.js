@@ -284,6 +284,7 @@ function Header() {
           )}
         </li>
 
+        <li><Link to="/careers" onClick={() => setMenuOpen(false)}>Careers</Link></li>
         <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
 
         {/* Mobile-only: Nearby Stores inside menu */}

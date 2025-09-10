@@ -1,0 +1,156 @@
+.careers-page {
+  width: 100%;
+}
+
+.careers-hero {
+  background: #00093d;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.careers-hero .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.careers-hero h1 {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.careers-hero p {
+  font-size: 18px;
+  color: #e6e6e6;
+  margin-bottom: 24px;
+}
+
+.apply-btn {
+  display: inline-block;
+  background: #ff0000;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.apply-btn:hover {
+  background: #cc0000;
+}
+
+.apply-btn.secondary {
+  background: transparent;
+  border: 2px solid #ff0000;
+  color: #ff0000;
+}
+
+.benefits, .openings, .cta {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.benefits .container, .openings .container, .cta .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefits h2, .openings h2, .cta h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.benefits-list .check {
+  color: #28a745;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.job-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.job-card h3 {
+  margin: 0 0 8px 0;
+}
+
+.job-card .meta {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.job-card .meta-item svg {
+  margin-right: 6px;
+}
+
+.job-card .summary {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.job-apply {
+  display: inline-block;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.job-apply:hover {
+  background: #ff0000;
+  color: #fff;
+}
+
+.cta p {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.cta .apply-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .careers-hero h1 {
+    font-size: 30px;
+  }
+  .benefits h2, .openings h2, .cta h2 {
+    font-size: 26px;
+  }
+}
+
+
