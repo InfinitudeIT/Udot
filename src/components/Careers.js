@@ -6,7 +6,7 @@ function Careers() {
   const openings = [
     {
       id: 1,
-      title: "Marketting Executive",
+      title: "Marketing Executive",
       location: "Hyderabad, IN",
       type: "Full-time",
       experience: "1-2 years",
@@ -16,7 +16,7 @@ function Careers() {
     },
     {
       id: 2,
-      title: "Marketting Executive",
+      title: "Marketing Executive",
       location: "Telanagana, IN",
       type: "Full-time",
       experience: "1-2 years",
@@ -26,7 +26,7 @@ function Careers() {
     },
     {
       id: 3,
-      title: "Marketting Executive",
+      title: "Marketing Executive",
       location: "Andhra Pradesh, IN",
       type: "Full-time",
       experience: "0-2 years",
@@ -36,7 +36,7 @@ function Careers() {
     },
     {
       id: 4,
-      title: "Marketting Executive",
+      title: "Marketing Executive",
       location: "Bangalore , IN",
       type: "Full-time",
       experience: "0-2 years",
@@ -46,7 +46,7 @@ function Careers() {
     },
     {
       id: 5,
-      title: "Marketting Executive",
+      title: "Marketing Executive",
       location: "Noida , IN",
       type: "Full-time",
       experience: "0-2 years",

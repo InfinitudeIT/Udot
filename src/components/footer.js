@@ -34,27 +34,17 @@ function Footer() {
 
         {/* Middle Section - Contact Info */}
         <section className="footer-section" aria-label="Contact Information">
-          <h3>Contact</h3>
+        </section>
+
+        {/* Right Section - Newsletter Signup */}
+        <section className="footer-section" aria-label="Newsletter Signup">
+           <h3>Contact</h3>
           <address>
             <p>Customer Support : 1800 570 1989</p>
             <p>Franchise Enquires : 9493979796</p>
             <p>Email: info@urbandot.in</p>
             <p>#301, Manbhum Jade Towers,<br />Somajiguda, Hyderabad, Telangana, 500082</p>
           </address>
-        </section>
-
-        {/* Right Section - Newsletter Signup */}
-        <section className="footer-section" aria-label="Newsletter Signup">
-          <h3>Enter your email address</h3>
-          <form className="newsletter-form" autoComplete="off">
-            <input
-              type="email"
-              className="centered-placeholder"
-              placeholder="Your email for updates"
-              aria-label="Email address for newsletter"
-            />
-            <button type="submit">Submit your request now</button>
-          </form>
         </section>
       </div>
 
