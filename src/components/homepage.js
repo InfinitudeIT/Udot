@@ -16,7 +16,8 @@ import msmeLogo from '../assets/msme4.png';
 import CountUp from "react-countup";
 import { FaStore, FaMapMarkedAlt, FaWarehouse, FaUsers } from "react-icons/fa";
 import LoginPopup from "./loginPopup";
-
+import gstLogo from "../assets/Brand Logo.png";
+import gstLogo2 from "../assets/Brand Logo (1).png";
 
 function Home() {
   const [showTrackingPopup, setShowTrackingPopup] = useState(false);
@@ -47,8 +48,8 @@ function Home() {
   }, []);
 
    const statsData = [
-  { value: 150, suffix: "+", label: "Total Outlets", icon: <FaStore size={30} color="#ff0000" /> },
-  { value: 5000, suffix: "+", label: "Areas Serving", icon: <FaMapMarkedAlt size={30} color="#ff0000" /> },
+  { value: 250, suffix: "+", label: "Total Outlets", icon: <FaStore size={30} color="#ff0000" /> },
+  { value: 9000, suffix: "+", label: "Areas Serving", icon: <FaMapMarkedAlt size={30} color="#ff0000" /> },
   { value: 15, suffix: "+", label: "Hubs", icon: <FaWarehouse size={30} color="#ff0000" /> },
   { value: 200, suffix: "+", label: "Team Size", icon: <FaUsers size={30} color="#ff0000" /> }
 ];
@@ -160,11 +161,17 @@ function Home() {
       </section>
 
     <div class="logos-section">
+    <div className="logow">
+        <img src={gstLogo} alt="GST Logo" />
+      </div>
       <div className="logox">
         <img src={msmeLogo} alt="MSME Logo" />
       </div>
       <div className="logoy">
         <img src={startupLogo} alt="Startup India Logo" />
+      </div>
+      <div className="logoz">
+        <img src={gstLogo} alt="GST Logo" />
       </div>
     </div>
 

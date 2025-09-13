@@ -526,6 +526,11 @@ main {
   /* animation: blink 5s infinite; */
 }
 
+.logow img {
+  height: 250px;
+  width: 250px;  /* Control the image height */
+
+}
 .logox img {
   height: 200px;
   width: 250px;
@@ -533,7 +538,13 @@ main {
 }
 .logoy img {
   height: 100px;
-  width: 270px;  /* Control the image height */
+  width: 250px;  /* Control the image height */
+
+}
+
+.logoz img {
+  height: 250px;
+  width: 250px;  /* Control the image height */
 
 }
 

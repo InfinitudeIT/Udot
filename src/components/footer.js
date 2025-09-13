@@ -51,10 +51,7 @@ function Footer() {
       <hr className="footer-divider" />
 
       <div className="footer-bottom">
-        <p className="left">© {new Date().getFullYear()} Urbandot Private Limited, All Rights Reserved.</p>
-        <p className="center">
-          <a href="https://www.infinitudeit.com" target="_blank" rel="noopener noreferrer">⚡ InfinitudeIT</a>
-        </p>
+        <p className="left">© {new Date().getFullYear()} Urbandot Couriers and Cargos Private Limited, All Rights Reserved.</p>
         <nav className="right" aria-label="Footer Navigation">
           <a href="/terms-of-use">Terms of Use</a> | <a href="/privacy-policy">Privacy Policy</a> | <a href="/refund-policy">Refund Policy</a>
         </nav>

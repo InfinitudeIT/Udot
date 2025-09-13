@@ -29,7 +29,8 @@ const ContactUs = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8000/feedback/", {
+      const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8000";
+      const response = await fetch(`${API_BASE_URL}/feedback/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

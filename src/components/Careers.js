@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCheckCircle, FaMapMarkerAlt, FaClock, FaBriefcase, FaMoneyBillWave } from "react-icons/fa";
+import JobApplicationForm from "./JobApplicationForm";
 import "../css/Careers.css";
 
 function Careers() {
@@ -128,17 +129,19 @@ function Careers() {
 
       <section className="cta" data-aos="fade-up" data-aos-delay="200">
         <div className="container">
-          <h2>Didn’t find a fit?</h2>
+          <h2>Didn't find a fit?</h2>
           <p>
-            We’re always looking for passionate team players. Send your resume to
+            We're always looking for passionate team players. Send your resume to
             <a href="mailto:hr@urbandot.in"> hr@urbandot.in</a> with the subject
-            “Open Application”.
+            "Open Application".
           </p>
           <a className="apply-btn secondary" href="mailto:hr@urbandot.in?subject=Open Application - UrbanDot">
             Share your profile
           </a>
         </div>
       </section>
+
+      <JobApplicationForm />
     </div>
   );
 }
