@@ -36,7 +36,7 @@ app = FastAPI(title="Urbandot Backend", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[origin.strip() for origin in ALLOWED_ORIGINS if origin.strip()],
+    allow_origins=["https://urbandot.in", "https://www.urbandot.in"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
