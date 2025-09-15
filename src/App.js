@@ -9,7 +9,7 @@ import "./css/header.css"; // Import header styles
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import Footer from "./components/footer";
-import FaqChatBot from "./components/FaqChatBot";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import ContactUs from "./components/contactus";
 import TermsOfUse from "./TermsofUse";
 import PrivacyPolicy from "./privacyPolicy";
@@ -61,7 +61,7 @@ function App() {
                   {/* <Route path="*" element={<NotFound />} /> Catch all for 404 pages */}
                 </Routes>
               </main>
-              <FaqChatBot />
+              <FloatingWhatsApp />
               <Footer />
             </div>
           </Router>

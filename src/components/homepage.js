@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "../css/homepage.css"; // Import CSS for styling
 import videoBg from "../assets/background.mp4"; // Import video
 import delivery from "../assets/website15.png"; // Import the image
@@ -24,6 +24,34 @@ function Home() {
   const [trackingNumber, setTrackingNumber] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
   const [showLoginPopup, setShowLoginPopup] = useState(false);
+  const carouselSlides = useMemo(() => ([
+    {
+      title: "Pan-India Courier & Cargo",
+      subtitle: "Fast, reliable, and secure deliveries for businesses and individuals.",
+      ctaText: "Get a Quote",
+      ctaHref: "/contact"
+    },
+    {
+      title: "Express & Freight Solutions",
+      subtitle: "From documents to bulk cargo — we move it all with care.",
+      ctaText: "Our Services",
+      ctaHref: "/our-services"
+    },
+    {
+      title: "Real-time Tracking",
+      subtitle: "Stay updated with live tracking for your shipments.",
+      ctaText: "Track Shipment",
+      ctaHref: "https://navis.elastic.run/trackOrder"
+    }
+  ]), []);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
+    }, 4000);
+    return () => clearInterval(intervalId);
+  }, [carouselSlides.length]);
 
   useEffect(() => {
     // Initialize AOS
@@ -65,14 +93,58 @@ function Home() {
           </div>
 
           <div className="hero-content" data-aos="zoom-in" data-aos-delay="300">
-            <h1>UrbanDot Services</h1>
-            <p>Cargo and Couriers Services</p>
-            <button className="cta-button book-btn" onClick={() => {
-                setShowLoginPopup(true);
-              }}>Book Now</button>
-            <button className="cta-button track-btn" onClick={() => {
-                window.location.href = "https://navis.elastic.run/trackOrder";
-              }}>Track your Shipment</button>
+            <div className="carousel">
+              {carouselSlides.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`carousel-slide ${index === currentSlide ? "active" : ""}`}
+                  aria-hidden={index !== currentSlide}
+                >
+                  <h1>{slide.title}</h1>
+                  <p>{slide.subtitle}</p>
+                  <div className="carousel-actions">
+                    <button
+                      className="cta-button book-btn"
+                      onClick={() => {
+                        if (slide.ctaHref.startsWith("http")) {
+                          window.location.href = slide.ctaHref;
+                        } else {
+                          window.location.href = slide.ctaHref;
+                        }
+                      }}
+                    >
+                      {slide.ctaText}
+                    </button>
+                  </div>
+                </div>
+              ))}
+
+              <div className="carousel-dots">
+                {carouselSlides.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`dot ${index === currentSlide ? "active" : ""}`}
+                    aria-label={`Go to slide ${index + 1}`}
+                    onClick={() => setCurrentSlide(index)}
+                  />
+                ))}
+              </div>
+
+              <button
+                className="carousel-arrow left"
+                aria-label="Previous slide"
+                onClick={() => setCurrentSlide((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length)}
+              >
+                ‹
+              </button>
+              <button
+                className="carousel-arrow right"
+                aria-label="Next slide"
+                onClick={() => setCurrentSlide((prev) => (prev + 1) % carouselSlides.length)}
+              >
+                ›
+              </button>
+            </div>
           </div>
         </section>
 
@@ -191,7 +263,7 @@ function Home() {
 
     
 
-    <section className="gallery" data-aos="fade-up">
+    {/* <section className="gallery" data-aos="fade-up">
           <h2>Gallery</h2>
           <p className="gallery-subtext">
             Explore our commitment to excellence in couriers and cargo services.  </p>
@@ -204,7 +276,7 @@ function Home() {
           <img src={delivery} alt="Logistics and Shipping" data-aos="zoom-in" data-aos-delay="500"/>
           <img src={cargoImage} alt="Cargo Transport" data-aos="zoom-in" data-aos-delay="600"/>
         </div>
-    </section>
+    </section> */}
     <div>
 
     {/* <div class="logos-section">

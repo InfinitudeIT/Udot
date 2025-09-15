@@ -59,6 +59,110 @@ main {
     z-index: 1;
 }
 
+/* Carousel overlay on video */
+.carousel {
+    position: relative;
+    width: min(900px, 92vw);
+    margin: 0 auto;
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 500ms ease, transform 500ms ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    backdrop-filter: saturate(120%) blur(6px);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.35)
+    );
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    height: 30vh;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel-slide h1 {
+    font-size: clamp(28px, 4vw, 44px);
+    margin: 0 0 8px;
+}
+
+.carousel-slide p {
+    font-size: clamp(16px, 2.2vw, 20px);
+    margin: 0 0 16px;
+    max-width: 70ch;
+}
+
+.carousel-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.carousel-dots {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    z-index: 2;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+    background: #d90000;
+}
+
+/* .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+} */
+
+/* .carousel-arrow:hover {
+    background: rgba(0,0,0,0.55);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-arrow.left { left: 12px; }
+.carousel-arrow.right { right: 12px; } */
+
+@media (max-width: 768px) {
+    .carousel-arrow.left { left: 8px; }
+    .carousel-arrow.right { right: 8px; }
+    .carousel-dots { top: 8px; }
+}
+
 .hero-content h1 {
     font-size: 48px;
     margin-bottom: 10px;
@@ -519,10 +623,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 150px; /* space between logos */
+  /* gap: 150px; space between logos */
   flex-wrap: wrap;
   /* margin-top: 20px; */
-  padding: 1.75rem;
+  /* padding: 1.75rem; */
   /* animation: blink 5s infinite; */
 }
 
