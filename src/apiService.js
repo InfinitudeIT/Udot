@@ -19,7 +19,7 @@
 //   }
 // };
 
-const API_BASE_URL = "http://localhost:8000"; // FastAPI server URL
+const API_BASE_URL = "https://api.urbandot.in"; // FastAPI server URL
 
 // Generic function for API requests
 const apiRequest = async (endpoint, method, body = null) => {

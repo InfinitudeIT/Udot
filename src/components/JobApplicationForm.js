@@ -142,7 +142,7 @@ function JobApplicationForm() {
 
       // Send data to backend API
       // FastAPI backend
-      const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+      const API_BASE_URL = "https://api.urbandot.in"
       const response = await fetch(`${API_BASE_URL}/careers/apply`, {
         method: 'POST',
         headers: {
