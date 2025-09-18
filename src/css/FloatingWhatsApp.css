@@ -17,6 +17,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   will-change: transform, box-shadow;
   overflow: visible;
+  width:12rem;
 }
 
 /* Red variant for Track button */
@@ -67,6 +68,7 @@
     padding: 12px;
     border-radius: 50%;
     gap: 0;
+    width: 4rem;
   }
   .floating-whatsapp-text {
     display: none;
@@ -88,6 +90,7 @@
     padding: 12px;
     border-radius: 50%;
     gap: 0;
+    width: 4rem;
   }
 }
 
@@ -96,11 +99,13 @@
   .floating-whatsapp {
     bottom: 20px;
     right: 20px;
+    width: 4rem;
   }
   
   .floating-track {
     bottom: 76px; /* Adjust for smaller spacing on very small screens */
     right: 20px;
+    width: 4rem;
   }
 }
 

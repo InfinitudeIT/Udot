@@ -565,7 +565,7 @@
 
 .office-tabs {
   display: flex;
-  gap: 50px;
+  gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 14px;
 }
@@ -594,7 +594,7 @@
 
 .office-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 16px;
 }
 
@@ -654,7 +654,7 @@
 .office-map-embed {
   position: relative;
   width: 100%;
-  padding-top: 45%;
+  padding-top: 30%;
   border-radius: 10px;
   overflow: hidden;
 }
