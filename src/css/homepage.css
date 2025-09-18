@@ -730,32 +730,40 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+
   /* gap: 150px; space between logos */
   flex-wrap: wrap;
-  /* margin-top: 20px; */
+  margin-top: 2rem;
   /* padding: 1.75rem; */
   /* animation: blink 5s infinite; */
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(255, 77, 77, 0.22);
+  border-color: rgba(255, 77, 77, 0.35);
+  border-radius: 15px;
 }
 
 .logow img {
-  height: 250px;
-  width: 250px;  /* Control the image height */
-
+  height: 300px;
+  width: 300px;
+  
 }
 .logox img {
-  height: 200px;
+  /* height: 200px; */
   width: 250px;
 
 }
 .logoy img {
-  height: 100px;
-  width: 250px;  /* Control the image height */
-
+  /* height: 100px; */
+  /* width: 250px;  Control the image height */
 }
 
 .logoz img {
-  height: 250px;
-  width: 250px;  /* Control the image height */
+  /* height: 250px; */
+  width: 250px; 
 
 }
 
