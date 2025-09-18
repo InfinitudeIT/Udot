@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../css/Header2.css";
 import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaVimeo, FaTimes, FaMapMarkerAlt, FaSearch, FaUser, FaChevronDown, FaShippingFast, FaTruck, FaUndo, FaRoute, FaHandshake, FaSearchLocation,FaBars } from "react-icons/fa";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo2.png"
 import { Link } from 'react-router-dom';
 import LocationSearchPopup from "./LocationSearchPopup"; // Ensure correct import path
 import LoginPopup from "./loginPopup";
-import logo2 from "../assets/logo2.png";
+// using alternate logo as the single logo for all states
 import * as XLSX from 'xlsx';
 import { useNavigate } from 'react-router-dom';
 
@@ -232,7 +232,7 @@ function Header() {
     {/* Logo - left */}
     <div className="logo">
       <Link to="/">
-        <img src={isScrolled ? logo : logo2} alt="UrbanDot Logo" />
+        <img src={logo} alt="UrbanDot Logo" />
       </Link>
     </div>
 
@@ -247,12 +247,7 @@ function Header() {
       </div>
     </button>
 
-    {/* Logo - left */}
-    {/* <div className="logo">
-      <Link to="/">
-        <img src={isScrolled ? logo : logo2} alt="UrbanDot Logo" />
-      </Link>
-    </div> */}
+    {/* Logo - left (single image) */}
 
     {/* Main Nav */}
     <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
@@ -303,7 +298,7 @@ function Header() {
 
       {/* Buttons: Track & Login - desktop & inside mobile nav */}
       <div className="nav-buttons">
-        <button
+        {/* <button
           className="enquiry-btn"
           onClick={() => {
             window.location.href = "https://navis.elastic.run/trackOrder";
@@ -311,7 +306,7 @@ function Header() {
           }}
         >
           Track Shipment
-        </button>
+        </button> */}
         
         {/* Book Now Button */}
         <button

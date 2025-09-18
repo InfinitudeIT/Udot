@@ -1,7 +1,7 @@
 /* ========== Base Container ========== */
 .contact-container {
   font-family: "Poppins", sans-serif;
-  padding: 150px 20px 50px;
+  padding: 50px 20px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,9 +9,79 @@
   box-sizing: border-box;
 }
 
+/* ========== Map Section ========== */
+.contactpage-map-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto 40px;
+  /* background: linear-gradient(135deg, rgba(255, 0, 0, 0.08), rgba(24, 24, 70, 0.08)); */
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 28px 20px;
+  box-sizing: border-box;
+}
+
+.contactpage-map-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.contactpage-map-header h2 {
+  margin: 0 0 6px 0;
+  color: #181846;
+}
+
+.contactpage-map-header p {
+  margin: 0;
+  color: #444;
+}
+
+.contactpage-map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.contactpage-map-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.contactpage-map-card h3 {
+  margin: 0 0 6px 0;
+  color: #cc0000;
+}
+
+.contactpage-map-card p {
+  margin: 0 0 10px 0;
+  color: #333;
+  line-height: 1.45;
+}
+
+.contactpage-map-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+}
+
+.contactpage-map-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* ========== Hero Section ========== */
 .contactpage-hero-section {
-  background: #f4f4f4;
+  background: linear-gradient(135deg, rgba(255,0,0,0.10), rgba(24,24,70,0.10));
   padding: 40px 20px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -38,7 +108,7 @@
 
 /* ========== Contact Form ========== */
 .contactpage-form-section {
-  background: #fff;
+  background: linear-gradient(180deg, #ffffff 0%, #fff5f5 100%);
   padding: 40px 20px;
   width: 100%;
   max-width: 800px;
@@ -81,7 +151,7 @@
 }
 
 .contactpage-submit-btn {
-  background: red;
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
   color: white;
   border: none;
   padding: 15px 30px;
@@ -95,13 +165,13 @@
 }
 
 .contactpage-submit-btn:hover {
-  background: darkred;
+  background: linear-gradient(135deg, #cc0000 0%, #a80000 100%);
   transform: translateY(-2px);
 }
 
 /* ========== Contact Cards Section ========== */
 .contact-section {
-  background: url("../assets/contactus.jpg") no-repeat center center/cover;
+  /* background: url("../assets/contactus.jpg") no-repeat center center/cover; */
   width: 100%;
   max-width: 1200px;
   padding: 50px 20px;
@@ -125,7 +195,7 @@
 }
 
 .contact-card {
-  background: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
+  background: rgba(255, 255, 255, 0.96); /* Slightly transparent white background */
   padding: 25px;
   border-radius: 8px;
   text-align: center;
@@ -209,9 +279,7 @@
 }
 
 @media (max-width: 992px) {
-  .contact-container {
-    padding: 130px 15px 40px;
-  }
+
   
   .contactpage-hero-section {
     padding: 30px 15px;
@@ -227,9 +295,6 @@
 }
 
 @media (max-width: 768px) {
-  .contact-container {
-    padding: 120px 10px 30px;
-  }
   
   .contactpage-hero-section h1 {
     font-size: 2rem;
@@ -263,10 +328,6 @@
 }
 
 @media (max-width: 480px) {
-  .contact-container {
-    padding: 100px 10px 20px;
-  }
-  
   .contactpage-hero-section h1 {
     font-size: 1.8rem;
   }
@@ -320,4 +381,298 @@
   outline: none;
   border-color: red;
   box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.1);
+}
+
+/* ========== Addresses (Redesigned) ========== */
+.contactpage-addresses {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto 40px;
+}
+
+.contactpage-addresses-title {
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 12px 0;
+}
+
+.contactpage-addresses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.address-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 16px;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.address-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.address-icon {
+  color: #ff4d4d;
+  font-size: 18px;
+}
+
+.address-text {
+  margin: 0 0 10px 0;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.45;
+}
+
+.address-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.address-action-link,
+.address-action-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.address-action-link:hover,
+.address-action-btn:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+.address-action-btn {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .address-actions {
+    flex-wrap: wrap;
+  }
+}
+
+/* =====================
+   Contact Page Dark Theme (match homepage)
+   ===================== */
+.contact-container {
+  background: rgb(24, 24, 70);
+}
+
+.contactpage-hero-section {
+  background: transparent;
+  box-shadow: none;
+}
+
+.contactpage-hero-section h1,
+.contactpage-hero-section p {
+  color: #ffffff;
+}
+
+.contact-section {
+  /* background: linear-gradient(135deg, rgba(255, 0, 0, 0.08), rgba(24, 24, 70, 0.08)); */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-icon {
+  color: #ff4d4d;
+}
+
+.contactpage-form-section {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+.contactpage-form-group input,
+.contactpage-form-group select,
+.contactpage-form textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.contactpage-form-group input::placeholder,
+.contactpage-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contactpage-submit-btn {
+  background: #ff0000;
+  box-shadow: 0 8px 24px rgba(255, 0, 0, 0.25);
+}
+
+.contactpage-submit-btn:hover {
+  background: #cc0000;
+}
+
+.contactpage-map-section {
+  /* background: linear-gradient(135deg, rgba(255, 0, 0, 0.08), rgba(24, 24, 70, 0.08)); */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.contactpage-map-header h2,
+.contactpage-map-header p {
+  color: #ffffff;
+}
+
+.contactpage-map-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.contactpage-map-card h3 {
+  color: #ff4d4d;
+}
+
+.contactpage-map-card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ========== Offices - Tabbed two-column section ========== */
+.contactpage-offices {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto 40px;
+}
+
+.office-tabs {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.office-tab {
+  appearance: none;
+  -webkit-appearance: none;
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 999px;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.office-tab.active,
+.office-tab:hover {
+  font-size: 1em;
+  background: #ff0000;
+  border-color: #ff0000;
+  box-shadow: 0 10px 24px rgba(255, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+.office-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.office-left {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.office-title {
+  margin: 0 0 6px 0;
+}
+
+.office-address {
+  margin: 0 0 10px 0;
+  color: rgba(255,255,255,0.9);
+}
+
+.office-lines {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.office-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.office-actions .address-action-btn {
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.office-actions .address-action-btn:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.25);
+}
+
+.office-right {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.office-map-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 45%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.office-map-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .office-split {
+    grid-template-columns: 1fr;
+  }
+  .office-map-embed {
+    padding-top: 40%;
+  }
 }

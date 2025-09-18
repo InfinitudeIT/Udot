@@ -10,6 +10,8 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import Footer from "./components/footer";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import FloatingTrackButton from "./components/FloatingTrackButton";
+import SocialLinksBar from "./components/SocialLinksBar";
 import ContactUs from "./components/contactus";
 import TermsOfUse from "./TermsofUse";
 import PrivacyPolicy from "./privacyPolicy";
@@ -62,6 +64,8 @@ function App() {
                 </Routes>
               </main>
               <FloatingWhatsApp />
+              <FloatingTrackButton />
+              <SocialLinksBar vertical={true} />
               <Footer />
             </div>
           </Router>

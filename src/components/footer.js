@@ -26,10 +26,10 @@ function Footer() {
               <FaLinkedin />
             </a>
           </nav>
-          <div className="partner-logos" aria-label="Certifications and Partners">
+          {/* <div className="partner-logos" aria-label="Certifications and Partners">
             <img src={msmeLogo} alt="MSME Logo" className="logo-icon" />
             <img src={startupLogo} alt="Startup India Logo" className="logo-icon2" />
-          </div>
+          </div> */}
         </section>
 
         {/* Middle Section - Contact Info */}

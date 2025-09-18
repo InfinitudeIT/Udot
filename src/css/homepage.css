@@ -27,6 +27,112 @@ main {
    color: white;
    padding: 20px;
 }
+
+/* Homepage-only theming */
+.homepage {
+    background-color: rgb(24, 24, 70);
+    color: #ffffff;
+    position: relative;
+}
+
+/* Truck icon background pattern (responsive) */
+.homepage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Inline SVG truck icon (outline), favicon-like */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='0.5' stroke-opacity='0.2'><g transform='translate(3 5)'><rect x='1' y='6' width='12' height='6' rx='1'/><path d='M13 7h3l3 3v2h-6z'/><circle cx='6' cy='13' r='2'/><circle cx='16' cy='13' r='2'/></g></svg>");
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    background-position: 0 0;
+    opacity: 0.10;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Tablet: slightly smaller pattern */
+@media (max-width: 1024px) {
+  .homepage::before {
+    background-size: 180px 180px;
+  }
+}
+
+/* Mobile: smaller pattern */
+@media (max-width: 768px) {
+  .homepage::before {
+    background-size: 140px 140px;
+  }
+}
+
+/* Clear light backgrounds inside homepage to let dark bg show */
+.homepage .trusted-partner,
+.homepage .reliable-delivery,
+.homepage .gallery,
+.homepage .counter-section {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure text inside typical blocks is white on homepage */
+.homepage .column p,
+.homepage .info-box p,
+.homepage .subtext {
+    color: #ffffff;
+}
+
+/* Headings inherit white from .homepage */
+.homepage h1,
+.homepage h2,
+.homepage h3,
+.homepage p,
+.homepage a,
+.homepage li,
+.homepage span {
+    color: #ffffff;
+}
+
+/* Buttons and interactive elements on dark background */
+.homepage .cta-button {
+    background: #ff0000;
+    color: #ffffff;
+}
+.homepage .cta-button:hover {
+    background: #cc0000;
+}
+
+.homepage .hero-content .book-btn {
+    color: #ffffff;
+    border-color: #ff4d4d;
+}
+.homepage .hero-content .book-btn:hover {
+    background: #ff4d4d;
+    border-color: #ff4d4d;
+}
+
+.homepage .hero-content .track-btn {
+    background: #ff0000;
+    color: #ffffff;
+}
+.homepage .hero-content .track-btn:hover {
+    background: #cc0000;
+}
+
+/* Links */
+.homepage a:hover {
+    color: #ff4d4d;
+}
+
+/* Carousel dots contrast on dark */
+.homepage .carousel-dots .dot {
+    background: rgba(255,255,255,0.6);
+}
+.homepage .carousel-dots .dot.active {
+    background: #ff4d4d;
+}
 /* Video Container - Ensures Video Stays Inside Hero Section */
 .video-container {
     position: absolute;
@@ -56,7 +162,7 @@ main {
     /* transform: translate(-50%, -50%); */
     text-align: center;
     color: white;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Carousel overlay on video */
@@ -64,6 +170,7 @@ main {
     position: relative;
     width: min(900px, 92vw);
     margin: 0 auto;
+    z-index: 2;
 }
 
 .carousel-slide {
@@ -776,4 +883,56 @@ main {
   .counter-box {
     padding: 16px;
   }
+}
+
+/* Homepage themed counter redesign */
+.homepage .counter-section {
+  background: transparent;
+}
+
+.homepage .counter-grid {
+  gap: 24px;
+}
+
+.homepage .counter-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.homepage .counter-box::after {
+  background-image: none;
+}
+
+.homepage .counter-box::before {
+  background-color: rgba(255, 77, 77, 0.9);
+}
+
+.homepage .counter-box .icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(255, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.15) inset;
+}
+
+.homepage .counter-box h2 {
+  color: #ffffff;
+  font-size: 2.25rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.homepage .counter-box h3 {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.homepage .counter-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(255, 77, 77, 0.22);
+  border-color: rgba(255, 77, 77, 0.35);
 }

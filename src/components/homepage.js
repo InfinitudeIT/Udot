@@ -1,22 +1,22 @@
 import React, { useState, useEffect, useMemo } from "react";
 import "../css/homepage.css"; // Import CSS for styling
 import videoBg from "../assets/background.mp4"; // Import video
-import delivery from "../assets/website15.png"; // Import the image
+// import delivery from "../assets/website15.png"; // Import the image
 import cargoImage from "../assets/cargoloading.avif"; // Import new cargo image
-import user1boy from "../assets/website7.png";
-import user2women from "../assets/website8.png";
-import airplane from "../assets/website3.png";
-import red from "../assets/website6.png";
+// import user1boy from "../assets/website7.png";
+// import user2women from "../assets/website8.png";
+// import airplane from "../assets/website3.png";
+// import red from "../assets/website6.png";
 // import truck from "../assets/website15.png"
 import truck from "../assets/truc.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import startupLogo from '../assets/startup_resized.svg';
-import msmeLogo from '../assets/msme4.png';
+import startupLogo from '../assets/Brand Logo.png';
+import msmeLogo from '../assets/msme3.png';
 import CountUp from "react-countup";
 import { FaStore, FaMapMarkedAlt, FaWarehouse, FaUsers } from "react-icons/fa";
 import LoginPopup from "./loginPopup";
-import gstLogo from "../assets/Brand Logo.png";
+import gstLogo from "../assets/DPIIT3.png";
 import gstLogo2 from "../assets/Brand Logo (1).png";
 
 function Home() {
@@ -83,7 +83,7 @@ function Home() {
 ];
 
   return (
-    <main>
+    <main className="homepage">
         <section className="hero" data-aos="fade-up" data-aos-duration="1500">
           <div className="video-container">
           <video autoPlay loop muted className="video-bg">
@@ -239,11 +239,11 @@ function Home() {
       <div className="logox">
         <img src={msmeLogo} alt="MSME Logo" />
       </div>
-      <div className="logoy">
+      <div >
         <img src={startupLogo} alt="Startup India Logo" />
       </div>
       <div className="logoz">
-        <img src={gstLogo} alt="GST Logo" />
+        <img src={gstLogo2} alt="GST Logo" />
       </div>
     </div>
 

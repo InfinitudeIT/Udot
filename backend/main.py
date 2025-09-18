@@ -153,6 +153,7 @@ async def submit_feedback(payload: Feedback, background_tasks: BackgroundTasks):
     excel_payload = {
         "Name": payload.name,
         "Email": payload.email,
+        "Phone": payload.phone,
         "Feedback": payload.feedback,
         "Submitted At": timestamp.isoformat(),
     }

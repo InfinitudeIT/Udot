@@ -15,6 +15,41 @@ const ContactUs = () => {
     feedback: "",
   });
 
+  // Offices data for tabbed section
+  const offices = {
+    head: {
+      title: "Head Office",
+      address: "#301, Manbhum Jade Towers, Somajiguda, Hyderabad, Telangana 500082",
+      phones: ["1800 570 1989", "9493979796"],
+      email: ["info@urbandot.in", "partners@urbandot.in"],
+      mapSrc: "https://www.google.com/maps?q=Manbhum%20Jade%20Towers%2C%20Somajiguda%2C%20Hyderabad%20500082&output=embed"
+    },
+    delhi: {
+      title: "Regional Office - Delhi NCR",
+      address: "#904, Tower 2, Assotech Business Cresterra, Sector 135, Noida, Uttar Pradesh 201305",
+      phones: ["1800 570 1989"],
+      email: ["info@urbandot.in"],
+      mapSrc: "https://www.google.com/maps?q=Assotech%20Business%20Cresterra%2C%20Sector%20135%2C%20Noida&output=embed"
+    },
+    bengaluru: {
+      title: "Regional Office - Bengaluru",
+      address: "#301, Jaganath Arcade, 7-13, 1st Main Rd, SBM Layout, SBM Colony, Anandnagar, Ganganagar, Bengaluru, Karnataka 560024",
+      phones: ["1800 570 1989"],
+      email: ["info@urbandot.in"],
+      mapSrc: "https://www.google.com/maps?q=Jaganath%20Arcade%20SBM%20Layout%20Ganganagar%20Bengaluru%20560024&output=embed"
+    },
+    vijayawada: {
+      title: "Regional Office - Vijayawada",
+      address: "#7-6, ABR Building, Opp Santhi Nagar, Rayanapadu, Vijayawada Rural, NTR Dist, Andhra Pradesh 521241",
+      phones: ["1800 570 1989"],
+      email: ["info@urbandot.in"],
+      mapSrc: "https://www.google.com/maps?q=ABR%20Building%20Rayanapadu%20Vijayawada%20521241&output=embed"
+    }
+  };
+
+  const [activeOfficeKey, setActiveOfficeKey] = useState("head");
+  const activeOffice = offices[activeOfficeKey];
+
   // Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -60,56 +95,77 @@ const ContactUs = () => {
 
   return (
     <div className="contact-container">
-      <section
-        className="contact-section"
-        style={{ backgroundImage: `url(${contactUsBg})` }}
-      >
-        <div className="contact-row">
-          <div className="contact-card">
-            <FaMapMarkerAlt className="contact-icon" />
-            <h3>HEAD OFFICE - <br /> URBANDOT COURIERS AND CARGO PRIVATE LIMITED</h3>
-            <p>CIN NO - U53200TS2024PTC187415</p>
-            <p>#301, Manbhum Jade Towers, Somajiguda, Hyderabad, Telangana 500082</p>
+   
+      {/* Offices - Tabbed two-column section */}
+      <section className="contactpage-offices" aria-label="Our Offices">
+        <div role="tablist" aria-label="Office Locations" className="office-tabs">
+          <button
+            role="tab"
+            aria-selected={activeOfficeKey === "head"}
+            className={`office-tab ${activeOfficeKey === "head" ? "active" : ""}`}
+            onClick={() => setActiveOfficeKey("head")}
+          >
+            Head Office
+          </button>
+          <button
+            role="tab"
+            aria-selected={activeOfficeKey === "delhi"}
+            className={`office-tab ${activeOfficeKey === "delhi" ? "active" : ""}`}
+            onClick={() => setActiveOfficeKey("delhi")}
+          >
+            Delhi NCR
+          </button>
+          <button
+            role="tab"
+            aria-selected={activeOfficeKey === "bengaluru"}
+            className={`office-tab ${activeOfficeKey === "bengaluru" ? "active" : ""}`}
+            onClick={() => setActiveOfficeKey("bengaluru")}
+          >
+            Bengaluru
+          </button>
+          <button
+            role="tab"
+            aria-selected={activeOfficeKey === "vijayawada"}
+            className={`office-tab ${activeOfficeKey === "vijayawada" ? "active" : ""}`}
+            onClick={() => setActiveOfficeKey("vijayawada")}
+          >
+            Vijayawada
+          </button>
+        </div>
+
+        <div className="office-split">
+          <div className="office-left">
+            <h3 className="office-title">{activeOffice.title}</h3>
+            <p className="office-address">{activeOffice.address}</p>
+            <div className="office-lines">
+              <div className="office-line"><FaPhoneAlt /> {activeOffice.phones.join(" / ")}</div>
+              <div className="office-line"><FaEnvelope /> {activeOffice.email.join(" , ")}</div>
+            </div>
+            <div className="office-actions">
+              {/* <button
+                type="button"
+                className="address-action-btn"
+                onClick={() => navigator.clipboard.writeText(`${activeOffice.title} - ${activeOffice.address}`)}
+              >
+                Copy Address
+              </button> */}
+            </div>
           </div>
-          {/* Call Us Card */}
-          <div className="contact-card">
-            <FaPhoneAlt className="contact-icon" />
-            <h3>Call Us</h3>
-            <p>Customer Support: 1800 570 1989</p>
-            <p>Franchise Enquiries: 9493979796</p>
+          <div className="office-right">
+            <div className="office-map-embed">
+              <iframe
+                title={`${activeOffice.title} Map`}
+                src={activeOffice.mapSrc}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
           </div>
-          {/* Email Us Card */}
-          <div className="contact-card">
-            <FaEnvelope className="contact-icon" />
-            <h3>Email Us</h3>
-            <p>info@urbandot.in</p>
-            <p>partners@urbandot.in</p>
-          </div>
-          </div>
-      </section>      
-      <section
-        className="contact-section"
-        style={{ backgroundImage: `url(${contactUsBg})` }}
-      >
-        <div className="contact-row">
-          <div className="contact-card">
-            <FaMapMarkerAlt className="contact-icon" />
-            <h3>REGIONAL OFFICE DELHI</h3>
-            <p> #904, 9Th floor, Tower 2, Assotech Business Cresterra, Sector 135, Noida, Uttar Pradesh 201305</p>
-          </div>
-          <div className="contact-card">
-            <FaMapMarkerAlt className="contact-icon" />
-            <h3>REGIONAL OFFICE BENGALURU</h3>
-            <p>#301, Jaganath Arcade, 7-13, 1st Main Rd, SBM Layout, SBM Colony, Anandnagar, Ganganagar, Bengaluru, Karnataka 560024</p>
-          </div>
-          <div className="contact-card">
-            <FaMapMarkerAlt className="contact-icon" />
-            <h3>REGIONAL OFFICE VIJAYAWADA</h3>
-            <p>#7-6, ABR Building, Opp Santhi Nagar, Rayanapadu, Vijayawada Rural, NTR Dist, Andhra Pradesh 521241</p>
-          </div>
-          </div>
-      </section>      
-      {/* Hero Section */}
+        </div>
+      </section>
+  
+  {/* Hero Section */}
       <section className="contactpage-hero-section">
         <h1>GET IN TOUCH</h1>
         <p>

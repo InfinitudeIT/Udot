@@ -1,5 +1,5 @@
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaPhone, FaComment, FaMessage, FaHeadset } from "react-icons/fa";
 import "../css/FloatingWhatsApp.css";
 
 const PHONE_NUMBER = "9493979796"; // Without country code, default to India (+91)
@@ -23,7 +23,8 @@ const FloatingWhatsApp = () => {
       aria-label="Chat on WhatsApp"
       onClick={handleClick}
     >
-      <FaWhatsapp className="floating-whatsapp-icon" />
+      <FaWhatsapp className="floating-whatsapp-icon desktop-icon" />
+      <FaPhone className="floating-whatsapp-icon mobile-icon" />
       <span className="floating-whatsapp-text">Chat with us</span>
     </button>
   );

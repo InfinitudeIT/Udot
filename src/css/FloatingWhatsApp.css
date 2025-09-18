@@ -1,7 +1,7 @@
 .floating-whatsapp {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 24px;
+  right: 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -19,9 +19,26 @@
   overflow: visible;
 }
 
+/* Red variant for Track button */
+.floating-track {
+  background-color: #ff0000;
+  bottom: 80px; /* Position above WhatsApp button */
+  right: 24px;  /* Align with WhatsApp button */
+  z-index: 10002; /* Ensure it's above WhatsApp button */
+}
+.floating-track::before {
+  border-color: rgba(255, 0, 0, 0.45);
+}
+
 .floating-whatsapp:hover {
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28), 0 0 0 2px rgba(255, 255, 255, 0.25) inset;
+}
+
+/* Track button hover effect */
+.floating-track:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(255, 0, 0, 0.28), 0 0 0 2px rgba(255, 255, 255, 0.25) inset;
 }
 
 .floating-whatsapp-icon {
@@ -30,16 +47,60 @@
   animation: pulseIcon 2s ease-in-out infinite;
 }
 
+/* Desktop icon - show WhatsApp icon */
+.desktop-icon {
+  display: block;
+}
+
+.mobile-icon {
+  display: none;
+}
+
 .floating-whatsapp-text {
   font-size: 16px;
   font-weight: 700;
   line-height: 1;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .floating-whatsapp {
     padding: 12px;
     border-radius: 50%;
+    gap: 0;
+  }
+  .floating-whatsapp-text {
+    display: none;
+  }
+  
+  /* Mobile icon - show phone icon */
+  .desktop-icon {
+    display: none;
+  }
+  
+  .mobile-icon {
+    display: block;
+  }
+  
+  /* Mobile positioning for track button */
+  .floating-track {
+    bottom: 80px; /* Keep above WhatsApp button on mobile */
+    right: 24px;  /* Align with WhatsApp button */
+    padding: 12px;
+    border-radius: 50%;
+    gap: 0;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .floating-whatsapp {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .floating-track {
+    bottom: 76px; /* Adjust for smaller spacing on very small screens */
+    right: 20px;
   }
 }
 
