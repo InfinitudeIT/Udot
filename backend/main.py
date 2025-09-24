@@ -153,7 +153,7 @@ async def submit_feedback(payload: Feedback, background_tasks: BackgroundTasks):
     excel_payload = {
         "Name": payload.name,
         "Email": payload.email,
-        "Phone": payload.phone,
+        "Phone": payload.phone_number,
         "Feedback": payload.feedback,
         "Submitted At": timestamp.isoformat(),
     }
@@ -180,7 +180,7 @@ async def submit_career_application(payload: CareerApplication, background_tasks
     excel_payload = {
         "Name": payload.name,
         "Email": payload.email,
-        "Phone": "Phone": payload.phone_number,
+        "Phone": payload.phone,
         "Job Role": payload.jobRole,
         "Location": payload.location,
         "Experience": payload.experience or "",
