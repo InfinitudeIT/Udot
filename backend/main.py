@@ -1,24 +1,23 @@
 import os
 from datetime import datetime
 from io import BytesIO
+from typing import Optional
 
 from fastapi import FastAPI, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, EmailStr, Field
-from typing import Optional
-from fastapi import BackgroundTasks
-from datetime import datetime
+
+from pydantic import BaseModel, EmailStr, Field, ConfigDict, root_validator
+
 from openpyxl import Workbook
+import io
+import openpyxl
 import aiosmtplib
 from email.message import EmailMessage
 from dotenv import load_dotenv
-from pydantic import ConfigDict
-
-import io
-import openpyxl
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
+
 
 
 load_dotenv()
@@ -48,28 +47,26 @@ class Feedback(BaseModel):
     name: str
     lastname: str
     email: EmailStr
-    phone_number: str = Field(...)               # <-- single canonical field
+    phone_number: str = Field(...)  # canonical field we will always read
     category: str
     feedback: Optional[str] = ""
     submittedAt: Optional[datetime] = None
 
-    # allow field-name usage when dumping etc.
+    # harmless on v1, useful on v2
     model_config = ConfigDict(populate_by_name=True)
 
-    @model_validator(mode="before")
-    @classmethod
-    def _normalize_phone(cls, data):
+    @root_validator(pre=True)
+    def normalize_phone(cls, values):
         # Accept multiple possible keys from the frontend
-        if isinstance(data, dict):
-            for k in (
-                "phone_number", "phone", "phoneNumber",
-                "mobile", "mobile_number", "mobileNumber",
-                "contact", "contact_number", "contactNumber"
-            ):
-                if k in data and data.get(k):
-                    data["phone_number"] = data[k]
-                    break
-        return data
+        for k in (
+            "phone_number", "phone", "phoneNumber",
+            "mobile", "mobile_number", "mobileNumber",
+            "contact", "contact_number", "contactNumber"
+        ):
+            if k in values and values.get(k):
+                values["phone_number"] = values[k]
+                break
+        return values
 
 
 
