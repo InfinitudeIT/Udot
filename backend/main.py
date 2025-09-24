@@ -180,7 +180,7 @@ async def submit_career_application(payload: CareerApplication, background_tasks
     excel_payload = {
         "Name": payload.name,
         "Email": payload.email,
-        "Phone": payload.phone,
+        "Phone": "Phone": payload.phone_number,
         "Job Role": payload.jobRole,
         "Location": payload.location,
         "Experience": payload.experience or "",

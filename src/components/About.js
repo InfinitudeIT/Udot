@@ -6,6 +6,22 @@ import { FaMapMarkedAlt,FaUsers , FaSmileBeam , FaCogs, FaClock, FaBoxOpen, FaLe
 import visionImage from "../assets/website7.png";
 
 const AboutUs = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,  // show 2 at a time
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768, // for mobile
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  };
+  
   const visionPoints = [
     {
       icon: <FaMapMarkedAlt className="vision-icon red" />,
