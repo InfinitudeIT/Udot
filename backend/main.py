@@ -12,6 +12,7 @@ from openpyxl import Workbook
 import aiosmtplib
 from email.message import EmailMessage
 from dotenv import load_dotenv
+from pydantic import ConfigDict
 
 import io
 import openpyxl
@@ -47,10 +48,14 @@ class Feedback(BaseModel):
     name: str
     lastname: str
     email: EmailStr
-    phone_number: str = Field(..., description="Phone number as string to preserve formatting")
+    phone_number: str = Field(..., alias="phone")  # ← accept "phone" from JSON
     category: str
     feedback: Optional[str] = ""
     submittedAt: Optional[datetime] = None
+
+    # allow both alias ("phone") and field name ("phone_number")
+    model_config = ConfigDict(populate_by_name=True)
+
 
 
 class CareerApplication(BaseModel):
@@ -150,13 +155,17 @@ def root():
 @app.post("/feedback/")
 async def submit_feedback(payload: Feedback, background_tasks: BackgroundTasks):
     timestamp = payload.submittedAt or datetime.utcnow()
+    
     excel_payload = {
         "Name": payload.name,
+        "Last Name": payload.lastname,
         "Email": payload.email,
-        "Phone": payload.phone_number,
-        "Feedback": payload.feedback,
-        "Submitted At": timestamp.isoformat(),
+        "Phone Number": payload.phone_number,        # ← FIXED
+        "Category": payload.category,
+        "Feedback": payload.feedback or "",
+        "Submitted At": (payload.submittedAt or datetime.utcnow()).isoformat(),
     }
+
 
     subject = "New Feedback Received"
     body = f"Feedback received from {payload.name}."
