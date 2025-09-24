@@ -97,7 +97,13 @@ def _build_email(subject: str, body: str, attachment_stream: BytesIO, attachment
     )
     return msg
 
-async def _send_message(to_email: str, subject: str, body: str, excel_payload: dict):
+async def _send_message(
+    to_email: str,
+    subject: str,
+    body: str,
+    excel_payload: dict,
+    attachment_name: str = "job_application.xlsx",
+):
     # Create Excel in memory
     wb = openpyxl.Workbook()
     ws = wb.active
@@ -106,16 +112,15 @@ async def _send_message(to_email: str, subject: str, body: str, excel_payload: d
     # Write headers
     ws.append(list(excel_payload.keys()))
 
-    # ✅ Force the Phone cell to Text format explicitly
-headers = list(excel_payload.keys())
-if "Phone" in headers:
-    row_idx = 2  # first data row (row 1 = headers)
-    col_idx = headers.index("Phone") + 1  # 1-based column index
-    ws.cell(row=row_idx, column=col_idx).number_format = "@"
-
-    # Write values
-    # ws.append(list(excel_payload.values()))
+    # Write values as strings (avoid Excel number auto-formatting)
     ws.append(["" if v is None else str(v) for v in excel_payload.values()])
+
+    # Force Phone column to Text, if present
+    headers = list(excel_payload.keys())
+    if "Phone" in headers:
+        row_idx = 2
+        col_idx = headers.index("Phone") + 1
+        ws.cell(row=row_idx, column=col_idx).number_format = "@"
 
     file_stream = io.BytesIO()
     wb.save(file_stream)
@@ -135,11 +140,11 @@ if "Phone" in headers:
     excel_attachment.add_header(
         "Content-Disposition",
         "attachment",
-        filename="job_application.xlsx"
+        filename=attachment_name,
     )
     msg.attach(excel_attachment)
 
-    # Send email via Gmail SMTP
+    # Send email via SMTP
     await aiosmtplib.send(
         msg,
         hostname=SMTP_HOST,
@@ -148,6 +153,7 @@ if "Phone" in headers:
         username=SMTP_USERNAME,
         password=SMTP_PASSWORD,
     )
+
 
 
 @app.get("/")
