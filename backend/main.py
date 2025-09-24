@@ -106,8 +106,16 @@ async def _send_message(to_email: str, subject: str, body: str, excel_payload: d
     # Write headers
     ws.append(list(excel_payload.keys()))
 
+    # ✅ Force the Phone cell to Text format explicitly
+headers = list(excel_payload.keys())
+if "Phone" in headers:
+    row_idx = 2  # first data row (row 1 = headers)
+    col_idx = headers.index("Phone") + 1  # 1-based column index
+    ws.cell(row=row_idx, column=col_idx).number_format = "@"
+
     # Write values
-    ws.append(list(excel_payload.values()))
+    # ws.append(list(excel_payload.values()))
+    ws.append(["" if v is None else str(v) for v in excel_payload.values()])
 
     file_stream = io.BytesIO()
     wb.save(file_stream)
