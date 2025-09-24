@@ -48,20 +48,28 @@ class Feedback(BaseModel):
     name: str
     lastname: str
     email: EmailStr
-    # Accept several possible JSON keys:
-    phone_number: str = Field(
-        ...,
-        validation_alias=AliasChoices(
-            "phone_number", "phone", "phoneNumber",
-            "mobile", "mobile_number", "mobileNumber",
-            "contact", "contact_number", "contactNumber"
-        )
-    )
+    phone_number: str = Field(...)               # <-- single canonical field
     category: str
     feedback: Optional[str] = ""
     submittedAt: Optional[datetime] = None
 
+    # allow field-name usage when dumping etc.
     model_config = ConfigDict(populate_by_name=True)
+
+    @model_validator(mode="before")
+    @classmethod
+    def _normalize_phone(cls, data):
+        # Accept multiple possible keys from the frontend
+        if isinstance(data, dict):
+            for k in (
+                "phone_number", "phone", "phoneNumber",
+                "mobile", "mobile_number", "mobileNumber",
+                "contact", "contact_number", "contactNumber"
+            ):
+                if k in data and data.get(k):
+                    data["phone_number"] = data[k]
+                    break
+        return data
 
 
 
@@ -171,7 +179,7 @@ async def submit_feedback(payload: Feedback, background_tasks: BackgroundTasks):
         "Phone Number": payload.phone_number,
         "Category": payload.category,
         "Feedback": payload.feedback or "",
-        "Submitted At": timestamp.isoformat(),
+       "Submitted At": (payload.submittedAt or datetime.utcnow()).isoformat(),
     }
 
     subject = "New Feedback Received"
