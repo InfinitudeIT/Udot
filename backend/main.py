@@ -48,13 +48,21 @@ class Feedback(BaseModel):
     name: str
     lastname: str
     email: EmailStr
-    phone_number: str = Field(..., alias="phone")  # ← accept "phone" from JSON
+    # Accept several possible JSON keys:
+    phone_number: str = Field(
+        ...,
+        validation_alias=AliasChoices(
+            "phone_number", "phone", "phoneNumber",
+            "mobile", "mobile_number", "mobileNumber",
+            "contact", "contact_number", "contactNumber"
+        )
+    )
     category: str
     feedback: Optional[str] = ""
     submittedAt: Optional[datetime] = None
 
-    # allow both alias ("phone") and field name ("phone_number")
     model_config = ConfigDict(populate_by_name=True)
+
 
 
 
@@ -132,7 +140,7 @@ async def _send_message(to_email: str, subject: str, body: str, excel_payload: d
     excel_attachment.add_header(
         "Content-Disposition",
         "attachment",
-        filename="job_application.xlsx"
+        filename="feedback.xlsx"
     )
     msg.attach(excel_attachment)
 
@@ -154,18 +162,17 @@ def root():
 
 @app.post("/feedback/")
 async def submit_feedback(payload: Feedback, background_tasks: BackgroundTasks):
+    print("DEBUG Feedback payload:", payload.model_dump())  # ← temporary debug
     timestamp = payload.submittedAt or datetime.utcnow()
-    
     excel_payload = {
         "Name": payload.name,
         "Last Name": payload.lastname,
         "Email": payload.email,
-        "Phone Number": payload.phone_number,        # ← FIXED
+        "Phone Number": payload.phone_number,
         "Category": payload.category,
         "Feedback": payload.feedback or "",
-        "Submitted At": (payload.submittedAt or datetime.utcnow()).isoformat(),
+        "Submitted At": timestamp.isoformat(),
     }
-
 
     subject = "New Feedback Received"
     body = f"Feedback received from {payload.name}."
